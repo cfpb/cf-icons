@@ -15,7 +15,7 @@
     "url": "https://github.com/cfpb/cf-icons.git"
   },
   "license": "https://github.com/cfpb/cf-icons/blob/gh-pages/TERMS.md",
-  "main": "src/cf-icons.less",
+  "main": "src/less/cf-icons.less",
   "dependencies": {
     "cf-colors": "git://github.com/cfpb/cf-colors.git"
   },

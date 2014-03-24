@@ -39,6 +39,7 @@ module.exports = function(grunt) {
       main: {
         src: [
           'src/*.less',
+          'src/less/*.less',
           'src/vendor/cf-*/*.less'
         ],
         dest: 'src/vendor/cf-concat/cf.less',
@@ -48,7 +49,7 @@ module.exports = function(grunt) {
     less: {
       main: {
         options: {
-          paths: grunt.file.expand('src/','src/vendor/**/'),
+          paths: grunt.file.expand('src/less/','src/vendor/**/'),
           yuicompress: false
         },
         files: {
