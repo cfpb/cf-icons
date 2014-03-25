@@ -3,6 +3,29 @@
    Icons
    ========================================================================== */
 
+/* topdoc
+    name: LESS Variables
+    family: cf-icons
+    patterns:
+    - name: CSS Prefix
+      codenotes:
+        - "@cf-css-prefix: cf-icon;"
+    tags:
+    - cf-icons
+*/
+
+/* topdoc
+    name: @font-face
+    family: cf-icons
+    patterns:
+    - name: Bulletproof Syntax
+      notes:
+        - "Follows the 'Bulletproof' @font-face syntax for browser support"
+        - "http://www.fontspring.com/blog/further-hardening-of-the-bulletproof-syntax"
+    tags:
+    - cf-icons
+*/
+
 @font-face {
   font-family: 'CFPB Minicons';
   src: url("../fonts/cf-icons.eot");
@@ -10,6 +33,17 @@
   font-weight: normal;
   font-style: normal;
 }
+
+/* topdoc
+    name: Icon Class
+    family: cf-icons
+    patterns:
+    - name: Use of Icon Class
+      notes:
+        - "The cf-css-prefix class applies the font family to an element."
+    tags:
+    - cf-icons
+*/
 
 .cf-icon {
   font-family: 'CFPB Minicons';
@@ -19,6 +53,22 @@
   line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
+
+/* topdoc
+    name: Icons
+    family: cf-icons
+    patterns:
+    - name: Standard Icon Use
+      notes:
+        ""
+      markup: |
+        <i class="cf-icon cf-icon-share"></i> Standard Icon
+    - name: Alt Icon Use
+      markup: |
+        <i class="cf-icon cf-icon-share-alt"></i> Alt Icon
+    tags:
+    - cf-icons
+*/
 
 /* NAVIGATION ICONS
  * -------------------------- */
@@ -88,7 +138,7 @@
 }
 
 /* STATUS ICONS
- * -------------------------- */
+* -------------------------- */
 
 .cf-icon-approved:before {
   content: "\e100";
@@ -147,7 +197,7 @@
 }
 
 /* SOCIAL ICONS
- * -------------------------- */
+* -------------------------- */
 
 .cf-icon-youtube:before {
   content: "\e200";
@@ -206,7 +256,7 @@
 }
 
 /* COMMUNICATION ICONS
- * -------------------------- */
+* -------------------------- */
 
 .cf-icon-web:before {
   content: "\e300";
@@ -257,7 +307,7 @@
 }
 
 /* DOCUMENT ICONS
- * -------------------------- */
+* -------------------------- */
 
 .cf-icon-document:before {
   content: "\e400";
@@ -348,7 +398,7 @@
 }
 
 /* FINANCIAL PRODUCTS ICONS
- * -------------------------- */
+* -------------------------- */
 
 .cf-icon-bank-account:before {
   content: "\e500";
@@ -511,7 +561,7 @@
 }
 
 /* WEB ICONS
- * -------------------------- */
+* -------------------------- */
 
 .cf-icon-user:before {
   content: "\e600";

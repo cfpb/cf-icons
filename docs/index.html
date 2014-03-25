@@ -15,6 +15,566 @@
         <h1 class="h5">cf-icons docs</h1>
       </header>
       <ul class="demo-component-list">
+        <li id="less-notes" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">LESS notes</h1>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>CSS Prefix</h3>
+                <ul>
+                  <li>
+                    <pre class="css"><code data-language="css">@cf-css-prefix: cf-icon;</code></pre>
+                  </li>
+                </ul>
+              </header>
+            </li>
+          </ul>
+          <div class="demo-pattern-css">
+            <pre class="css"><code data-language="css">@font-face {
+  font-family: 'CFPB Minicons';
+  src: url(&quot;../fonts/cf-icons.eot&quot;);
+  src: url(&quot;../fonts/cf-icons.eot?#iefix&quot;) format('embedded-opentype'), url(&quot;../fonts/cf-icons.woff&quot;) format('woff'), url(&quot;../fonts/cf-icons.ttf&quot;) format('truetype'), url(&quot;../fonts/cf-icons.svg&quot;) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.cf-icon {
+  font-family: 'CFPB Minicons';
+  display: inline-block;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}</code></pre>
+          </div>
+        </li>
+        <li id="icons" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">Icons</h1>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Standard Icon Use</h3>
+              </header>
+              <section>
+<i class="cf-icon cf-icon-share"></i> Standard Icon
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-share&quot;&gt;&lt;/i&gt; Standard Icon</code></pre>
+              </footer>
+            </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Alt Icon Use</h3>
+              </header>
+              <section>
+<i class="cf-icon cf-icon-share-alt"></i> Alt Icon
+</section>
+              <footer class="demo-pattern-list_footer">
+                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-share-alt&quot;&gt;&lt;/i&gt; Alt Icon</code></pre>
+              </footer>
+            </li>
+          </ul>
+          <div class="demo-pattern-css">
+            <pre class="css"><code data-language="css">/* NAVIGATION ICONS
+ * -------------------------- */
+.cf-icon-left:before {
+  content: &quot;\e000&quot;;
+}
+.cf-icon-left-alt:before {
+  content: &quot;\e001&quot;;
+}
+.cf-icon-right:before {
+  content: &quot;\e002&quot;;
+}
+.cf-icon-right-alt:before {
+  content: &quot;\e003&quot;;
+}
+.cf-icon-up:before {
+  content: &quot;\e004&quot;;
+}
+.cf-icon-up-alt:before {
+  content: &quot;\e005&quot;;
+}
+.cf-icon-down:before {
+  content: &quot;\e006&quot;;
+}
+.cf-icon-down-alt:before {
+  content: &quot;\e007&quot;;
+}
+.cf-icon-arrow-left:before {
+  content: &quot;\e008&quot;;
+}
+.cf-icon-arrow-left-alt:before {
+  content: &quot;\e009&quot;;
+}
+.cf-icon-arrow-right:before {
+  content: &quot;\e010&quot;;
+}
+.cf-icon-arrow-right-alt:before {
+  content: &quot;\e011&quot;;
+}
+.cf-icon-arrow-up:before {
+  content: &quot;\e012&quot;;
+}
+.cf-icon-arrow-up-alt:before {
+  content: &quot;\e013&quot;;
+}
+.cf-icon-arrow-down:before {
+  content: &quot;\e014&quot;;
+}
+.cf-icon-arrow-down-alt:before {
+  content: &quot;\e015&quot;;
+}
+/* STATUS ICONS
+* -------------------------- */
+.cf-icon-approved:before {
+  content: &quot;\e100&quot;;
+}
+.cf-icon-approved-alt:before {
+  content: &quot;\e101&quot;;
+}
+.cf-icon-error:before {
+  content: &quot;\e102&quot;;
+}
+.cf-icon-error-alt:before {
+  content: &quot;\e103&quot;;
+}
+.cf-icon-help:before {
+  content: &quot;\e104&quot;;
+}
+.cf-icon-help-alt:before {
+  content: &quot;\e105&quot;;
+}
+.cf-icon-delete:before {
+  content: &quot;\e106&quot;;
+}
+.cf-icon-delete-alt:before {
+  content: &quot;\e107&quot;;
+}
+.cf-icon-plus:before {
+  content: &quot;\e108&quot;;
+}
+.cf-icon-plus-alt:before {
+  content: &quot;\e109&quot;;
+}
+.cf-icon-minus:before {
+  content: &quot;\e110&quot;;
+}
+.cf-icon-minus-alt:before {
+  content: &quot;\e111&quot;;
+}
+.cf-icon-update:before {
+  content: &quot;\e112&quot;;
+}
+.cf-icon-update-alt:before {
+  content: &quot;\e113&quot;;
+}
+/* SOCIAL ICONS
+* -------------------------- */
+.cf-icon-youtube:before {
+  content: &quot;\e200&quot;;
+}
+.cf-icon-youtube-alt:before {
+  content: &quot;\e201&quot;;
+}
+.cf-icon-linkedin:before {
+  content: &quot;\e202&quot;;
+}
+.cf-icon-linkedin-alt:before {
+  content: &quot;\e203&quot;;
+}
+.cf-icon-facebook:before {
+  content: &quot;\e204&quot;;
+}
+.cf-icon-facebook-alt:before {
+  content: &quot;\e205&quot;;
+}
+.cf-icon-flickr:before {
+  content: &quot;\e206&quot;;
+}
+.cf-icon-flickr-alt:before {
+  content: &quot;\e207&quot;;
+}
+.cf-icon-twitter:before {
+  content: &quot;\e208&quot;;
+}
+.cf-icon-twitter-alt:before {
+  content: &quot;\e209&quot;;
+}
+.cf-icon-github:before {
+  content: &quot;\e210&quot;;
+}
+.cf-icon-github-alt:before {
+  content: &quot;\e211&quot;;
+}
+.cf-icon-email-social:before {
+  content: &quot;\e212&quot;;
+}
+.cf-icon-email-social-alt:before {
+  content: &quot;\e213&quot;;
+}
+/* COMMUNICATION ICONS
+* -------------------------- */
+.cf-icon-web:before {
+  content: &quot;\e300&quot;;
+}
+.cf-icon-web-alt:before {
+  content: &quot;\e301&quot;;
+}
+.cf-icon-email:before {
+  content: &quot;\e302&quot;;
+}
+.cf-icon-email-alt:before {
+  content: &quot;\e303&quot;;
+}
+.cf-icon-mail:before {
+  content: &quot;\e304&quot;;
+}
+.cf-icon-mail-alt:before {
+  content: &quot;\e305&quot;;
+}
+.cf-icon-phone:before {
+  content: &quot;\e306&quot;;
+}
+.cf-icon-phone-alt:before {
+  content: &quot;\e307&quot;;
+}
+.cf-icon-technology:before {
+  content: &quot;\e308&quot;;
+}
+.cf-icon-technology-alt:before {
+  content: &quot;\e309&quot;;
+}
+.cf-icon-fax:before {
+  content: &quot;\e310&quot;;
+}
+.cf-icon-fax-alt:before {
+  content: &quot;\e311&quot;;
+}
+/* DOCUMENT ICONS
+* -------------------------- */
+.cf-icon-document:before {
+  content: &quot;\e400&quot;;
+}
+.cf-icon-document-alt:before {
+  content: &quot;\e401&quot;;
+}
+.cf-icon-pdf:before {
+  content: &quot;\e402&quot;;
+}
+.cf-icon-pdf-alt:before {
+  content: &quot;\e403&quot;;
+}
+.cf-icon-upload:before {
+  content: &quot;\e404&quot;;
+}
+.cf-icon-upload-alt:before {
+  content: &quot;\e405&quot;;
+}
+.cf-icon-download:before {
+  content: &quot;\e406&quot;;
+}
+.cf-icon-download-alt:before {
+  content: &quot;\e407&quot;;
+}
+.cf-icon-copy:before {
+  content: &quot;\e408&quot;;
+}
+.cf-icon-copy-alt:before {
+  content: &quot;\e409&quot;;
+}
+.cf-icon-edit:before {
+  content: &quot;\e410&quot;;
+}
+.cf-icon-edit-alt:before {
+  content: &quot;\e411&quot;;
+}
+.cf-icon-attach:before {
+  content: &quot;\e412&quot;;
+}
+.cf-icon-attach-alt:before {
+  content: &quot;\e413&quot;;
+}
+.cf-icon-print:before {
+  content: &quot;\e414&quot;;
+}
+.cf-icon-print-alt:before {
+  content: &quot;\e415&quot;;
+}
+.cf-icon-save:before {
+  content: &quot;\e416&quot;;
+}
+.cf-icon-save-alt:before {
+  content: &quot;\e417&quot;;
+}
+.cf-icon-appendix:before {
+  content: &quot;\e418&quot;;
+}
+.cf-icon-appendix-alt:before {
+  content: &quot;\e419&quot;;
+}
+.cf-icon-supplement:before {
+  content: &quot;\e420&quot;;
+}
+.cf-icon-supplement-alt:before {
+  content: &quot;\e421&quot;;
+}
+/* FINANCIAL PRODUCTS ICONS
+* -------------------------- */
+.cf-icon-bank-account:before {
+  content: &quot;\e500&quot;;
+}
+.cf-icon-bank-account-alt:before {
+  content: &quot;\e501&quot;;
+}
+.cf-icon-credit-card:before {
+  content: &quot;\e502&quot;;
+}
+.cf-icon-credit-card-alt:before {
+  content: &quot;\e503&quot;;
+}
+.cf-icon-loan:before {
+  content: &quot;\e504&quot;;
+}
+.cf-icon-loan-alt:before {
+  content: &quot;\e505&quot;;
+}
+.cf-icon-money-transfer:before {
+  content: &quot;\e506&quot;;
+}
+.cf-icon-money-transfer-alt:before {
+  content: &quot;\e507&quot;;
+}
+.cf-icon-mortgage:before {
+  content: &quot;\e508&quot;;
+}
+.cf-icon-mortgage-alt:before {
+  content: &quot;\e509&quot;;
+}
+.cf-icon-debt-collection:before {
+  content: &quot;\e510&quot;;
+}
+.cf-icon-debt-collection-alt:before {
+  content: &quot;\e511&quot;;
+}
+.cf-icon-credit-report:before {
+  content: &quot;\e512&quot;;
+}
+.cf-icon-credit-report-alt:before {
+  content: &quot;\e513&quot;;
+}
+.cf-icon-money:before {
+  content: &quot;\e514&quot;;
+}
+.cf-icon-money-alt:before {
+  content: &quot;\e515&quot;;
+}
+.cf-icon-quick-cash:before {
+  content: &quot;\e516&quot;;
+}
+.cf-icon-quick-cash-alt:before {
+  content: &quot;\e517&quot;;
+}
+.cf-icon-contract:before {
+  content: &quot;\e518&quot;;
+}
+.cf-icon-contract-alt:before {
+  content: &quot;\e519&quot;;
+}
+.cf-icon-complaint:before {
+  content: &quot;\e520&quot;;
+}
+.cf-icon-complaint-alt:before {
+  content: &quot;\e521&quot;;
+}
+.cf-icon-getting-credit-card:before {
+  content: &quot;\e522&quot;;
+}
+.cf-icon-getting-credit-card-alt:before {
+  content: &quot;\e523&quot;;
+}
+.cf-icon-buying-car:before {
+  content: &quot;\e524&quot;;
+}
+.cf-icon-buying-car-alt:before {
+  content: &quot;\e525&quot;;
+}
+.cf-icon-paying-college:before {
+  content: &quot;\e526&quot;;
+}
+.cf-icon-paying-college-alt:before {
+  content: &quot;\e527&quot;;
+}
+.cf-icon-owning-home:before {
+  content: &quot;\e528&quot;;
+}
+.cf-icon-owning-home-alt:before {
+  content: &quot;\e529&quot;;
+}
+.cf-icon-debt:before {
+  content: &quot;\e530&quot;;
+}
+.cf-icon-debt-alt:before {
+  content: &quot;\e531&quot;;
+}
+.cf-icon-building-credit:before {
+  content: &quot;\e532&quot;;
+}
+.cf-icon-building-credit-alt:before {
+  content: &quot;\e533&quot;;
+}
+.cf-icon-prepaid-cards:before {
+  content: &quot;\e534&quot;;
+}
+.cf-icon-prepaid-cards-alt:before {
+  content: &quot;\e535&quot;;
+}
+.cf-icon-payday-loan:before {
+  content: &quot;\e536&quot;;
+}
+.cf-icon-payday-loan-alt:before {
+  content: &quot;\e537&quot;;
+}
+.cf-icon-retirement:before {
+  content: &quot;\e538&quot;;
+}
+.cf-icon-retirement-alt:before {
+  content: &quot;\e539&quot;;
+}
+/* WEB ICONS
+* -------------------------- */
+.cf-icon-user:before {
+  content: &quot;\e600&quot;;
+}
+.cf-icon-user-alt:before {
+  content: &quot;\e601&quot;;
+}
+.cf-icon-wifi:before {
+  content: &quot;\e602&quot;;
+}
+.cf-icon-wifi-alt:before {
+  content: &quot;\e603&quot;;
+}
+.cf-icon-search:before {
+  content: &quot;\e604&quot;;
+}
+.cf-icon-search-alt:before {
+  content: &quot;\e605&quot;;
+}
+.cf-icon-share:before {
+  content: &quot;\e606&quot;;
+}
+.cf-icon-share-alt:before {
+  content: &quot;\e607&quot;;
+}
+.cf-icon-link:before {
+  content: &quot;\e608&quot;;
+}
+.cf-icon-link-alt:before {
+  content: &quot;\e609&quot;;
+}
+.cf-icon-external-link:before {
+  content: &quot;\e610&quot;;
+}
+.cf-icon-external-link-alt:before {
+  content: &quot;\e611&quot;;
+}
+.cf-icon-audio-mute:before {
+  content: &quot;\e612&quot;;
+}
+.cf-icon-audio-mute-alt:before {
+  content: &quot;\e616&quot;;
+}
+.cf-icon-audio-low:before {
+  content: &quot;\e613&quot;;
+}
+.cf-icon-audio-low-alt:before {
+  content: &quot;\e617&quot;;
+}
+.cf-icon-audio-medium:before {
+  content: &quot;\e614&quot;;
+}
+.cf-icon-audio-medium-alt:before {
+  content: &quot;\e618&quot;;
+}
+.cf-icon-audio-max:before {
+  content: &quot;\e615&quot;;
+}
+.cf-icon-audio-max-alt:before {
+  content: &quot;\e619&quot;;
+}
+.cf-icon-favorite:before {
+  content: &quot;\e620&quot;;
+}
+.cf-icon-favorite-alt:before {
+  content: &quot;\e621&quot;;
+}
+.cf-icon-unfavorite:before {
+  content: &quot;\e622&quot;;
+}
+.cf-icon-unfavorite-alt:before {
+  content: &quot;\e623&quot;;
+}
+.cf-icon-bookmark:before {
+  content: &quot;\e624&quot;;
+}
+.cf-icon-bookmark-alt:before {
+  content: &quot;\e625&quot;;
+}
+.cf-icon-unbookmark:before {
+  content: &quot;\e626&quot;;
+}
+.cf-icon-unbookmark-alt:before {
+  content: &quot;\e627&quot;;
+}
+.cf-icon-settings:before {
+  content: &quot;\e628&quot;;
+}
+.cf-icon-settings-alt:before {
+  content: &quot;\e629&quot;;
+}
+.cf-icon-menu:before {
+  content: &quot;\e630&quot;;
+}
+.cf-icon-menu-alt:before {
+  content: &quot;\e631&quot;;
+}
+.cf-icon-lock:before {
+  content: &quot;\e632&quot;;
+}
+.cf-icon-lock-alt:before {
+  content: &quot;\e633&quot;;
+}
+.cf-icon-unlock:before {
+  content: &quot;\e634&quot;;
+}
+.cf-icon-unlock-alt:before {
+  content: &quot;\e635&quot;;
+}
+.cf-icon-clock:before {
+  content: &quot;\e636&quot;;
+}
+.cf-icon-clock-alt:before {
+  content: &quot;\e637&quot;;
+}
+.cf-icon-chart:before {
+  content: &quot;\e638&quot;;
+}
+.cf-icon-chart-alt:before {
+  content: &quot;\e639&quot;;
+}
+.cf-icon-play:before {
+  content: &quot;\e640&quot;;
+}
+.cf-icon-play-alt:before {
+  content: &quot;\e641&quot;;
+}
+/* ==========================================================================
+   Capital Framework
+   Color Variables
+   ========================================================================== */
+</code></pre>
+          </div>
+        </li>
       </ul>
       <footer class="wrapper-footer">
         <h4><a href="https://github.com/cfpb/cf-icons">View the repository</a></h4>
