@@ -12,15 +12,676 @@
 }
 
 .cf-icon {
-  display: inline-block;
   font-family: 'CFPB Minicons';
+  display: inline-block;
   font-style: normal;
   font-weight: normal;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
+
+/* NAVIGATION ICONS
+ * -------------------------- */
 
 .cf-icon-left:before {
   content: "\e000";
 }
+
+.cf-icon-left-alt:before {
+  content: "\e001";
+}
+
+.cf-icon-right:before {
+  content: "\e002";
+}
+
+.cf-icon-right-alt:before {
+  content: "\e003";
+}
+
+.cf-icon-up:before {
+  content: "\e004";
+}
+
+.cf-icon-up-alt:before {
+  content: "\e005";
+}
+
+.cf-icon-down:before {
+  content: "\e006";
+}
+
+.cf-icon-down-alt:before {
+  content: "\e007";
+}
+
+.cf-icon-arrow-left:before {
+  content: "\e008";
+}
+
+.cf-icon-arrow-left-alt:before {
+  content: "\e009";
+}
+
+.cf-icon-arrow-right:before {
+  content: "\e010";
+}
+
+.cf-icon-arrow-right-alt:before {
+  content: "\e011";
+}
+
+.cf-icon-arrow-up:before {
+  content: "\e012";
+}
+
+.cf-icon-arrow-up-alt:before {
+  content: "\e013";
+}
+
+.cf-icon-arrow-down:before {
+  content: "\e014";
+}
+
+.cf-icon-arrow-down-alt:before {
+  content: "\e015";
+}
+
+/* STATUS ICONS
+ * -------------------------- */
+
+.cf-icon-approved:before {
+  content: "\e100";
+}
+
+.cf-icon-approved-alt:before {
+  content: "\e101";
+}
+
+.cf-icon-error:before {
+  content: "\e102";
+}
+
+.cf-icon-error-alt:before {
+  content: "\e103";
+}
+
+.cf-icon-help:before {
+  content: "\e104";
+}
+
+.cf-icon-help-alt:before {
+  content: "\e105";
+}
+
+.cf-icon-delete:before {
+  content: "\e106";
+}
+
+.cf-icon-delete-alt:before {
+  content: "\e107";
+}
+
+.cf-icon-plus:before {
+  content: "\e108";
+}
+
+.cf-icon-plus-alt:before {
+  content: "\e109";
+}
+
+.cf-icon-minus:before {
+  content: "\e110";
+}
+
+.cf-icon-minus-alt:before {
+  content: "\e111";
+}
+
+.cf-icon-update:before {
+  content: "\e112";
+}
+
+.cf-icon-update-alt:before {
+  content: "\e113";
+}
+
+/* SOCIAL ICONS
+ * -------------------------- */
+
+.cf-icon-youtube:before {
+  content: "\e200";
+}
+
+.cf-icon-youtube-alt:before {
+  content: "\e201";
+}
+
+.cf-icon-linkedin:before {
+  content: "\e202";
+}
+
+.cf-icon-linkedin-alt:before {
+  content: "\e203";
+}
+
+.cf-icon-facebook:before {
+  content: "\e204";
+}
+
+.cf-icon-facebook-alt:before {
+  content: "\e205";
+}
+
+.cf-icon-flickr:before {
+  content: "\e206";
+}
+
+.cf-icon-flickr-alt:before {
+  content: "\e207";
+}
+
+.cf-icon-twitter:before {
+  content: "\e208";
+}
+
+.cf-icon-twitter-alt:before {
+  content: "\e209";
+}
+
+.cf-icon-github:before {
+  content: "\e210";
+}
+
+.cf-icon-github-alt:before {
+  content: "\e211";
+}
+
+.cf-icon-email-social:before {
+  content: "\e212";
+}
+
+.cf-icon-email-social-alt:before {
+  content: "\e213";
+}
+
+/* COMMUNICATION ICONS
+ * -------------------------- */
+
+.cf-icon-web:before {
+  content: "\e300";
+}
+
+.cf-icon-web-alt:before {
+  content: "\e301";
+}
+
+.cf-icon-email:before {
+  content: "\e302";
+}
+
+.cf-icon-email-alt:before {
+  content: "\e303";
+}
+
+.cf-icon-mail:before {
+  content: "\e304";
+}
+
+.cf-icon-mail-alt:before {
+  content: "\e305";
+}
+
+.cf-icon-phone:before {
+  content: "\e306";
+}
+
+.cf-icon-phone-alt:before {
+  content: "\e307";
+}
+
+.cf-icon-technology:before {
+  content: "\e308";
+}
+
+.cf-icon-technology-alt:before {
+  content: "\e309";
+}
+
+.cf-icon-fax:before {
+  content: "\e310";
+}
+
+.cf-icon-fax-alt:before {
+  content: "\e311";
+}
+
+/* DOCUMENT ICONS
+ * -------------------------- */
+
+.cf-icon-document:before {
+  content: "\e400";
+}
+
+.cf-icon-document-alt:before {
+  content: "\e401";
+}
+
+.cf-icon-pdf:before {
+  content: "\e402";
+}
+
+.cf-icon-pdf-alt:before {
+  content: "\e403";
+}
+
+.cf-icon-upload:before {
+  content: "\e404";
+}
+
+.cf-icon-upload-alt:before {
+  content: "\e405";
+}
+
+.cf-icon-download:before {
+  content: "\e406";
+}
+
+.cf-icon-download-alt:before {
+  content: "\e407";
+}
+
+.cf-icon-copy:before {
+  content: "\e408";
+}
+
+.cf-icon-copy-alt:before {
+  content: "\e409";
+}
+
+.cf-icon-edit:before {
+  content: "\e410";
+}
+
+.cf-icon-edit-alt:before {
+  content: "\e411";
+}
+
+.cf-icon-attach:before {
+  content: "\e412";
+}
+
+.cf-icon-attach-alt:before {
+  content: "\e413";
+}
+
+.cf-icon-print:before {
+  content: "\e414";
+}
+
+.cf-icon-print-alt:before {
+  content: "\e415";
+}
+
+.cf-icon-save:before {
+  content: "\e416";
+}
+
+.cf-icon-save-alt:before {
+  content: "\e417";
+}
+
+.cf-icon-appendix:before {
+  content: "\e418";
+}
+
+.cf-icon-appendix-alt:before {
+  content: "\e419";
+}
+
+.cf-icon-supplement:before {
+  content: "\e420";
+}
+
+.cf-icon-supplement-alt:before {
+  content: "\e421";
+}
+
+/* FINANCIAL PRODUCTS ICONS
+ * -------------------------- */
+
+.cf-icon-bank-account:before {
+  content: "\e500";
+}
+
+.cf-icon-bank-account-alt:before {
+  content: "\e501";
+}
+
+.cf-icon-credit-card:before {
+  content: "\e502";
+}
+
+.cf-icon-credit-card-alt:before {
+  content: "\e503";
+}
+
+.cf-icon-loan:before {
+  content: "\e504";
+}
+
+.cf-icon-loan-alt:before {
+  content: "\e505";
+}
+
+.cf-icon-money-transfer:before {
+  content: "\e506";
+}
+
+.cf-icon-money-transfer-alt:before {
+  content: "\e507";
+}
+
+.cf-icon-mortgage:before {
+  content: "\e508";
+}
+
+.cf-icon-mortgage-alt:before {
+  content: "\e509";
+}
+
+.cf-icon-debt-collection:before {
+  content: "\e510";
+}
+
+.cf-icon-debt-collection-alt:before {
+  content: "\e511";
+}
+
+.cf-icon-credit-report:before {
+  content: "\e512";
+}
+
+.cf-icon-credit-report-alt:before {
+  content: "\e513";
+}
+
+.cf-icon-money:before {
+  content: "\e514";
+}
+
+.cf-icon-money-alt:before {
+  content: "\e515";
+}
+
+.cf-icon-quick-cash:before {
+  content: "\e516";
+}
+
+.cf-icon-quick-cash-alt:before {
+  content: "\e517";
+}
+
+.cf-icon-contract:before {
+  content: "\e518";
+}
+
+.cf-icon-contract-alt:before {
+  content: "\e519";
+}
+
+.cf-icon-complaint:before {
+  content: "\e520";
+}
+
+.cf-icon-complaint-alt:before {
+  content: "\e521";
+}
+
+.cf-icon-getting-credit-card:before {
+  content: "\e522";
+}
+
+.cf-icon-getting-credit-card-alt:before {
+  content: "\e523";
+}
+
+.cf-icon-buying-car:before {
+  content: "\e524";
+}
+
+.cf-icon-buying-car-alt:before {
+  content: "\e525";
+}
+
+.cf-icon-paying-college:before {
+  content: "\e526";
+}
+
+.cf-icon-paying-college-alt:before {
+  content: "\e527";
+}
+
+.cf-icon-owning-home:before {
+  content: "\e528";
+}
+
+.cf-icon-owning-home-alt:before {
+  content: "\e529";
+}
+
+.cf-icon-debt:before {
+  content: "\e530";
+}
+
+.cf-icon-debt-alt:before {
+  content: "\e531";
+}
+
+.cf-icon-building-credit:before {
+  content: "\e532";
+}
+
+.cf-icon-building-credit-alt:before {
+  content: "\e533";
+}
+
+.cf-icon-prepaid-cards:before {
+  content: "\e534";
+}
+
+.cf-icon-prepaid-cards-alt:before {
+  content: "\e535";
+}
+
+.cf-icon-payday-loan:before {
+  content: "\e536";
+}
+
+.cf-icon-payday-loan-alt:before {
+  content: "\e537";
+}
+
+.cf-icon-retirement:before {
+  content: "\e538";
+}
+
+.cf-icon-retirement-alt:before {
+  content: "\e539";
+}
+
+/* WEB ICONS
+ * -------------------------- */
+
+.cf-icon-user:before {
+  content: "\e600";
+}
+
+.cf-icon-user-alt:before {
+  content: "\e601";
+}
+
+.cf-icon-wifi:before {
+  content: "\e602";
+}
+
+.cf-icon-wifi-alt:before {
+  content: "\e603";
+}
+
+.cf-icon-search:before {
+  content: "\e604";
+}
+
+.cf-icon-search-alt:before {
+  content: "\e605";
+}
+
+.cf-icon-share:before {
+  content: "\e606";
+}
+
+.cf-icon-share-alt:before {
+  content: "\e607";
+}
+
+.cf-icon-link:before {
+  content: "\e608";
+}
+
+.cf-icon-link-alt:before {
+  content: "\e609";
+}
+
+.cf-icon-external-link:before {
+  content: "\e610";
+}
+
+.cf-icon-external-link-alt:before {
+  content: "\e611";
+}
+
+.cf-icon-audio-mute:before {
+  content: "\e612";
+}
+
+.cf-icon-audio-mute-alt:before {
+  content: "\e616";
+}
+
+.cf-icon-audio-low:before {
+  content: "\e613";
+}
+
+.cf-icon-audio-low-alt:before {
+  content: "\e617";
+}
+
+.cf-icon-audio-medium:before {
+  content: "\e614";
+}
+
+.cf-icon-audio-medium-alt:before {
+  content: "\e618";
+}
+
+.cf-icon-audio-max:before {
+  content: "\e615";
+}
+
+.cf-icon-audio-max-alt:before {
+  content: "\e619";
+}
+
+.cf-icon-favorite:before {
+  content: "\e620";
+}
+
+.cf-icon-favorite-alt:before {
+  content: "\e621";
+}
+
+.cf-icon-unfavorite:before {
+  content: "\e622";
+}
+
+.cf-icon-unfavorite-alt:before {
+  content: "\e623";
+}
+
+.cf-icon-bookmark:before {
+  content: "\e624";
+}
+
+.cf-icon-bookmark-alt:before {
+  content: "\e625";
+}
+
+.cf-icon-unbookmark:before {
+  content: "\e626";
+}
+
+.cf-icon-unbookmark-alt:before {
+  content: "\e627";
+}
+
+.cf-icon-settings:before {
+  content: "\e628";
+}
+
+.cf-icon-settings-alt:before {
+  content: "\e629";
+}
+
+.cf-icon-menu:before {
+  content: "\e630";
+}
+
+.cf-icon-menu-alt:before {
+  content: "\e631";
+}
+
+.cf-icon-lock:before {
+  content: "\e632";
+}
+
+.cf-icon-lock-alt:before {
+  content: "\e633";
+}
+
+.cf-icon-unlock:before {
+  content: "\e634";
+}
+
+.cf-icon-unlock-alt:before {
+  content: "\e635";
+}
+
+.cf-icon-clock:before {
+  content: "\e636";
+}
+
+.cf-icon-clock-alt:before {
+  content: "\e637";
+}
+
+.cf-icon-chart:before {
+  content: "\e638";
+}
+
+.cf-icon-chart-alt:before {
+  content: "\e639";
+}
+
+.cf-icon-play:before {
+  content: "\e640";
+}
+
+.cf-icon-play-alt:before {
+  content: "\e641";
+}
+
+/* ==========================================================================
+   Capital Framework
+   Color Variables
+   ========================================================================== */
