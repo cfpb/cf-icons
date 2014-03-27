@@ -44,56 +44,38 @@
     - name: left
       markup: |
         <i class="cf-icon cf-icon-left"></i>
-    - name: left-round
-      markup: |
         <i class="cf-icon cf-icon-left-round"></i>
     - name: right
       markup: |
         <i class="cf-icon cf-icon-right"></i>
-    - name: right-round
-      markup: |
         <i class="cf-icon cf-icon-right-round"></i>
     - name: up
       markup: |
         <i class="cf-icon cf-icon-up"></i>
-    - name: up-round
-      markup: |
         <i class="cf-icon cf-icon-up-round"></i>
     - name: down
       markup: |
         <i class="cf-icon cf-icon-down"></i>
-    - name: down-round
-      markup: |
         <i class="cf-icon cf-icon-down-round"></i>
     - name: arrow-left
       markup: |
         <i class="cf-icon cf-icon-arrow-left"></i>
-    - name: arrow-left-round
-      markup: |
         <i class="cf-icon cf-icon-arrow-left-round"></i>
     - name: arrow-right
       markup: |
         <i class="cf-icon cf-icon-arrow-right"></i>
-    - name: arrow-right-round
-      markup: |
         <i class="cf-icon cf-icon-arrow-right-round"></i>
     - name: arrow-up
       markup: |
         <i class="cf-icon cf-icon-arrow-up"></i>
-    - name: arrow-up-round
-      markup: |
-        <i class="cf-icon cf-icon-arrow-up-round"></i>
+         <i class="cf-icon cf-icon-arrow-up-round"></i>
     - name: arrow-down
       markup: |
         <i class="cf-icon cf-icon-arrow-down"></i>
-    - name: arrow-down-round
-      markup: |
         <i class="cf-icon cf-icon-arrow-down-round"></i>
     tags:
     - cf-icons
 */
-/* NAVIGATION ICONS
- * -------------------------- */
 .cf-icon-left:before {
   content: "\e000";
 }
@@ -142,8 +124,7 @@
 .cf-icon-arrow-down-round:before {
   content: "\e015";
 }
-/* STATUS ICONS
-* -------------------------- */
+/* Status Icons */
 .cf-icon-approved:before {
   content: "\e100";
 }
