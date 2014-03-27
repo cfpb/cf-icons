@@ -146,7 +146,41 @@
   content: "\e015";
 }
 
-/* Status Icons */
+/* topdoc
+    name: Status Icons
+    family: cf-icons
+    patterns:
+    - name: approved
+      markup: |
+        <i class="cf-icon cf-icon-approved"></i>
+        <i class="cf-icon cf-icon-approved-round"></i>
+    - name: error
+      markup: |
+        <i class="cf-icon cf-icon-error"></i>
+        <i class="cf-icon cf-icon-error-round"></i>
+    - name: help
+      markup: |
+        <i class="cf-icon cf-icon-help"></i>
+        <i class="cf-icon cf-icon-help-round"></i>
+    - name: delete
+      markup: |
+        <i class="cf-icon cf-icon-delete"></i>
+        <i class="cf-icon cf-icon-delete-round"></i>
+    - name: plus
+      markup: |
+        <i class="cf-icon cf-icon-plus"></i>
+        <i class="cf-icon cf-icon-plus-round"></i>
+    - name: minus
+      markup: |
+        <i class="cf-icon cf-icon-minus"></i>
+        <i class="cf-icon cf-icon-minus-round"></i>
+    - name: update
+      markup: |
+        <i class="cf-icon cf-icon-update"></i>
+         <i class="cf-icon cf-icon-update-round"></i>
+    tags:
+    - cf-icons
+*/
 
 .cf-icon-approved:before {
   content: "\e100";
