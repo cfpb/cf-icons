@@ -278,8 +278,37 @@
 .cf-icon-email-social-round:before {
   content: "\e213";
 }
-/* COMMUNICATION ICONS
-* -------------------------- */
+/* topdoc
+    name: Communication Icons
+    family: cf-icons
+    patterns:
+    - name: web
+      markup: |
+        <i class="cf-icon cf-icon-web"></i>
+        <i class="cf-icon cf-icon-web-round"></i>
+    - name: email
+      markup: |
+        <i class="cf-icon cf-icon-email"></i>
+        <i class="cf-icon cf-icon-email-round"></i>
+    - name: mail
+      markup: |
+        <i class="cf-icon cf-icon-mail"></i>
+        <i class="cf-icon cf-icon-mail-round"></i>
+    - name: phone
+      markup: |
+        <i class="cf-icon cf-icon-phone"></i>
+        <i class="cf-icon cf-icon-phone-round"></i>
+    - name: technology
+      markup: |
+        <i class="cf-icon cf-icon-technology"></i>
+        <i class="cf-icon cf-icon-technology-round"></i>
+    - name: fax
+      markup: |
+        <i class="cf-icon cf-icon-fax"></i>
+        <i class="cf-icon cf-icon-fax-round"></i>
+    tags:
+    - cf-icons
+*/
 .cf-icon-web:before {
   content: "\e300";
 }
@@ -316,8 +345,53 @@
 .cf-icon-fax-round:before {
   content: "\e311";
 }
-/* DOCUMENT ICONS
-* -------------------------- */
+/* topdoc
+    name: Document Icons
+    family: cf-icons
+    patterns:
+    - name: document
+      markup: |
+        <i class="cf-icon cf-icon-document"></i>
+        <i class="cf-icon cf-icon-document-round"></i>
+    - name: pdf
+      markup: |
+        <i class="cf-icon cf-icon-pdf"></i>
+        <i class="cf-icon cf-icon-pdf-round"></i>
+    - name: upload
+      markup: |
+        <i class="cf-icon cf-icon-upload"></i>
+        <i class="cf-icon cf-icon-upload-round"></i>
+    - name: copy
+      markup: |
+        <i class="cf-icon cf-icon-copy"></i>
+        <i class="cf-icon cf-icon-copy-round"></i>
+    - name: edit
+      markup: |
+        <i class="cf-icon cf-icon-edit"></i>
+        <i class="cf-icon cf-icon-edit-round"></i>
+    - name: attach
+      markup: |
+        <i class="cf-icon cf-icon-attach"></i>
+        <i class="cf-icon cf-icon-attach-round"></i>
+    - name: print
+      markup: |
+        <i class="cf-icon cf-icon-print"></i>
+        <i class="cf-icon cf-icon-print-round"></i>
+    - name: save
+      markup: |
+        <i class="cf-icon cf-icon-save"></i>
+        <i class="cf-icon cf-icon-save-round"></i>
+    - name: appendix
+      markup: |
+        <i class="cf-icon cf-icon-appendix"></i>
+        <i class="cf-icon cf-icon-appendix-round"></i>
+    - name: supplement
+      markup: |
+        <i class="cf-icon cf-icon-supplement"></i>
+        <i class="cf-icon cf-icon-supplement-round"></i>
+    tags:
+    - cf-icons
+*/
 .cf-icon-document:before {
   content: "\e400";
 }
