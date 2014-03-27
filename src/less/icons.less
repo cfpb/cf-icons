@@ -16,18 +16,6 @@
 
 @cf-css-prefix: cf-icon;
 
-/* topdoc
-    name: @font-face
-    family: cf-icons
-    patterns:
-    - name: Bulletproof Syntax
-      notes:
-        - "Follows the 'Bulletproof' @font-face syntax for browser support"
-        - "http://www.fontspring.com/blog/further-hardening-of-the-bulletproof-syntax"
-    tags:
-    - cf-icons
-*/
-
 @font-face {
   font-family: 'CFPB Minicons';
   src: url('../fonts/cf-icons.eot');
@@ -61,28 +49,50 @@
 
 
 /* topdoc
-    name: Icons
+    name: Navigation Icons
     family: cf-icons
     patterns:
-    - name: Standard Icon Use
-      notes:
-        ""
+    - name: left
       markup: |
-        <i class="cf-icon cf-icon-share"></i> Standard Icon
-    - name: Alt Icon Use
+        <i class="cf-icon cf-icon-left"></i>
+        <i class="cf-icon cf-icon-left-round"></i>
+    - name: right
       markup: |
-        <i class="cf-icon cf-icon-share-alt"></i> Alt Icon
+        <i class="cf-icon cf-icon-right"></i>
+        <i class="cf-icon cf-icon-right-round"></i>
+    - name: up
+      markup: |
+        <i class="cf-icon cf-icon-up"></i>
+        <i class="cf-icon cf-icon-up-round"></i>
+    - name: down
+      markup: |
+        <i class="cf-icon cf-icon-down"></i>
+        <i class="cf-icon cf-icon-down-round"></i>
+    - name: arrow-left
+      markup: |
+        <i class="cf-icon cf-icon-arrow-left"></i>
+        <i class="cf-icon cf-icon-arrow-left-round"></i>
+    - name: arrow-right
+      markup: |
+        <i class="cf-icon cf-icon-arrow-right"></i>
+        <i class="cf-icon cf-icon-arrow-right-round"></i>
+    - name: arrow-up
+      markup: |
+        <i class="cf-icon cf-icon-arrow-up"></i>
+        <i class="cf-icon cf-icon-arrow-up-round"></i>
+    - name: arrow-down
+      markup: |
+        <i class="cf-icon cf-icon-arrow-down"></i>
+        <i class="cf-icon cf-icon-arrow-down-round"></i>
     tags:
     - cf-icons
 */
 
-/* NAVIGATION ICONS
- * -------------------------- */
 .@{cf-css-prefix}-left:before {
   content: "\e000";
 }
 
-.@{cf-css-prefix}-left-alt:before {
+.@{cf-css-prefix}-left-round:before {
   content: "\e001";
 }
 
@@ -90,7 +100,7 @@
   content: "\e002";
 }
 
-.@{cf-css-prefix}-right-alt:before {
+.@{cf-css-prefix}-right-round:before {
   content: "\e003";
 }
 
@@ -98,7 +108,7 @@
   content: "\e004";
 }
 
-.@{cf-css-prefix}-up-alt:before {
+.@{cf-css-prefix}-up-round:before {
   content: "\e005";
 }
 
@@ -106,7 +116,7 @@
   content: "\e006";
 }
 
-.@{cf-css-prefix}-down-alt:before {
+.@{cf-css-prefix}-down-round:before {
   content: "\e007";
 }
 
@@ -114,7 +124,7 @@
   content: "\e008";
 }
 
-.@{cf-css-prefix}-arrow-left-alt:before {
+.@{cf-css-prefix}-arrow-left-round:before {
   content: "\e009";
 }
 
@@ -122,7 +132,7 @@
   content: "\e010";
 }
 
-.@{cf-css-prefix}-arrow-right-alt:before {
+.@{cf-css-prefix}-arrow-right-round:before {
   content: "\e011";
 }
 
@@ -130,7 +140,7 @@
   content: "\e012";
 }
 
-.@{cf-css-prefix}-arrow-up-alt:before {
+.@{cf-css-prefix}-arrow-up-round:before {
   content: "\e013";
 }
 
@@ -138,17 +148,51 @@
   content: "\e014";
 }
 
-.@{cf-css-prefix}-arrow-down-alt:before {
+.@{cf-css-prefix}-arrow-down-round:before {
   content: "\e015";
 }
 
-/* STATUS ICONS
-* -------------------------- */
+/* topdoc
+    name: Status Icons
+    family: cf-icons
+    patterns:
+    - name: approved
+      markup: |
+        <i class="cf-icon cf-icon-approved"></i>
+        <i class="cf-icon cf-icon-approved-round"></i>
+    - name: error
+      markup: |
+        <i class="cf-icon cf-icon-error"></i>
+        <i class="cf-icon cf-icon-error-round"></i>
+    - name: help
+      markup: |
+        <i class="cf-icon cf-icon-help"></i>
+        <i class="cf-icon cf-icon-help-round"></i>
+    - name: delete
+      markup: |
+        <i class="cf-icon cf-icon-delete"></i>
+        <i class="cf-icon cf-icon-delete-round"></i>
+    - name: plus
+      markup: |
+        <i class="cf-icon cf-icon-plus"></i>
+        <i class="cf-icon cf-icon-plus-round"></i>
+    - name: minus
+      markup: |
+        <i class="cf-icon cf-icon-minus"></i>
+        <i class="cf-icon cf-icon-minus-round"></i>
+    - name: update
+      markup: |
+        <i class="cf-icon cf-icon-update"></i>
+        <i class="cf-icon cf-icon-update-round"></i>
+    tags:
+    - cf-icons
+*/
+
 .@{cf-css-prefix}-approved:before {
   content: "\e100";
 }
 
-.@{cf-css-prefix}-approved-alt:before {
+.@{cf-css-prefix}-approved-round:before {
   content: "\e101";
 }
 
@@ -156,7 +200,7 @@
   content: "\e102";
 }
 
-.@{cf-css-prefix}-error-alt:before {
+.@{cf-css-prefix}-error-round:before {
   content: "\e103";
 }
 
@@ -164,7 +208,7 @@
   content: "\e104";
 }
 
-.@{cf-css-prefix}-help-alt:before {
+.@{cf-css-prefix}-help-round:before {
   content: "\e105";
 }
 
@@ -172,7 +216,7 @@
   content: "\e106";
 }
 
-.@{cf-css-prefix}-delete-alt:before {
+.@{cf-css-prefix}-delete-round:before {
   content: "\e107";
 }
 
@@ -180,7 +224,7 @@
   content: "\e108";
 }
 
-.@{cf-css-prefix}-plus-alt:before {
+.@{cf-css-prefix}-plus-round:before {
   content: "\e109";
 }
 
@@ -188,7 +232,7 @@
   content: "\e110";
 }
 
-.@{cf-css-prefix}-minus-alt:before {
+.@{cf-css-prefix}-minus-round:before {
   content: "\e111";
 }
 
@@ -196,17 +240,51 @@
   content: "\e112";
 }
 
-.@{cf-css-prefix}-update-alt:before {
+.@{cf-css-prefix}-update-round:before {
   content: "\e113";
 }
 
-/* SOCIAL ICONS
-* -------------------------- */
+/* topdoc
+    name: Social Icons
+    family: cf-icons
+    patterns:
+    - name: youtube
+      markup: |
+        <i class="cf-icon cf-icon-youtube"></i>
+        <i class="cf-icon cf-icon-youtube-square"></i>
+    - name: linkedin
+      markup: |
+        <i class="cf-icon cf-icon-linkedin"></i>
+        <i class="cf-icon cf-icon-linkedin-square"></i>
+    - name: facebook
+      markup: |
+        <i class="cf-icon cf-icon-facebook"></i>
+        <i class="cf-icon cf-icon-facebook-square"></i>
+    - name: flickr
+      markup: |
+        <i class="cf-icon cf-icon-flickr"></i>
+        <i class="cf-icon cf-icon-flickr-square"></i>
+    - name: plus
+      markup: |
+        <i class="cf-icon cf-icon-twitter"></i>
+        <i class="cf-icon cf-icon-twitter-square"></i>
+    - name: github
+      markup: |
+        <i class="cf-icon cf-icon-github"></i>
+        <i class="cf-icon cf-icon-github-square"></i>
+    - name: email-social
+      markup: |
+        <i class="cf-icon cf-icon-email-social"></i>
+        <i class="cf-icon cf-icon-email-social-square"></i>
+    tags:
+    - cf-icons
+*/
+
 .@{cf-css-prefix}-youtube:before {
   content: "\e200";
 }
 
-.@{cf-css-prefix}-youtube-alt:before {
+.@{cf-css-prefix}-youtube-square:before {
   content: "\e201";
 }
 
@@ -214,7 +292,7 @@
   content: "\e202";
 }
 
-.@{cf-css-prefix}-linkedin-alt:before {
+.@{cf-css-prefix}-linkedin-square:before {
   content: "\e203";
 }
 
@@ -222,7 +300,7 @@
   content: "\e204";
 }
 
-.@{cf-css-prefix}-facebook-alt:before {
+.@{cf-css-prefix}-facebook-square:before {
   content: "\e205";
 }
 
@@ -230,7 +308,7 @@
   content: "\e206";
 }
 
-.@{cf-css-prefix}-flickr-alt:before {
+.@{cf-css-prefix}-flickr-square:before {
   content: "\e207";
 }
 
@@ -238,7 +316,7 @@
   content: "\e208";
 }
 
-.@{cf-css-prefix}-twitter-alt:before {
+.@{cf-css-prefix}-twitter-square:before {
   content: "\e209";
 }
 
@@ -246,7 +324,7 @@
   content: "\e210";
 }
 
-.@{cf-css-prefix}-github-alt:before {
+.@{cf-css-prefix}-github-square:before {
   content: "\e211";
 }
 
@@ -254,18 +332,47 @@
   content: "\e212";
 }
 
-.@{cf-css-prefix}-email-social-alt:before {
+.@{cf-css-prefix}-email-social-square:before {
   content: "\e213";
 }
 
-/* COMMUNICATION ICONS
-* -------------------------- */
+/* topdoc
+    name: Communication Icons
+    family: cf-icons
+    patterns:
+    - name: web
+      markup: |
+        <i class="cf-icon cf-icon-web"></i>
+        <i class="cf-icon cf-icon-web-round"></i>
+    - name: email
+      markup: |
+        <i class="cf-icon cf-icon-email"></i>
+        <i class="cf-icon cf-icon-email-round"></i>
+    - name: mail
+      markup: |
+        <i class="cf-icon cf-icon-mail"></i>
+        <i class="cf-icon cf-icon-mail-round"></i>
+    - name: phone
+      markup: |
+        <i class="cf-icon cf-icon-phone"></i>
+        <i class="cf-icon cf-icon-phone-round"></i>
+    - name: technology
+      markup: |
+        <i class="cf-icon cf-icon-technology"></i>
+        <i class="cf-icon cf-icon-technology-round"></i>
+    - name: fax
+      markup: |
+        <i class="cf-icon cf-icon-fax"></i>
+        <i class="cf-icon cf-icon-fax-round"></i>
+    tags:
+    - cf-icons
+*/
 
 .@{cf-css-prefix}-web:before {
   content: "\e300";
 }
 
-.@{cf-css-prefix}-web-alt:before {
+.@{cf-css-prefix}-web-round:before {
   content: "\e301";
 }
 
@@ -273,7 +380,7 @@
   content: "\e302";
 }
 
-.@{cf-css-prefix}-email-alt:before {
+.@{cf-css-prefix}-email-round:before {
   content: "\e303";
 }
 
@@ -281,7 +388,7 @@
   content: "\e304";
 }
 
-.@{cf-css-prefix}-mail-alt:before {
+.@{cf-css-prefix}-mail-round:before {
   content: "\e305";
 }
 
@@ -289,7 +396,7 @@
   content: "\e306";
 }
 
-.@{cf-css-prefix}-phone-alt:before {
+.@{cf-css-prefix}-phone-round:before {
   content: "\e307";
 }
 
@@ -297,7 +404,7 @@
   content: "\e308";
 }
 
-.@{cf-css-prefix}-technology-alt:before {
+.@{cf-css-prefix}-technology-round:before {
   content: "\e309";
 }
 
@@ -305,18 +412,63 @@
   content: "\e310";
 }
 
-.@{cf-css-prefix}-fax-alt:before {
+.@{cf-css-prefix}-fax-round:before {
   content: "\e311";
 }
 
-/* DOCUMENT ICONS
-* -------------------------- */
+/* topdoc
+    name: Document Icons
+    family: cf-icons
+    patterns:
+    - name: document
+      markup: |
+        <i class="cf-icon cf-icon-document"></i>
+        <i class="cf-icon cf-icon-document-round"></i>
+    - name: pdf
+      markup: |
+        <i class="cf-icon cf-icon-pdf"></i>
+        <i class="cf-icon cf-icon-pdf-round"></i>
+    - name: upload
+      markup: |
+        <i class="cf-icon cf-icon-upload"></i>
+        <i class="cf-icon cf-icon-upload-round"></i>
+    - name: copy
+      markup: |
+        <i class="cf-icon cf-icon-copy"></i>
+        <i class="cf-icon cf-icon-copy-round"></i>
+    - name: edit
+      markup: |
+        <i class="cf-icon cf-icon-edit"></i>
+        <i class="cf-icon cf-icon-edit-round"></i>
+    - name: attach
+      markup: |
+        <i class="cf-icon cf-icon-attach"></i>
+        <i class="cf-icon cf-icon-attach-round"></i>
+    - name: print
+      markup: |
+        <i class="cf-icon cf-icon-print"></i>
+        <i class="cf-icon cf-icon-print-round"></i>
+    - name: save
+      markup: |
+        <i class="cf-icon cf-icon-save"></i>
+        <i class="cf-icon cf-icon-save-round"></i>
+    - name: appendix
+      markup: |
+        <i class="cf-icon cf-icon-appendix"></i>
+        <i class="cf-icon cf-icon-appendix-round"></i>
+    - name: supplement
+      markup: |
+        <i class="cf-icon cf-icon-supplement"></i>
+        <i class="cf-icon cf-icon-supplement-round"></i>
+    tags:
+    - cf-icons
+*/
 
 .@{cf-css-prefix}-document:before {
   content: "\e400";
 }
 
-.@{cf-css-prefix}-document-alt:before {
+.@{cf-css-prefix}-document-round:before {
   content: "\e401";
 }
 
@@ -324,7 +476,7 @@
   content: "\e402";
 }
 
-.@{cf-css-prefix}-pdf-alt:before {
+.@{cf-css-prefix}-pdf-round:before {
   content: "\e403";
 }
 
@@ -332,7 +484,7 @@
   content: "\e404";
 }
 
-.@{cf-css-prefix}-upload-alt:before {
+.@{cf-css-prefix}-upload-round:before {
   content: "\e405";
 }
 
@@ -340,7 +492,7 @@
   content: "\e406";
 }
 
-.@{cf-css-prefix}-download-alt:before {
+.@{cf-css-prefix}-download-round:before {
   content: "\e407";
 }
 
@@ -348,7 +500,7 @@
   content: "\e408";
 }
 
-.@{cf-css-prefix}-copy-alt:before {
+.@{cf-css-prefix}-copy-round:before {
   content: "\e409";
 }
 
@@ -356,7 +508,7 @@
   content: "\e410";
 }
 
-.@{cf-css-prefix}-edit-alt:before {
+.@{cf-css-prefix}-edit-round:before {
   content: "\e411";
 }
 
@@ -364,7 +516,7 @@
   content: "\e412";
 }
 
-.@{cf-css-prefix}-attach-alt:before {
+.@{cf-css-prefix}-attach-round:before {
   content: "\e413";
 }
 
@@ -372,7 +524,7 @@
   content: "\e414";
 }
 
-.@{cf-css-prefix}-print-alt:before {
+.@{cf-css-prefix}-print-round:before {
   content: "\e415";
 }
 
@@ -380,7 +532,7 @@
   content: "\e416";
 }
 
-.@{cf-css-prefix}-save-alt:before {
+.@{cf-css-prefix}-save-round:before {
   content: "\e417";
 }
 
@@ -388,7 +540,7 @@
   content: "\e418";
 }
 
-.@{cf-css-prefix}-appendix-alt:before {
+.@{cf-css-prefix}-appendix-round:before {
   content: "\e419";
 }
 
@@ -396,18 +548,103 @@
   content: "\e420";
 }
 
-.@{cf-css-prefix}-supplement-alt:before {
+.@{cf-css-prefix}-supplement-round:before {
   content: "\e421";
 }
 
-/* FINANCIAL PRODUCTS ICONS
-* -------------------------- */
+/* topdoc
+    name: Financial Product Icons
+    family: cf-icons
+    patterns:
+    - name: bank-account
+      markup: |
+        <i class="cf-icon cf-icon-bank-account"></i>
+        <i class="cf-icon cf-icon-bank-account-round"></i>
+    - name: credit-card
+      markup: |
+        <i class="cf-icon cf-icon-credit-card"></i>
+        <i class="cf-icon cf-icon-credit-card-round"></i>
+    - name: loan
+      markup: |
+        <i class="cf-icon cf-icon-loan"></i>
+        <i class="cf-icon cf-icon-loan-round"></i>
+    - name: money-transfer
+      markup: |
+        <i class="cf-icon cf-icon-money-transfer"></i>
+        <i class="cf-icon cf-icon-money-transfer-round"></i>
+    - name: mortgage
+      markup: |
+        <i class="cf-icon cf-icon-mortgage"></i>
+        <i class="cf-icon cf-icon-mortgage-round"></i>
+    - name: debt-collection
+      markup: |
+        <i class="cf-icon cf-icon-debt-collection"></i>
+        <i class="cf-icon cf-icon-debt-collection-round"></i>
+    - name: credit-report
+      markup: |
+        <i class="cf-icon cf-icon-credit-report"></i>
+        <i class="cf-icon cf-icon-credit-report-round"></i>
+    - name: money
+      markup: |
+        <i class="cf-icon cf-icon-money"></i>
+        <i class="cf-icon cf-icon-money-round"></i>
+    - name: quick-cash
+      markup: |
+        <i class="cf-icon cf-icon-quick-cash"></i>
+        <i class="cf-icon cf-icon-quick-cash-round"></i>
+    - name: contract
+      markup: |
+        <i class="cf-icon cf-icon-contract"></i>
+        <i class="cf-icon cf-icon-contract-round"></i>
+    - name: comlaint
+      markup: |
+        <i class="cf-icon cf-icon-complaint"></i>
+        <i class="cf-icon cf-icon-complaint-round"></i>
+    - name: getting-credit-card
+      markup: |
+        <i class="cf-icon cf-icon-getting-credit-card"></i>
+        <i class="cf-icon cf-icon-getting-credit-card-round"></i>
+    - name: buying-car
+      markup: |
+        <i class="cf-icon cf-icon-buying-car"></i>
+        <i class="cf-icon cf-icon-buying-car-round"></i>
+    - name: mortgage
+      markup: |
+        <i class="cf-icon cf-icon-paying-college"></i>
+        <i class="cf-icon cf-icon-paying-college-round"></i>
+    - name: owning-home
+      markup: |
+        <i class="cf-icon cf-icon-owning-home"></i>
+        <i class="cf-icon cf-icon-owning-home-round"></i>
+    - name: debt
+      markup: |
+        <i class="cf-icon cf-icon-debt"></i>
+        <i class="cf-icon cf-icon-debt-round"></i>
+    - name: building-credit
+      markup: |
+        <i class="cf-icon cf-icon-building-credit"></i>
+        <i class="cf-icon cf-icon-building-credit-round"></i>
+    - name: prepaid-cards
+      markup: |
+        <i class="cf-icon cf-icon-prepaid-cards"></i>
+        <i class="cf-icon cf-icon-prepaid-cards-round"></i>
+    - name: payday-loan
+      markup: |
+        <i class="cf-icon cf-icon-payday-loan"></i>
+        <i class="cf-icon cf-icon-payday-loan-round"></i>
+    - name: retirement
+      markup: |
+        <i class="cf-icon cf-icon-retirement"></i>
+        <i class="cf-icon cf-icon-retirement-round"></i>
+    tags:
+    - cf-icons
+*/
 
 .@{cf-css-prefix}-bank-account:before {
   content: "\e500";
 }
 
-.@{cf-css-prefix}-bank-account-alt:before {
+.@{cf-css-prefix}-bank-account-round:before {
   content: "\e501";
 }
 
@@ -415,7 +652,7 @@
   content: "\e502";
 }
 
-.@{cf-css-prefix}-credit-card-alt:before {
+.@{cf-css-prefix}-credit-card-round:before {
   content: "\e503";
 }
 
@@ -423,7 +660,7 @@
   content: "\e504";
 }
 
-.@{cf-css-prefix}-loan-alt:before {
+.@{cf-css-prefix}-loan-round:before {
   content: "\e505";
 }
 
@@ -431,7 +668,7 @@
   content: "\e506";
 }
 
-.@{cf-css-prefix}-money-transfer-alt:before {
+.@{cf-css-prefix}-money-transfer-round:before {
   content: "\e507";
 }
 
@@ -439,7 +676,7 @@
   content: "\e508";
 }
 
-.@{cf-css-prefix}-mortgage-alt:before {
+.@{cf-css-prefix}-mortgage-round:before {
   content: "\e509";
 }
 
@@ -447,7 +684,7 @@
   content: "\e510";
 }
 
-.@{cf-css-prefix}-debt-collection-alt:before {
+.@{cf-css-prefix}-debt-collection-round:before {
   content: "\e511";
 }
 
@@ -455,7 +692,7 @@
   content: "\e512";
 }
 
-.@{cf-css-prefix}-credit-report-alt:before {
+.@{cf-css-prefix}-credit-report-round:before {
   content: "\e513";
 }
 
@@ -463,7 +700,7 @@
   content: "\e514";
 }
 
-.@{cf-css-prefix}-money-alt:before {
+.@{cf-css-prefix}-money-round:before {
   content: "\e515";
 }
 
@@ -471,7 +708,7 @@
   content: "\e516";
 }
 
-.@{cf-css-prefix}-quick-cash-alt:before {
+.@{cf-css-prefix}-quick-cash-round:before {
   content: "\e517";
 }
 
@@ -479,7 +716,7 @@
   content: "\e518";
 }
 
-.@{cf-css-prefix}-contract-alt:before {
+.@{cf-css-prefix}-contract-round:before {
   content: "\e519";
 }
 
@@ -487,7 +724,7 @@
   content: "\e520";
 }
 
-.@{cf-css-prefix}-complaint-alt:before {
+.@{cf-css-prefix}-complaint-round:before {
   content: "\e521";
 }
 
@@ -495,7 +732,7 @@
   content: "\e522";
 }
 
-.@{cf-css-prefix}-getting-credit-card-alt:before {
+.@{cf-css-prefix}-getting-credit-card-round:before {
   content: "\e523";
 }
 
@@ -503,7 +740,7 @@
   content: "\e524";
 }
 
-.@{cf-css-prefix}-buying-car-alt:before {
+.@{cf-css-prefix}-buying-car-round:before {
   content: "\e525";
 }
 
@@ -511,7 +748,7 @@
   content: "\e526";
 }
 
-.@{cf-css-prefix}-paying-college-alt:before {
+.@{cf-css-prefix}-paying-college-round:before {
   content: "\e527";
 }
 
@@ -519,7 +756,7 @@
   content: "\e528";
 }
 
-.@{cf-css-prefix}-owning-home-alt:before {
+.@{cf-css-prefix}-owning-home-round:before {
   content: "\e529";
 }
 
@@ -527,7 +764,7 @@
   content: "\e530";
 }
 
-.@{cf-css-prefix}-debt-alt:before {
+.@{cf-css-prefix}-debt-round:before {
   content: "\e531";
 }
 
@@ -535,7 +772,7 @@
   content: "\e532";
 }
 
-.@{cf-css-prefix}-building-credit-alt:before {
+.@{cf-css-prefix}-building-credit-round:before {
   content: "\e533";
 }
 
@@ -543,7 +780,7 @@
   content: "\e534";
 }
 
-.@{cf-css-prefix}-prepaid-cards-alt:before {
+.@{cf-css-prefix}-prepaid-cards-round:before {
   content: "\e535";
 }
 
@@ -551,7 +788,7 @@
   content: "\e536";
 }
 
-.@{cf-css-prefix}-payday-loan-alt:before {
+.@{cf-css-prefix}-payday-loan-round:before {
   content: "\e537";
 }
 
@@ -559,18 +796,107 @@
   content: "\e538";
 }
 
-.@{cf-css-prefix}-retirement-alt:before {
+.@{cf-css-prefix}-retirement-round:before {
   content: "\e539";
 }
 
-/* WEB ICONS
-* -------------------------- */
+/* topdoc
+    name: Web Icons
+    family: cf-icons
+    patterns:
+    - name: user
+      markup: |
+        <i class="cf-icon cf-icon-user"></i>
+        <i class="cf-icon cf-icon-user-round"></i>
+    - name: wifi
+      markup: |
+        <i class="cf-icon cf-icon-wifi"></i>
+        <i class="cf-icon cf-icon-wifi-round"></i>
+    - name: search
+      markup: |
+        <i class="cf-icon cf-icon-search"></i>
+        <i class="cf-icon cf-icon-search-round"></i>
+    - name: share
+      markup: |
+        <i class="cf-icon cf-icon-share"></i>
+        <i class="cf-icon cf-icon-share-round"></i>
+    - name: link
+      markup: |
+        <i class="cf-icon cf-icon-link"></i>
+        <i class="cf-icon cf-icon-link-round"></i>
+    - name: external-link
+      markup: |
+        <i class="cf-icon cf-icon-external-link"></i>
+        <i class="cf-icon cf-icon-external-link-round"></i>
+    - name: audio-mute
+      markup: |
+        <i class="cf-icon cf-icon-audio-mute"></i>
+        <i class="cf-icon cf-icon-audio-mute-round"></i>
+    - name: audio-low
+      markup: |
+        <i class="cf-icon cf-icon-audio-low"></i>
+        <i class="cf-icon cf-icon-audio-low-round"></i>
+    - name: audio-medium
+      markup: |
+        <i class="cf-icon cf-icon-audio-medium"></i>
+        <i class="cf-icon cf-icon-audio-medium-round"></i>
+    - name: audio-max
+      markup: |
+        <i class="cf-icon cf-icon-audio-max"></i>
+        <i class="cf-icon cf-icon-audio-max-round"></i>
+    - name: favorite
+      markup: |
+        <i class="cf-icon cf-icon-favorite"></i>
+        <i class="cf-icon cf-icon-favorite-round"></i>
+    - name: unfavorite
+      markup: |
+        <i class="cf-icon cf-icon-unfavorite"></i>
+        <i class="cf-icon cf-icon-unfavorite-round"></i>
+    - name: bookmark
+      markup: |
+        <i class="cf-icon cf-icon-bookmark"></i>
+        <i class="cf-icon cf-icon-bookmark-round"></i>
+    - name: unbookmark
+      markup: |
+        <i class="cf-icon cf-icon-unbookmark"></i>
+        <i class="cf-icon cf-icon-unbookmark-round"></i>
+    - name: settings
+      markup: |
+        <i class="cf-icon cf-icon-settings"></i>
+        <i class="cf-icon cf-icon-settings-round"></i>
+    - name: menu
+      markup: |
+        <i class="cf-icon cf-icon-menu"></i>
+        <i class="cf-icon cf-icon-menu-round"></i>
+    - name: lock
+      markup: |
+        <i class="cf-icon cf-icon-lock"></i>
+        <i class="cf-icon cf-icon-lock-round"></i>
+    - name: unlock
+      markup: |
+        <i class="cf-icon cf-icon-unlock"></i>
+        <i class="cf-icon cf-icon-unlock-round"></i>
+    - name: clock
+      markup: |
+        <i class="cf-icon cf-icon-clock"></i>
+        <i class="cf-icon cf-icon-clock-round"></i>
+    - name: chart
+      markup: |
+        <i class="cf-icon cf-chart-lock"></i>
+        <i class="cf-icon cf-icon-chart-round"></i>
+    - name: play
+      markup: |
+        <i class="cf-icon cf-icon-play"></i>
+        <i class="cf-icon cf-icon-play-round"></i>
+    tags:
+    - cf-icons
+*/
 
 .@{cf-css-prefix}-user:before {
   content: "\e600";
 }
 
-.@{cf-css-prefix}-user-alt:before {
+.@{cf-css-prefix}-user-round:before {
   content: "\e601";
 }
 
@@ -578,7 +904,7 @@
   content: "\e602";
 }
 
-.@{cf-css-prefix}-wifi-alt:before {
+.@{cf-css-prefix}-wifi-round:before {
   content: "\e603";
 }
 
@@ -586,7 +912,7 @@
   content: "\e604";
 }
 
-.@{cf-css-prefix}-search-alt:before {
+.@{cf-css-prefix}-search-round:before {
   content: "\e605";
 }
 
@@ -594,7 +920,7 @@
   content: "\e606";
 }
 
-.@{cf-css-prefix}-share-alt:before {
+.@{cf-css-prefix}-share-round:before {
   content: "\e607";
 }
 
@@ -602,7 +928,7 @@
   content: "\e608";
 }
 
-.@{cf-css-prefix}-link-alt:before {
+.@{cf-css-prefix}-link-round:before {
   content: "\e609";
 }
 
@@ -610,7 +936,7 @@
   content: "\e610";
 }
 
-.@{cf-css-prefix}-external-link-alt:before {
+.@{cf-css-prefix}-external-link-round:before {
   content: "\e611";
 }
 
@@ -618,7 +944,7 @@
   content: "\e612";
 }
 
-.@{cf-css-prefix}-audio-mute-alt:before {
+.@{cf-css-prefix}-audio-mute-round:before {
   content: "\e616";
 }
 
@@ -626,7 +952,7 @@
   content: "\e613";
 }
 
-.@{cf-css-prefix}-audio-low-alt:before {
+.@{cf-css-prefix}-audio-low-round:before {
   content: "\e617";
 }
 
@@ -634,7 +960,7 @@
   content: "\e614";
 }
 
-.@{cf-css-prefix}-audio-medium-alt:before {
+.@{cf-css-prefix}-audio-medium-round:before {
   content: "\e618";
 }
 
@@ -642,7 +968,7 @@
   content: "\e615";
 }
 
-.@{cf-css-prefix}-audio-max-alt:before {
+.@{cf-css-prefix}-audio-max-round:before {
   content: "\e619";
 }
 
@@ -650,7 +976,7 @@
   content: "\e620";
 }
 
-.@{cf-css-prefix}-favorite-alt:before {
+.@{cf-css-prefix}-favorite-round:before {
   content: "\e621";
 }
 
@@ -658,7 +984,7 @@
   content: "\e622";
 }
 
-.@{cf-css-prefix}-unfavorite-alt:before {
+.@{cf-css-prefix}-unfavorite-round:before {
   content: "\e623";
 }
 
@@ -666,7 +992,7 @@
   content: "\e624";
 }
 
-.@{cf-css-prefix}-bookmark-alt:before {
+.@{cf-css-prefix}-bookmark-round:before {
   content: "\e625";
 }
 
@@ -674,7 +1000,7 @@
   content: "\e626";
 }
 
-.@{cf-css-prefix}-unbookmark-alt:before {
+.@{cf-css-prefix}-unbookmark-round:before {
   content: "\e627";
 }
 
@@ -682,7 +1008,7 @@
   content: "\e628";
 }
 
-.@{cf-css-prefix}-settings-alt:before {
+.@{cf-css-prefix}-settings-round:before {
   content: "\e629";
 }
 
@@ -690,7 +1016,7 @@
   content: "\e630";
 }
 
-.@{cf-css-prefix}-menu-alt:before {
+.@{cf-css-prefix}-menu-round:before {
   content: "\e631";
 }
 
@@ -698,7 +1024,7 @@
   content: "\e632";
 }
 
-.@{cf-css-prefix}-lock-alt:before {
+.@{cf-css-prefix}-lock-round:before {
   content: "\e633";
 }
 
@@ -706,7 +1032,7 @@
   content: "\e634";
 }
 
-.@{cf-css-prefix}-unlock-alt:before {
+.@{cf-css-prefix}-unlock-round:before {
   content: "\e635";
 }
 
@@ -714,7 +1040,7 @@
   content: "\e636";
 }
 
-.@{cf-css-prefix}-clock-alt:before {
+.@{cf-css-prefix}-clock-round:before {
   content: "\e637";
 }
 
@@ -722,7 +1048,7 @@
   content: "\e638";
 }
 
-.@{cf-css-prefix}-chart-alt:before {
+.@{cf-css-prefix}-chart-round:before {
   content: "\e639";
 }
 
@@ -730,6 +1056,11 @@
   content: "\e640";
 }
 
-.@{cf-css-prefix}-play-alt:before {
+.@{cf-css-prefix}-play-round:before {
   content: "\e641";
 }
+
+/* topdoc
+  name: EOF
+  eof: true
+*/
