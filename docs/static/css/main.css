@@ -12,17 +12,6 @@
     tags:
     - cf-icons
 */
-/* topdoc
-    name: @font-face
-    family: cf-icons
-    patterns:
-    - name: Bulletproof Syntax
-      notes:
-        - "Follows the 'Bulletproof' @font-face syntax for browser support"
-        - "http://www.fontspring.com/blog/further-hardening-of-the-bulletproof-syntax"
-    tags:
-    - cf-icons
-*/
 @font-face {
   font-family: 'CFPB Minicons';
   src: url("../fonts/cf-icons.eot");
@@ -557,6 +546,10 @@
 .cf-icon-play-round:before {
   content: "\e641";
 }
+/* topdoc
+  name: EOF
+  eof: true
+*/
 /* ==========================================================================
    Capital Framework
    Color Variables
