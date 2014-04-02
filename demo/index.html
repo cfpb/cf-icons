@@ -19,7 +19,18 @@
 <!--[if lt IE 8]>
     <link rel="stylesheet" type="text/css" href="static/css/main.lt-ie8.min.css"><![endif]-->
 <!--[if lt IE 9]>
-    <script src="static/demo/html5shiv-printshiv.js"></script><![endif]-->
+    <script src="static/demo/html5shiv-printshiv.js"></script>
+    <script>
+      var cfHead = document.getElementsByTagName('head')[0],
+        cfStyle = document.createElement('style');
+      cfStyle.type = 'text/css';
+      cfStyle.styleSheet.cssText = ':before,:after{content:none !important}';
+      cfHead.appendChild(cfStyle);
+      setTimeout(function(){
+        cfHead.removeChild(cfStyle);
+      }, 100);
+      
+    </script><![endif]-->
   </head>
   <body style="padding:4px;">
     <div id="less-variables">
