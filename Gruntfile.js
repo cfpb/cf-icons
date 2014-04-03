@@ -43,7 +43,8 @@ module.exports = function(grunt) {
 
       // Set whether or not to include html5shiv for demoing a component.
       // Only necessary if component patterns include new HTML5 elements
-      html5Shiv: false,
+      html5Shiv: true,
+      ie8FontFaceHack: true
     },
 
     // Define tasks specific to this project here
