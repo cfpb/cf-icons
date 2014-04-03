@@ -2,230 +2,94 @@ module.exports = function(grunt) {
 
   'use strict';
 
+  require('time-grunt')(grunt);
+
   var path = require('path');
 
-  grunt.initConfig({
 
-    pkg: grunt.file.readJSON('package.json'),
+  /**
+   * Load the tasks we want to use, which are specified as dependencies in
+   * the package.json file of cf-grunt-config.
+   */
 
-    bower: {
-      install: {
-        options: {
-          targetDir: 'src/vendor/',
-          install: true,
-          verbose: true,
-          cleanBowerDir: true,
-          cleanTargetDir: true,
-          layout: function(type, component) {
-            if (type === 'img') {
-              return path.join('../../demo/static/img');
-            } else if (type === 'fonts') {
-              return path.join('../../demo/static/fonts');
-            } else {
-              return path.join(component);
-            }
-          }
-        }
-      }
-    },
-
-    clean: {
-      vendor: [
-        'src/vendor/cf-concat/cf.less'
-      ]
-    },
-
-    concat: {
-      main: {
-        src: [
-          'src/*.less',
-          'src/less/*.less',
-          'src/vendor/cf-*/*.less'
-        ],
-        dest: 'src/vendor/cf-concat/cf.less',
-      }
-    },
-
-    less: {
-      main: {
-        options: {
-          paths: grunt.file.expand('src/less/','src/vendor/**/'),
-          yuicompress: false
-        },
-        files: {
-          'demo/static/css/main.css': [
-            'src/vendor/normalize-css/normalize.css',
-            'src/vendor/cf-concat/cf.less'
-          ]
-        }
-      }
-    },
-
-    'string-replace': {
-      vendor: {
-        files: {
-          'demo/static/css/': [
-            'demo/static/css/main.css',
-            'demo/static/css/main.lt-ie8.css'
-          ]
-        },
-        options: {
-          replacements: [{
-            pattern: /url\((.*?)\)/ig,
-            replacement: function (match, p1, offset, string) {
-              var path, pathParts, pathLength, filename, newPath;
-              path = p1.replace(/["']/g,''); // Removes quotation marks if there are any
-              pathParts = path.split('/'); // Splits the path so we can find the filename
-              pathLength = pathParts.length;
-              filename = pathParts[pathLength-1]; // The filename is the last item in pathParts
-
-              grunt.verbose.writeln('');
-              grunt.verbose.writeln('--------------');
-              grunt.verbose.writeln('Original path:');
-              grunt.verbose.writeln(match);
-              grunt.verbose.writeln('--------------');
-
-              // Rewrite the path based on the file type
-              // Note that .svg can be a font or a graphic, not usre what to do about this.
-              if (filename.indexOf('.eot') !== -1 ||
-                  filename.indexOf('.woff') !== -1 ||
-                  filename.indexOf('.ttf') !== -1 ||
-                  filename.indexOf('.svg') !== -1)
-              {
-                newPath = 'url("../fonts/'+filename+'")';
-                grunt.verbose.writeln('New path:');
-                grunt.verbose.writeln(newPath);
-                grunt.verbose.writeln('--------------');
-                return newPath;
-              } else if (filename.indexOf('.png') !== -1 ||
-                  filename.indexOf('.gif') !== -1 ||
-                  filename.indexOf('.jpg') !== -1)
-              {
-                newPath = 'url("../img/'+filename+'")';
-                grunt.verbose.writeln('New path:');
-                grunt.verbose.writeln(newPath);
-                grunt.verbose.writeln('--------------');
-                return newPath;
-              } else {
-                grunt.verbose.writeln('No new path.');
-                grunt.verbose.writeln('--------------');
-                return match;
-              }
-
-              grunt.verbose.writeln('--------------');
-              return match;
-            }
-          }]
-        }
-      }
-    },
-
-    autoprefixer: {
-      options: {
-        // Options we might want to enable in the future.
-        diff: false,
-        map: false
-      },
-      multiple_files: {
-        // Prefix all CSS files found in `src/static/css` and overwrite.
-        expand: true,
-        src: 'demo/static/css/main.css'
-      },
-    },
-
-    legacssy: {
-      demo: {
-        options: {
-          legacyWidth: 960
-        },
-        files: {
-          'demo/static/css/main.lt-ie9.min.css': 'demo/static/css/main.css'
-        }
-      }
-    },
-
-    copy: {
-      component_assets: {
-        files:
-        [{
-          expand: true,
-          cwd: 'src/',
-          src: ['fonts/**'],
-          dest: 'demo/static/'
-        }]
-      },
-      docs_assets: {
-        files:
-        [{
-          expand: true,
-          cwd: 'demo/',
-          src: ['static/img/**', 'static/fonts/**'],
-          dest: 'docs/'
-        }]
-      },
-      docs: {
-        files:
-        [{
-          expand: true,
-          cwd: 'demo/',
-          src: ['static/css/main.css'],
-          dest: 'docs/'
-        }]
-      }
-    },
-
-    topdoc: {
-      demo: {
-        options: {
-          source: 'demo/static/css/',
-          destination: 'demo/',
-          template: 'node_modules/cf-component-demo/' + ( grunt.option('tpl') || 'raw' ) + '/',
-          templateData: {
-            ltIE9AltSource: 'static/css/main.lt-ie9.min.css',
-            ltIE8Source: 'static/css/main.lt-ie8.min.css',
-            html5Shiv: true,
-            family: '<%= pkg.name %>',
-            title: '<%= pkg.name %> demo',
-            repo: '<%= pkg.homepage %>',
-            custom: '<%= grunt.file.read("demo/custom.html") %>'
-          }
-        }
-      },
-      docs: {
-        options: {
-          source: 'docs/static/css/',
-          destination: 'docs/',
-          template: 'node_modules/cf-component-demo/' + ( grunt.option('tpl') || 'code_examples' ) + '/',
-          templateData: {
-            title: '<%= pkg.name %> docs',
-            description: '<%= pkg.description %>',
-            family: '<%= pkg.name %>',
-            repo: '<%= pkg.homepage %>'
-          }
-        }
-      }
-    }
-
+  // Sets the CWD to the cf-grunt-config package so that the loadTasks method
+  // (employed in jit-grunt) looks in the correct place.
+  grunt.file.setBase('./node_modules/cf-grunt-config/');
+  // Loads all Grunt tasks in the node_modules directory within the new CWD.
+  require('jit-grunt')(grunt, {
+    // Below line needed because task name does not match package name
+    bower: 'grunt-bower-task'
   });
+  // Sets the CWD back to the project root so that the tasks work as expected.
+  grunt.file.setBase('../../');
+
 
   /**
-   * The above tasks are loaded here.
+   * Initialize a variable to represent the Grunt task configuration.
    */
-  grunt.loadNpmTasks('grunt-autoprefixer');
-  grunt.loadNpmTasks('grunt-bower-task');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-copy');
-  grunt.loadNpmTasks('grunt-contrib-less');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-legacssy');
-  grunt.loadNpmTasks('grunt-string-replace');
-  grunt.loadNpmTasks('grunt-topdoc');
+  var config = {
+
+    // Define a couple of utility variables that may be used in task options.
+    pkg: grunt.file.readJSON('package.json'),
+    env: process.env,
+    opt: {
+      // Include path to compiled extra CSS for IE7 and below.
+      // Definitely needed if this component depends on an icon font.
+      // ltIE8Source: 'static/css/main.lt-ie8.min.css',
+
+      // Include path to compiled alternate CSS for IE8 and below.
+      // Definitely needed if this component depends on media queries.
+      // ltIE9AltSource: 'static/css/main.lt-ie9.min.css',
+
+      // Set whether or not to include html5shiv for demoing a component.
+      // Only necessary if component patterns include new HTML5 elements
+      html5Shiv: false,
+    },
+
+    // Define tasks specific to this project here
+
+  };
+
 
   /**
-   * Create custom task aliases and combinations
+   * Define a function that, given the path argument, returns an object
+   * containing all JS files in that directory.
    */
-  grunt.registerTask('vendor', ['clean', 'bower', 'copy:component_assets', 'copy:docs_assets', 'concat']);
-  grunt.registerTask('default', ['clean', 'concat', 'less', 'string-replace', 'autoprefixer', 'copy:docs', 'topdoc', 'legacssy']);
+  function loadConfig(path) {
+    var glob = require('glob');
+    var object = {};
+    var key;
+
+    glob.sync('*', {cwd: path}).forEach(function(option) {
+      key = option.replace(/\.js$/,'');
+      object[key] = require(path + option);
+      grunt.verbose.writeln("External config item - " + key + ": " + object[key]);
+    });
+
+    return object;
+  }
+
+
+  /**
+   * Combine the config variable defined above with the results of calling the
+   * loadConfig function with the given path, which is where our external
+   * task options get installed by npm.
+   */
+  grunt.util._.extend(config, loadConfig('./node_modules/cf-grunt-config/tasks/options/'));
+
+  grunt.initConfig(config);
+
+
+  /**
+   * Load any project-specific tasks installed in the customary location.
+   */
+  require('load-grunt-tasks')(grunt);
+
+
+  /**
+   * Create custom task aliases for our component build workflow.
+   */
+  grunt.registerTask('vendor', ['bower', 'copy:component_assets', 'copy:docs_assets', 'concat']);
+  grunt.registerTask('default', ['concat', 'less', 'string-replace', 'autoprefixer', 'copy:docs', 'topdoc']);
 
 };

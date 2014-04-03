@@ -24,17 +24,12 @@
     "node": ">=0.8.0"
   },
   "devDependencies": {
+    "cf-component-demo": "git://github.com/cfpb/cf-component-demo.git",
+    "cf-grunt-config": "git://github.com/cfpb/cf-grunt-config.git",
+    "glob": "~3.2.9",
     "grunt": "latest",
-    "grunt-autoprefixer": "latest",
-    "grunt-bower-task": "~0.3.2",
-    "grunt-contrib-clean": "latest",
-    "grunt-contrib-concat": "latest",
-    "grunt-contrib-copy": "latest",
-    "grunt-contrib-less": "~0.8.3",
-    "grunt-contrib-watch": "~0.5.3",
-    "grunt-legacssy": "~0.3.1",
-    "grunt-string-replace": "latest",
-    "grunt-topdoc": "~0.2.0",
-    "cf-component-demo": "git://github.com/cfpb/cf-component-demo.git"
+    "jit-grunt": "latest",
+    "load-grunt-tasks": "latest",
+    "time-grunt": "latest"
   }
 }
