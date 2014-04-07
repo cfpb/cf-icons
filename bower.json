@@ -17,7 +17,9 @@
   "license": "https://github.com/cfpb/cf-icons/blob/gh-pages/TERMS.md",
   "main": "src/less/cf-icons.less",
   "dependencies": {
-    "cf-colors": "git://github.com/cfpb/cf-colors.git"
+    "cf-colors": "git://github.com/cfpb/cf-colors.git",
+    "normalize-css": "~3.0.0",
+    "normalize-legacy-addon": "git://github.com/cfpb/normalize-legacy-addon.git#0.1.0"
   },
   "exportsOverride": {
     "cf-*": {
