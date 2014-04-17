@@ -40,3 +40,9 @@ author or the affirmer.
 
 [policy]: https://github.com/cfpb/source-code-policy/
 [CC0]: http://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+
+## Exceptions
+
+- [Normalize](http://necolas.github.io/normalize.css/) by Nicolas Gallagher,
+  co-created with Jonathan Neal is licensed under MIT.
