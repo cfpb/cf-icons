@@ -30,7 +30,7 @@ module.exports = function(grunt) {
   var config = {
 
     // Define a couple of utility variables that may be used in task options.
-    pkg: grunt.file.readJSON('package.json'),
+    pkg: grunt.file.readJSON('bower.json'),
     env: process.env,
     opt: {
       // Include path to compiled extra CSS for IE7 and below.
