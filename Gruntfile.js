@@ -5,6 +5,7 @@ module.exports = function(grunt) {
   require('time-grunt')(grunt);
 
   var path = require('path');
+  var extend = require('node.extend');
 
 
   /**
@@ -76,7 +77,7 @@ module.exports = function(grunt) {
    * loadConfig function with the given path, which is where our external
    * task options get installed by npm.
    */
-  grunt.util._.extend(config, loadConfig('./node_modules/cf-grunt-config/tasks/options/'));
+  config = extend(true, loadConfig('./node_modules/cf-grunt-config/tasks/options/'), config);
 
   grunt.initConfig(config);
 

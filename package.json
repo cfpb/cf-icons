@@ -6,6 +6,7 @@
     "grunt": "latest",
     "jit-grunt": "latest",
     "load-grunt-tasks": "latest",
+    "node.extend": "^1.0.10",
     "time-grunt": "latest"
   }
 }
