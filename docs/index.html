@@ -75,6 +75,19 @@
 }</code></pre>
           </div>
         </li>
+        <li id="ie7-mixin" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">IE7 mixin</h1>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Enable</h3>
+                <ul class="demo_notes">
+                  <li>IE7 support is added by using dynamic properties (CSS expressions).</li>
+                </ul>
+              </header>
+            </li>
+          </ul>
+        </li>
         <li id="navigation-icons" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">Navigation icons</h1>
           <ul class="demo-pattern-list">
@@ -186,6 +199,9 @@
           <div class="demo-pattern-css">
             <pre class="css"><code data-language="css">.cf-icon-left:before {
   content: &quot;\e000&quot;;
+}
+.lt-ie8 .cf-icon-left:before {
+  *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '\e000');
 }
 .cf-icon-left-round:before {
   content: &quot;\e001&quot;;

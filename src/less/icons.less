@@ -21,6 +21,7 @@
 
 @cf-icon-prefix: cf-icon;
 @cf-icon-path: '../fonts';
+@cf-icon-ie7-support: true;
 
 @font-face {
   font-family: 'CFPB Minicons';
@@ -51,6 +52,22 @@
   font-weight: normal;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
+}
+
+
+/* topdoc
+  name: IE7 mixin
+  family: cf-icons
+  patterns:
+    - name: Enable
+      notes:
+        - "IE7 support is added by using dynamic properties (CSS expressions)."
+  tags:
+    - cf-icons
+*/
+
+.ie7icon(@inner) when (@cf-icon-ie7-support) {
+    *zoom: ~"expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '@{inner}')";
 }
 
 
@@ -96,6 +113,7 @@
 
 .@{cf-icon-prefix}-left:before {
   content: "\e000";
+  .lt-ie8 & { .ie7icon('\e000'); }
 }
 
 .@{cf-icon-prefix}-left-round:before {
