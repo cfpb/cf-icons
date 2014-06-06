@@ -41,6 +41,45 @@
                 </ul>
               </header>
             </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Toggle IE7 support</h3>
+                <ul class="demo_codenotes">
+                  <li>
+                    <pre class="code"><code>@cf-icon-ie7-support: true;</code></pre>
+                  </li>
+                </ul>
+                <ul class="demo_notes">
+                  <li>More on IE7 support can be found in the 'IE7 Support' section.</li>
+                </ul>
+              </header>
+            </li>
+          </ul>
+        </li>
+        <li id="ie7-support" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">IE7 Support</h1>
+          <ul class="demo_notes">
+            <li>IE7 support is added by using dynamic properties (CSS expressions).</li>
+            <li>To turn off IE7 support simply set @cf-icon-ie7-support to false.</li>
+          </ul>
+        </li>
+        <li id="the-basics" class="demo-component-list_item wrapper">
+          <h1 class="demo-component-list_header">The basics</h1>
+          <ul class="demo-pattern-list">
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>@font-face declaration</h3>
+              </header>
+            </li>
+            <li class="demo-pattern-list_item">
+              <header class="demo-pattern-list_header">
+                <h3>Base icon class</h3>
+                <ul class="demo_notes">
+                  <li>The cf-icon-prefix class applies all shared icon styles including the font family.</li>
+                  <li>All icons must use two classes, one for this base class and another to set the font character. For example: &lt;i class='cf-icon cf-icon-left'&gt;&lt;/i&gt;.</li>
+                </ul>
+              </header>
+            </li>
           </ul>
           <div class="demo-pattern-css">
             <pre class="css"><code data-language="css">@font-face {
@@ -49,23 +88,8 @@
   src: url('../fonts/cf-icons.eot?#iefix') format('embedded-opentype'), url('../fonts/cf-icons.woff') format('woff'), url('../fonts/cf-icons.ttf') format('truetype'), url('../fonts/cf-icons.svg') format('svg');
   font-weight: normal;
   font-style: normal;
-}</code></pre>
-          </div>
-        </li>
-        <li id="icon-class" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">Icon class</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Use of icon class</h3>
-                <ul class="demo_notes">
-                  <li>The cf-icon-prefix class applies the font family to an element.</li>
-                </ul>
-              </header>
-            </li>
-          </ul>
-          <div class="demo-pattern-css">
-            <pre class="css"><code data-language="css">.cf-icon {
+}
+.cf-icon {
   font-family: 'CFPB Minicons';
   display: inline-block;
   font-style: normal;
@@ -74,19 +98,6 @@
   -webkit-font-smoothing: antialiased;
 }</code></pre>
           </div>
-        </li>
-        <li id="ie7-mixin" class="demo-component-list_item wrapper">
-          <h1 class="demo-component-list_header">IE7 mixin</h1>
-          <ul class="demo-pattern-list">
-            <li class="demo-pattern-list_item">
-              <header class="demo-pattern-list_header">
-                <h3>Enable</h3>
-                <ul class="demo_notes">
-                  <li>IE7 support is added by using dynamic properties (CSS expressions).</li>
-                </ul>
-              </header>
-            </li>
-          </ul>
         </li>
         <li id="navigation-icons" class="demo-component-list_item wrapper">
           <h1 class="demo-component-list_header">Navigation icons</h1>

@@ -3,6 +3,7 @@
    Icons
    ========================================================================== */
 
+
 /* topdoc
   name: Less variables
   family: cf-icons
@@ -15,6 +16,11 @@
     - name: Path to icon font files
       codenotes:
         - "@cf-icon-path: '../fonts';"
+    - name: Toggle IE7 support
+      codenotes:
+        - "@cf-icon-ie7-support: true;"
+      notes:
+        - "More on IE7 support can be found in the 'IE7 Support' section."
   tags:
     - cf-icons
 */
@@ -22,6 +28,38 @@
 @cf-icon-prefix: cf-icon;
 @cf-icon-path: '../fonts';
 @cf-icon-ie7-support: true;
+
+
+/* topdoc
+  name: IE7 Support
+  family: cf-icons
+  notes:
+    - "IE7 support is added by using dynamic properties (CSS expressions)."
+    - "To turn off IE7 support simply set @cf-icon-ie7-support to false."
+  tags:
+    - cf-icons
+*/
+
+.cf-icon-ie7(@inner) when (@cf-icon-ie7-support) {
+    *zoom: ~"expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '@{inner}')";
+}
+
+
+/* topdoc
+  name: The basics
+  family: cf-icons
+  patterns:
+    - name: "@font-face declaration"
+    - name: Base icon class
+      notes:
+        - "The cf-icon-prefix class applies all shared icon styles including the
+          font family."
+        - "All icons must use two classes, one for this base class and another
+          to set the font character. For example:
+          <i class='cf-icon cf-icon-left'></i>."
+  tags:
+    - cf-icons
+*/
 
 @font-face {
   font-family: 'CFPB Minicons';
@@ -34,17 +72,6 @@
   font-style: normal;
 }
 
-/* topdoc
-  name: Icon class
-  family: cf-icons
-  patterns:
-    - name: Use of icon class
-      notes:
-        - "The cf-icon-prefix class applies the font family to an element."
-  tags:
-    - cf-icons
-*/
-
 .@{cf-icon-prefix} {
   font-family: 'CFPB Minicons';
   display: inline-block;
@@ -52,22 +79,6 @@
   font-weight: normal;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-}
-
-
-/* topdoc
-  name: IE7 mixin
-  family: cf-icons
-  patterns:
-    - name: Enable
-      notes:
-        - "IE7 support is added by using dynamic properties (CSS expressions)."
-  tags:
-    - cf-icons
-*/
-
-.cf-icon-ie7(@inner) when (@cf-icon-ie7-support) {
-    *zoom: ~"expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '@{inner}')";
 }
 
 
@@ -191,6 +202,7 @@
     .lt-ie8 & { .cf-icon-ie7("\e015"); }
 }
 
+
 /* topdoc
     name: Status icons
     family: cf-icons
@@ -296,6 +308,7 @@
     &:before  {     content: "\e113"; }
     .lt-ie8 & { .cf-icon-ie7("\e113"); }
 }
+
 
 /* topdoc
     name: Social icons
@@ -403,6 +416,7 @@
     .lt-ie8 & { .cf-icon-ie7("\e213"); }
 }
 
+
 /* topdoc
     name: Communication icons
     family: cf-icons
@@ -494,6 +508,7 @@
     &:before  {     content: "\e311"; }
     .lt-ie8 & { .cf-icon-ie7("\e311"); }
 }
+
 
 /* topdoc
     name: Document icons
@@ -652,6 +667,7 @@
     &:before  {     content: "\e421"; }
     .lt-ie8 & { .cf-icon-ie7("\e421"); }
 }
+
 
 /* topdoc
     name: Financial product icons
@@ -940,6 +956,7 @@
     &:before  {     content: "\e539"; }
     .lt-ie8 & { .cf-icon-ie7("\e539"); }
 }
+
 
 /* topdoc
     name: Web icons
