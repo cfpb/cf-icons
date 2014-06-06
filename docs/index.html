@@ -76,7 +76,8 @@
                 <h3>Base icon class</h3>
                 <ul class="demo_notes">
                   <li>The cf-icon-prefix class applies all shared icon styles including the font family.</li>
-                  <li>All icons must use two classes, one for this base class and another to set the font character. For example: &lt;i class='cf-icon cf-icon-left'&gt;&lt;/i&gt;.</li>
+                  <li>All icons must use two classes, one for this base class and another to set the font character. For example: &lt;span class='cf-icon cf-icon-left'&gt;&lt;/span&gt;.</li>
+                  <li>Please use the span element instead of the i element. This avoids font family cascading conflicts when using an italic webfont on i elements and then another font for the icons. Note that this issue only pops up in older versions of Internet Explorer.</li>
                 </ul>
               </header>
             </li>
@@ -107,12 +108,12 @@
                 <h3>left</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-left"></i>
-<i class="cf-icon cf-icon-left-round"></i>
+<span class="cf-icon cf-icon-left"></span>
+<span class="cf-icon cf-icon-left-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-left&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-left-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-left&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-left-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -120,12 +121,12 @@
                 <h3>right</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-right"></i>
-<i class="cf-icon cf-icon-right-round"></i>
+<span class="cf-icon cf-icon-right"></span>
+<span class="cf-icon cf-icon-right-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-right&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-right-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-right&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-right-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -133,12 +134,12 @@
                 <h3>up</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-up"></i>
-<i class="cf-icon cf-icon-up-round"></i>
+<span class="cf-icon cf-icon-up"></span>
+<span class="cf-icon cf-icon-up-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-up&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-up-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-up&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-up-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -146,12 +147,12 @@
                 <h3>down</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-down"></i>
-<i class="cf-icon cf-icon-down-round"></i>
+<span class="cf-icon cf-icon-down"></span>
+<span class="cf-icon cf-icon-down-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-down&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-down-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-down&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-down-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -159,12 +160,12 @@
                 <h3>arrow-left</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-arrow-left"></i>
-<i class="cf-icon cf-icon-arrow-left-round"></i>
+<span class="cf-icon cf-icon-arrow-left"></span>
+<span class="cf-icon cf-icon-arrow-left-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-arrow-left&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-arrow-left-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-arrow-left&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-arrow-left-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -172,12 +173,12 @@
                 <h3>arrow-right</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-arrow-right"></i>
-<i class="cf-icon cf-icon-arrow-right-round"></i>
+<span class="cf-icon cf-icon-arrow-right"></span>
+<span class="cf-icon cf-icon-arrow-right-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-arrow-right&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-arrow-right-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-arrow-right&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-arrow-right-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -185,12 +186,12 @@
                 <h3>arrow-up</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-arrow-up"></i>
-<i class="cf-icon cf-icon-arrow-up-round"></i>
+<span class="cf-icon cf-icon-arrow-up"></span>
+<span class="cf-icon cf-icon-arrow-up-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-arrow-up&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-arrow-up-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-arrow-up&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-arrow-up-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -198,12 +199,12 @@
                 <h3>arrow-down</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-arrow-down"></i>
-<i class="cf-icon cf-icon-arrow-down-round"></i>
+<span class="cf-icon cf-icon-arrow-down"></span>
+<span class="cf-icon cf-icon-arrow-down-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-arrow-down&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-arrow-down-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-arrow-down&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-arrow-down-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
           </ul>
@@ -314,12 +315,12 @@
                 <h3>approved</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-approved"></i>
-<i class="cf-icon cf-icon-approved-round"></i>
+<span class="cf-icon cf-icon-approved"></span>
+<span class="cf-icon cf-icon-approved-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-approved&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-approved-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-approved&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-approved-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -327,12 +328,12 @@
                 <h3>error</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-error"></i>
-<i class="cf-icon cf-icon-error-round"></i>
+<span class="cf-icon cf-icon-error"></span>
+<span class="cf-icon cf-icon-error-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-error&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-error-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-error&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-error-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -340,12 +341,12 @@
                 <h3>help</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-help"></i>
-<i class="cf-icon cf-icon-help-round"></i>
+<span class="cf-icon cf-icon-help"></span>
+<span class="cf-icon cf-icon-help-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-help&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-help-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-help&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-help-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -353,12 +354,12 @@
                 <h3>delete</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-delete"></i>
-<i class="cf-icon cf-icon-delete-round"></i>
+<span class="cf-icon cf-icon-delete"></span>
+<span class="cf-icon cf-icon-delete-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-delete&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-delete-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-delete&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-delete-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -366,12 +367,12 @@
                 <h3>plus</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-plus"></i>
-<i class="cf-icon cf-icon-plus-round"></i>
+<span class="cf-icon cf-icon-plus"></span>
+<span class="cf-icon cf-icon-plus-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-plus&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-plus-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-plus&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-plus-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -379,12 +380,12 @@
                 <h3>minus</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-minus"></i>
-<i class="cf-icon cf-icon-minus-round"></i>
+<span class="cf-icon cf-icon-minus"></span>
+<span class="cf-icon cf-icon-minus-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-minus&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-minus-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-minus&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-minus-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -392,12 +393,12 @@
                 <h3>update</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-update"></i>
-<i class="cf-icon cf-icon-update-round"></i>
+<span class="cf-icon cf-icon-update"></span>
+<span class="cf-icon cf-icon-update-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-update&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-update-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-update&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-update-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
           </ul>
@@ -496,12 +497,12 @@
                 <h3>youtube</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-youtube"></i>
-<i class="cf-icon cf-icon-youtube-square"></i>
+<span class="cf-icon cf-icon-youtube"></span>
+<span class="cf-icon cf-icon-youtube-square"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-youtube&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-youtube-square&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-youtube&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-youtube-square&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -509,12 +510,12 @@
                 <h3>linkedin</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-linkedin"></i>
-<i class="cf-icon cf-icon-linkedin-square"></i>
+<span class="cf-icon cf-icon-linkedin"></span>
+<span class="cf-icon cf-icon-linkedin-square"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-linkedin&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-linkedin-square&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-linkedin&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-linkedin-square&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -522,12 +523,12 @@
                 <h3>facebook</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-facebook"></i>
-<i class="cf-icon cf-icon-facebook-square"></i>
+<span class="cf-icon cf-icon-facebook"></span>
+<span class="cf-icon cf-icon-facebook-square"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-facebook&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-facebook-square&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-facebook&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-facebook-square&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -535,12 +536,12 @@
                 <h3>flickr</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-flickr"></i>
-<i class="cf-icon cf-icon-flickr-square"></i>
+<span class="cf-icon cf-icon-flickr"></span>
+<span class="cf-icon cf-icon-flickr-square"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-flickr&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-flickr-square&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-flickr&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-flickr-square&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -548,12 +549,12 @@
                 <h3>plus</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-twitter"></i>
-<i class="cf-icon cf-icon-twitter-square"></i>
+<span class="cf-icon cf-icon-twitter"></span>
+<span class="cf-icon cf-icon-twitter-square"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-twitter&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-twitter-square&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-twitter&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-twitter-square&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -561,12 +562,12 @@
                 <h3>github</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-github"></i>
-<i class="cf-icon cf-icon-github-square"></i>
+<span class="cf-icon cf-icon-github"></span>
+<span class="cf-icon cf-icon-github-square"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-github&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-github-square&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-github&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-github-square&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -574,12 +575,12 @@
                 <h3>email-social</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-email-social"></i>
-<i class="cf-icon cf-icon-email-social-square"></i>
+<span class="cf-icon cf-icon-email-social"></span>
+<span class="cf-icon cf-icon-email-social-square"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-email-social&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-email-social-square&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-email-social&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-email-social-square&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
           </ul>
@@ -678,12 +679,12 @@
                 <h3>web</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-web"></i>
-<i class="cf-icon cf-icon-web-round"></i>
+<span class="cf-icon cf-icon-web"></span>
+<span class="cf-icon cf-icon-web-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-web&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-web-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-web&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-web-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -691,12 +692,12 @@
                 <h3>email</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-email"></i>
-<i class="cf-icon cf-icon-email-round"></i>
+<span class="cf-icon cf-icon-email"></span>
+<span class="cf-icon cf-icon-email-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-email&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-email-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-email&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-email-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -704,12 +705,12 @@
                 <h3>mail</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-mail"></i>
-<i class="cf-icon cf-icon-mail-round"></i>
+<span class="cf-icon cf-icon-mail"></span>
+<span class="cf-icon cf-icon-mail-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-mail&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-mail-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-mail&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-mail-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -717,12 +718,12 @@
                 <h3>phone</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-phone"></i>
-<i class="cf-icon cf-icon-phone-round"></i>
+<span class="cf-icon cf-icon-phone"></span>
+<span class="cf-icon cf-icon-phone-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-phone&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-phone-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-phone&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-phone-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -730,12 +731,12 @@
                 <h3>technology</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-technology"></i>
-<i class="cf-icon cf-icon-technology-round"></i>
+<span class="cf-icon cf-icon-technology"></span>
+<span class="cf-icon cf-icon-technology-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-technology&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-technology-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-technology&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-technology-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -743,12 +744,12 @@
                 <h3>fax</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-fax"></i>
-<i class="cf-icon cf-icon-fax-round"></i>
+<span class="cf-icon cf-icon-fax"></span>
+<span class="cf-icon cf-icon-fax-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-fax&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-fax-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-fax&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-fax-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
           </ul>
@@ -835,12 +836,12 @@
                 <h3>document</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-document"></i>
-<i class="cf-icon cf-icon-document-round"></i>
+<span class="cf-icon cf-icon-document"></span>
+<span class="cf-icon cf-icon-document-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-document&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-document-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-document&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-document-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -848,12 +849,12 @@
                 <h3>pdf</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-pdf"></i>
-<i class="cf-icon cf-icon-pdf-round"></i>
+<span class="cf-icon cf-icon-pdf"></span>
+<span class="cf-icon cf-icon-pdf-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-pdf&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-pdf-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-pdf&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-pdf-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -861,12 +862,12 @@
                 <h3>upload</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-upload"></i>
-<i class="cf-icon cf-icon-upload-round"></i>
+<span class="cf-icon cf-icon-upload"></span>
+<span class="cf-icon cf-icon-upload-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-upload&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-upload-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-upload&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-upload-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -874,12 +875,12 @@
                 <h3>copy</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-copy"></i>
-<i class="cf-icon cf-icon-copy-round"></i>
+<span class="cf-icon cf-icon-copy"></span>
+<span class="cf-icon cf-icon-copy-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-copy&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-copy-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-copy&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-copy-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -887,12 +888,12 @@
                 <h3>edit</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-edit"></i>
-<i class="cf-icon cf-icon-edit-round"></i>
+<span class="cf-icon cf-icon-edit"></span>
+<span class="cf-icon cf-icon-edit-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-edit&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-edit-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-edit&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-edit-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -900,12 +901,12 @@
                 <h3>attach</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-attach"></i>
-<i class="cf-icon cf-icon-attach-round"></i>
+<span class="cf-icon cf-icon-attach"></span>
+<span class="cf-icon cf-icon-attach-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-attach&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-attach-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-attach&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-attach-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -913,12 +914,12 @@
                 <h3>print</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-print"></i>
-<i class="cf-icon cf-icon-print-round"></i>
+<span class="cf-icon cf-icon-print"></span>
+<span class="cf-icon cf-icon-print-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-print&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-print-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-print&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-print-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -926,12 +927,12 @@
                 <h3>save</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-save"></i>
-<i class="cf-icon cf-icon-save-round"></i>
+<span class="cf-icon cf-icon-save"></span>
+<span class="cf-icon cf-icon-save-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-save&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-save-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-save&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-save-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -939,12 +940,12 @@
                 <h3>appendix</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-appendix"></i>
-<i class="cf-icon cf-icon-appendix-round"></i>
+<span class="cf-icon cf-icon-appendix"></span>
+<span class="cf-icon cf-icon-appendix-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-appendix&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-appendix-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-appendix&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-appendix-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -952,12 +953,12 @@
                 <h3>supplement</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-supplement"></i>
-<i class="cf-icon cf-icon-supplement-round"></i>
+<span class="cf-icon cf-icon-supplement"></span>
+<span class="cf-icon cf-icon-supplement-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-supplement&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-supplement-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-supplement&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-supplement-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
           </ul>
@@ -1104,12 +1105,12 @@
                 <h3>bank-account</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-bank-account"></i>
-<i class="cf-icon cf-icon-bank-account-round"></i>
+<span class="cf-icon cf-icon-bank-account"></span>
+<span class="cf-icon cf-icon-bank-account-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-bank-account&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-bank-account-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-bank-account&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-bank-account-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1117,12 +1118,12 @@
                 <h3>credit-card</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-credit-card"></i>
-<i class="cf-icon cf-icon-credit-card-round"></i>
+<span class="cf-icon cf-icon-credit-card"></span>
+<span class="cf-icon cf-icon-credit-card-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-credit-card&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-credit-card-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-credit-card&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-credit-card-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1130,12 +1131,12 @@
                 <h3>loan</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-loan"></i>
-<i class="cf-icon cf-icon-loan-round"></i>
+<span class="cf-icon cf-icon-loan"></span>
+<span class="cf-icon cf-icon-loan-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-loan&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-loan-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-loan&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-loan-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1143,12 +1144,12 @@
                 <h3>money-transfer</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-money-transfer"></i>
-<i class="cf-icon cf-icon-money-transfer-round"></i>
+<span class="cf-icon cf-icon-money-transfer"></span>
+<span class="cf-icon cf-icon-money-transfer-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-money-transfer&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-money-transfer-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-money-transfer&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-money-transfer-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1156,12 +1157,12 @@
                 <h3>mortgage</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-mortgage"></i>
-<i class="cf-icon cf-icon-mortgage-round"></i>
+<span class="cf-icon cf-icon-mortgage"></span>
+<span class="cf-icon cf-icon-mortgage-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-mortgage&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-mortgage-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-mortgage&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-mortgage-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1169,12 +1170,12 @@
                 <h3>debt-collection</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-debt-collection"></i>
-<i class="cf-icon cf-icon-debt-collection-round"></i>
+<span class="cf-icon cf-icon-debt-collection"></span>
+<span class="cf-icon cf-icon-debt-collection-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-debt-collection&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-debt-collection-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-debt-collection&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-debt-collection-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1182,12 +1183,12 @@
                 <h3>credit-report</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-credit-report"></i>
-<i class="cf-icon cf-icon-credit-report-round"></i>
+<span class="cf-icon cf-icon-credit-report"></span>
+<span class="cf-icon cf-icon-credit-report-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-credit-report&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-credit-report-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-credit-report&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-credit-report-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1195,12 +1196,12 @@
                 <h3>money</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-money"></i>
-<i class="cf-icon cf-icon-money-round"></i>
+<span class="cf-icon cf-icon-money"></span>
+<span class="cf-icon cf-icon-money-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-money&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-money-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-money&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-money-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1208,12 +1209,12 @@
                 <h3>quick-cash</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-quick-cash"></i>
-<i class="cf-icon cf-icon-quick-cash-round"></i>
+<span class="cf-icon cf-icon-quick-cash"></span>
+<span class="cf-icon cf-icon-quick-cash-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-quick-cash&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-quick-cash-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-quick-cash&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-quick-cash-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1221,12 +1222,12 @@
                 <h3>contract</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-contract"></i>
-<i class="cf-icon cf-icon-contract-round"></i>
+<span class="cf-icon cf-icon-contract"></span>
+<span class="cf-icon cf-icon-contract-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-contract&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-contract-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-contract&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-contract-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1234,12 +1235,12 @@
                 <h3>comlaint</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-complaint"></i>
-<i class="cf-icon cf-icon-complaint-round"></i>
+<span class="cf-icon cf-icon-complaint"></span>
+<span class="cf-icon cf-icon-complaint-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-complaint&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-complaint-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-complaint&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-complaint-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1247,12 +1248,12 @@
                 <h3>getting-credit-card</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-getting-credit-card"></i>
-<i class="cf-icon cf-icon-getting-credit-card-round"></i>
+<span class="cf-icon cf-icon-getting-credit-card"></span>
+<span class="cf-icon cf-icon-getting-credit-card-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-getting-credit-card&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-getting-credit-card-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-getting-credit-card&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-getting-credit-card-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1260,12 +1261,12 @@
                 <h3>buying-car</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-buying-car"></i>
-<i class="cf-icon cf-icon-buying-car-round"></i>
+<span class="cf-icon cf-icon-buying-car"></span>
+<span class="cf-icon cf-icon-buying-car-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-buying-car&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-buying-car-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-buying-car&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-buying-car-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1273,12 +1274,12 @@
                 <h3>paying-college</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-paying-college"></i>
-<i class="cf-icon cf-icon-paying-college-round"></i>
+<span class="cf-icon cf-icon-paying-college"></span>
+<span class="cf-icon cf-icon-paying-college-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-paying-college&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-paying-college-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-paying-college&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-paying-college-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1286,12 +1287,12 @@
                 <h3>owning-home</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-owning-home"></i>
-<i class="cf-icon cf-icon-owning-home-round"></i>
+<span class="cf-icon cf-icon-owning-home"></span>
+<span class="cf-icon cf-icon-owning-home-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-owning-home&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-owning-home-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-owning-home&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-owning-home-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1299,12 +1300,12 @@
                 <h3>debt</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-debt"></i>
-<i class="cf-icon cf-icon-debt-round"></i>
+<span class="cf-icon cf-icon-debt"></span>
+<span class="cf-icon cf-icon-debt-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-debt&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-debt-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-debt&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-debt-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1312,12 +1313,12 @@
                 <h3>building-credit</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-building-credit"></i>
-<i class="cf-icon cf-icon-building-credit-round"></i>
+<span class="cf-icon cf-icon-building-credit"></span>
+<span class="cf-icon cf-icon-building-credit-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-building-credit&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-building-credit-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-building-credit&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-building-credit-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1325,12 +1326,12 @@
                 <h3>prepaid-cards</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-prepaid-cards"></i>
-<i class="cf-icon cf-icon-prepaid-cards-round"></i>
+<span class="cf-icon cf-icon-prepaid-cards"></span>
+<span class="cf-icon cf-icon-prepaid-cards-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-prepaid-cards&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-prepaid-cards-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-prepaid-cards&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-prepaid-cards-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1338,12 +1339,12 @@
                 <h3>payday-loan</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-payday-loan"></i>
-<i class="cf-icon cf-icon-payday-loan-round"></i>
+<span class="cf-icon cf-icon-payday-loan"></span>
+<span class="cf-icon cf-icon-payday-loan-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-payday-loan&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-payday-loan-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-payday-loan&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-payday-loan-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1351,12 +1352,12 @@
                 <h3>retirement</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-retirement"></i>
-<i class="cf-icon cf-icon-retirement-round"></i>
+<span class="cf-icon cf-icon-retirement"></span>
+<span class="cf-icon cf-icon-retirement-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-retirement&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-retirement-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-retirement&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-retirement-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
           </ul>
@@ -1611,12 +1612,12 @@
                 <h3>user</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-user"></i>
-<i class="cf-icon cf-icon-user-round"></i>
+<span class="cf-icon cf-icon-user"></span>
+<span class="cf-icon cf-icon-user-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-user&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-user-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-user&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-user-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1624,12 +1625,12 @@
                 <h3>wifi</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-wifi"></i>
-<i class="cf-icon cf-icon-wifi-round"></i>
+<span class="cf-icon cf-icon-wifi"></span>
+<span class="cf-icon cf-icon-wifi-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-wifi&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-wifi-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-wifi&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-wifi-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1637,12 +1638,12 @@
                 <h3>search</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-search"></i>
-<i class="cf-icon cf-icon-search-round"></i>
+<span class="cf-icon cf-icon-search"></span>
+<span class="cf-icon cf-icon-search-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-search&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-search-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-search&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-search-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1650,12 +1651,12 @@
                 <h3>share</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-share"></i>
-<i class="cf-icon cf-icon-share-round"></i>
+<span class="cf-icon cf-icon-share"></span>
+<span class="cf-icon cf-icon-share-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-share&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-share-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-share&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-share-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1663,12 +1664,12 @@
                 <h3>link</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-link"></i>
-<i class="cf-icon cf-icon-link-round"></i>
+<span class="cf-icon cf-icon-link"></span>
+<span class="cf-icon cf-icon-link-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-link&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-link-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-link&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-link-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1676,12 +1677,12 @@
                 <h3>external-link</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-external-link"></i>
-<i class="cf-icon cf-icon-external-link-round"></i>
+<span class="cf-icon cf-icon-external-link"></span>
+<span class="cf-icon cf-icon-external-link-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-external-link&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-external-link-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-external-link&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-external-link-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1689,12 +1690,12 @@
                 <h3>audio-mute</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-audio-mute"></i>
-<i class="cf-icon cf-icon-audio-mute-round"></i>
+<span class="cf-icon cf-icon-audio-mute"></span>
+<span class="cf-icon cf-icon-audio-mute-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-audio-mute&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-audio-mute-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-audio-mute&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-audio-mute-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1702,12 +1703,12 @@
                 <h3>audio-low</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-audio-low"></i>
-<i class="cf-icon cf-icon-audio-low-round"></i>
+<span class="cf-icon cf-icon-audio-low"></span>
+<span class="cf-icon cf-icon-audio-low-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-audio-low&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-audio-low-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-audio-low&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-audio-low-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1715,12 +1716,12 @@
                 <h3>audio-medium</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-audio-medium"></i>
-<i class="cf-icon cf-icon-audio-medium-round"></i>
+<span class="cf-icon cf-icon-audio-medium"></span>
+<span class="cf-icon cf-icon-audio-medium-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-audio-medium&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-audio-medium-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-audio-medium&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-audio-medium-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1728,12 +1729,12 @@
                 <h3>audio-max</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-audio-max"></i>
-<i class="cf-icon cf-icon-audio-max-round"></i>
+<span class="cf-icon cf-icon-audio-max"></span>
+<span class="cf-icon cf-icon-audio-max-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-audio-max&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-audio-max-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-audio-max&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-audio-max-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1741,12 +1742,12 @@
                 <h3>favorite</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-favorite"></i>
-<i class="cf-icon cf-icon-favorite-round"></i>
+<span class="cf-icon cf-icon-favorite"></span>
+<span class="cf-icon cf-icon-favorite-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-favorite&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-favorite-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-favorite&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-favorite-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1754,12 +1755,12 @@
                 <h3>unfavorite</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-unfavorite"></i>
-<i class="cf-icon cf-icon-unfavorite-round"></i>
+<span class="cf-icon cf-icon-unfavorite"></span>
+<span class="cf-icon cf-icon-unfavorite-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-unfavorite&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-unfavorite-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-unfavorite&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-unfavorite-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1767,12 +1768,12 @@
                 <h3>bookmark</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-bookmark"></i>
-<i class="cf-icon cf-icon-bookmark-round"></i>
+<span class="cf-icon cf-icon-bookmark"></span>
+<span class="cf-icon cf-icon-bookmark-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-bookmark&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-bookmark-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-bookmark&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-bookmark-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1780,12 +1781,12 @@
                 <h3>unbookmark</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-unbookmark"></i>
-<i class="cf-icon cf-icon-unbookmark-round"></i>
+<span class="cf-icon cf-icon-unbookmark"></span>
+<span class="cf-icon cf-icon-unbookmark-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-unbookmark&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-unbookmark-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-unbookmark&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-unbookmark-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1793,12 +1794,12 @@
                 <h3>settings</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-settings"></i>
-<i class="cf-icon cf-icon-settings-round"></i>
+<span class="cf-icon cf-icon-settings"></span>
+<span class="cf-icon cf-icon-settings-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-settings&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-settings-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-settings&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-settings-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1806,12 +1807,12 @@
                 <h3>menu</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-menu"></i>
-<i class="cf-icon cf-icon-menu-round"></i>
+<span class="cf-icon cf-icon-menu"></span>
+<span class="cf-icon cf-icon-menu-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-menu&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-menu-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-menu&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-menu-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1819,12 +1820,12 @@
                 <h3>lock</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-lock"></i>
-<i class="cf-icon cf-icon-lock-round"></i>
+<span class="cf-icon cf-icon-lock"></span>
+<span class="cf-icon cf-icon-lock-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-lock&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-lock-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-lock&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-lock-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1832,12 +1833,12 @@
                 <h3>unlock</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-unlock"></i>
-<i class="cf-icon cf-icon-unlock-round"></i>
+<span class="cf-icon cf-icon-unlock"></span>
+<span class="cf-icon cf-icon-unlock-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-unlock&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-unlock-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-unlock&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-unlock-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1845,12 +1846,12 @@
                 <h3>clock</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-clock"></i>
-<i class="cf-icon cf-icon-clock-round"></i>
+<span class="cf-icon cf-icon-clock"></span>
+<span class="cf-icon cf-icon-clock-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-clock&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-clock-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-clock&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-clock-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1858,12 +1859,12 @@
                 <h3>chart</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-chart"></i>
-<i class="cf-icon cf-icon-chart-round"></i>
+<span class="cf-icon cf-icon-chart"></span>
+<span class="cf-icon cf-icon-chart-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-chart&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-chart-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-chart&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-chart-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1871,12 +1872,12 @@
                 <h3>play</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-play"></i>
-<i class="cf-icon cf-icon-play-round"></i>
+<span class="cf-icon cf-icon-play"></span>
+<span class="cf-icon cf-icon-play-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-play&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-play-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-play&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-play-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1884,12 +1885,12 @@
                 <h3>newspaper</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-newspaper"></i>
-<i class="cf-icon cf-icon-newspaper-round"></i>
+<span class="cf-icon cf-icon-newspaper"></span>
+<span class="cf-icon cf-icon-newspaper-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-newspaper&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-newspaper-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-newspaper&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-newspaper-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1897,12 +1898,12 @@
                 <h3>microphone</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-microphone"></i>
-<i class="cf-icon cf-icon-microphone-round"></i>
+<span class="cf-icon cf-icon-microphone"></span>
+<span class="cf-icon cf-icon-microphone-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-microphone&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-microphone-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-microphone&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-microphone-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1910,12 +1911,12 @@
                 <h3>bullhorn</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-bullhorn"></i>
-<i class="cf-icon cf-icon-bullhorn-round"></i>
+<span class="cf-icon cf-icon-bullhorn"></span>
+<span class="cf-icon cf-icon-bullhorn-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-bullhorn&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-bullhorn-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-bullhorn&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-bullhorn-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1923,12 +1924,12 @@
                 <h3>double-quote</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-double-quote"></i>
-<i class="cf-icon cf-icon-double-quote-round"></i>
+<span class="cf-icon cf-icon-double-quote"></span>
+<span class="cf-icon cf-icon-double-quote-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-double-quote&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-double-quote-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-double-quote&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-double-quote-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1936,12 +1937,12 @@
                 <h3>speech-bubble</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-speech-bubble"></i>
-<i class="cf-icon cf-icon-speech-bubble-round"></i>
+<span class="cf-icon cf-icon-speech-bubble"></span>
+<span class="cf-icon cf-icon-speech-bubble-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-speech-bubble&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-speech-bubble-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-speech-bubble&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-speech-bubble-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1949,12 +1950,12 @@
                 <h3>information</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-information"></i>
-<i class="cf-icon cf-icon-information-round"></i>
+<span class="cf-icon cf-icon-information"></span>
+<span class="cf-icon cf-icon-information-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-information&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-information-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-information&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-information-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1962,12 +1963,12 @@
                 <h3>lightbulb</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-lightbulb"></i>
-<i class="cf-icon cf-icon-lightbulb-round"></i>
+<span class="cf-icon cf-icon-lightbulb"></span>
+<span class="cf-icon cf-icon-lightbulb-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-lightbulb&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-lightbulb-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-lightbulb&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-lightbulb-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1975,12 +1976,12 @@
                 <h3>dialogue</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-dialogue"></i>
-<i class="cf-icon cf-icon-dialogue-round"></i>
+<span class="cf-icon cf-icon-dialogue"></span>
+<span class="cf-icon cf-icon-dialogue-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-dialogue&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-dialogue-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-dialogue&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-dialogue-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
             <li class="demo-pattern-list_item">
@@ -1988,12 +1989,12 @@
                 <h3>date</h3>
               </header>
               <section>
-<i class="cf-icon cf-icon-date"></i>
-<i class="cf-icon cf-icon-date-round"></i>
+<span class="cf-icon cf-icon-date"></span>
+<span class="cf-icon cf-icon-date-round"></span>
 </section>
               <footer class="demo-pattern-list_footer">
-                <pre class="html"><code data-language="html">&lt;i class=&quot;cf-icon cf-icon-date&quot;&gt;&lt;/i&gt;
-&lt;i class=&quot;cf-icon cf-icon-date-round&quot;&gt;&lt;/i&gt;</code></pre>
+                <pre class="html"><code data-language="html">&lt;span class=&quot;cf-icon cf-icon-date&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;cf-icon cf-icon-date-round&quot;&gt;&lt;/span&gt;</code></pre>
               </footer>
             </li>
           </ul>
