@@ -4,7 +4,7 @@ Custom icon font for Capital Framework.
 
 This component can be used by itself, but it was made for Capital Framework, a new front end framework developed at the [Consumer Financial Protection Bureau](http://cfpb.github.io/).
 
-If you would like to take advantage of more components or if you're new to Capital Framework, we encourage you to [start here](/cfpb/capital-framework).
+If you would like to take advantage of more components or if you're new to Capital Framework, we encourage you to [start here](http://cfpb.github.io/capital-framework).
 
 - [View the docs](http://cfpb.github.io/cf-icons/docs/)
 - [See the raw demo](http://cfpb.github.io/cf-icons/demo/)
