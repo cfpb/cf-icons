@@ -44,7 +44,18 @@ module.exports = function(grunt) {
       // Set whether or not to include html5shiv for demoing a component.
       // Only necessary if component patterns include new HTML5 elements
       html5Shiv: true,
-      ie8FontFaceHack: true
+
+      // Set whether you'd like to use a JS hack to force a redraw in the browser
+      // to avoid an IE8 bug where fonts do not appear or appear as boxes on load.
+      ie8FontFaceHack: true,
+
+      // Set a path to a concatenated JS file that you'd like to add before the
+      // closing body tag.
+      // jsBody: 'static/js/component.min.js',
+
+      // Here's a banner with some template variables.
+      // We'll be inserting it at the top of minified assets.
+      banner: grunt.file.read('./node_modules/cf-grunt-config/cfpb-banner.txt'),
     },
 
     // Define tasks specific to this project here
