@@ -13,16 +13,15 @@ module.exports = function(grunt) {
    * the package.json file of cf-grunt-config.
    */
 
-  // Sets the CWD to the cf-grunt-config package so that the loadTasks method
-  // (employed in jit-grunt) looks in the correct place.
-  grunt.file.setBase('./node_modules/cf-grunt-config/');
   // Loads all Grunt tasks in the node_modules directory within the new CWD.
   require('jit-grunt')(grunt, {
-    // Below line needed because task name does not match package name
+    // Static mapping
+    // Needed when task name does not match package name
     bower: 'grunt-bower-task'
+  })({
+    // Options
+    pluginsRoot: 'node_modules/cf-grunt-config/node_modules'
   });
-  // Sets the CWD back to the project root so that the tasks work as expected.
-  grunt.file.setBase('../../');
 
 
   /**
@@ -45,7 +44,18 @@ module.exports = function(grunt) {
       // Set whether or not to include html5shiv for demoing a component.
       // Only necessary if component patterns include new HTML5 elements
       html5Shiv: true,
-      ie8FontFaceHack: true
+
+      // Set whether you'd like to use a JS hack to force a redraw in the browser
+      // to avoid an IE8 bug where fonts do not appear or appear as boxes on load.
+      ie8FontFaceHack: true,
+
+      // Set a path to a concatenated JS file that you'd like to add before the
+      // closing body tag.
+      // jsBody: 'static/js/component.min.js',
+
+      // Here's a banner with some template variables.
+      // We'll be inserting it at the top of minified assets.
+      banner: grunt.file.read('./node_modules/cf-grunt-config/cfpb-banner.txt'),
     },
 
     // Define tasks specific to this project here
