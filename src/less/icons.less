@@ -558,6 +558,10 @@
         markup: |
           <span class="cf-icon cf-icon-supplement"></span>
           <span class="cf-icon cf-icon-supplement-round"></span>
+      - name: rss
+        markup: |
+          <span class="cf-icon cf-icon-rss"></span>
+          <span class="cf-icon cf-icon-rss-round"></span>
     tags:
       - cf-icons
 */
@@ -670,6 +674,16 @@
 .@{cf-icon-prefix}-supplement-round {
     &:before  {     content: "\e421"; }
     .lt-ie8 & { .cf-icon-ie7("\e421"); }
+}
+
+.@{cf-icon-prefix}-rss {
+    &:before  {     content: "\e422"; }
+    .lt-ie8 & { .cf-icon-ie7("\e422"); }
+}
+
+.@{cf-icon-prefix}-rss-round {
+    &:before  {     content: "\e423"; }
+    .lt-ie8 & { .cf-icon-ie7("\e423"); }
 }
 
 
