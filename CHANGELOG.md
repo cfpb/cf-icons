@@ -14,5 +14,4 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 - Bower depencencies cf-colors, normalize
 
 ### Fixed
-- Updated npm/Bower depenencies and rebuild docs
-- Example markup and .pagination_form padding to work with updates to cf-buttons
+- Nothing.
