@@ -1,6 +1,6 @@
 {
   "name": "cf-icons",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Custom icon font for Capital Framework.",
   "keywords": ["capital-framework", "capital", "icons", "less"],
   "authors": [
@@ -17,9 +17,7 @@
   "license": "https://github.com/cfpb/cf-icons/blob/gh-pages/TERMS.md",
   "main": "src/less/cf-icons.less",
   "dependencies": {
-    "cf-colors": "git://github.com/cfpb/cf-colors.git",
-    "normalize-css": "~3.0.0",
-    "normalize-legacy-addon": "git://github.com/cfpb/normalize-legacy-addon.git#0.1.0"
+    "cf-core": "git://github.com/cfpb/cf-core.git"
   },
   "exportsOverride": {
     "cf-*": {
