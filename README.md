@@ -1,3 +1,4 @@
+
 # cf-icons
 
 [![Dependency Status](https://gemnasium.com/cfpb/cf-icons.svg)](https://gemnasium.com/cfpb/cf-icons)
@@ -10,22 +11,27 @@ This component can be used by itself, but it was made for Capital Framework, a n
 
 The current version number can be found in [bower.json](bower.json#L3)
 and follows [Semantic Versioning 2.0](http://semver.org/).
-Release notes are recorded in the [CHANGELOG](CHANGELOG.md) and on the
+Release notes are recorded on the
 [Releases page](https://github.com/cfpb/cf-icons/releases/).
 
-If you would like to take advantage of more components or if you're new to Capital Framework, we encourage you to [start here](https://cfpb.github.io/capital-framework).
+If you would like to take advantage of more components or if you're new to
+Capital Framework, we encourage you to [start here](https://cfpb.github.io/capital-framework/).
+
+![](screenshot.png)
+
 
 ## How to use this component
 
 Detailed instructions can be found in the Capital Framework
 [documentation site](https://cfpb.github.io/capital-framework/components/).
 
+
 ## Getting involved
 
 We welcome your feedback and contributions.
 
 - [Find out about contributing](CONTRIBUTING.md)
-- File a bug using this [handy template](/cfpb/cf-icons/issues/new?body=%23%23%20URL%0D%0D%0D%23%23%20Actual%20Behavior%0D%0D%0D%23%23%20Expected%20Behavior%0D%0D%0D%23%23%20Steps%20to%20Reproduce%0D%0D%0D%23%23%20Screenshot&labels=bug)
+- File a bug using this [handy template](https://github.com/cfpb/cf-icons/issues/new?body=%23%23%20URL%0D%0D%0D%23%23%20Actual%20Behavior%0D%0D%0D%23%23%20Expected%20Behavior%0D%0D%0D%23%23%20Steps%20to%20Reproduce%0D%0D%0D%23%23%20Screenshot&labels=bug)
 
 
 ---
