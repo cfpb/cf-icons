@@ -15,8 +15,7 @@ module.exports = function(grunt) {
 
   // Loads all Grunt tasks in the node_modules directory within the new CWD.
   require('jit-grunt')(grunt, {
-    // Static mapping
-    // Needed when task name does not match package name
+    // Below line needed because task name does not match package name
     bower: 'grunt-bower-task'
   })({
     // Options
