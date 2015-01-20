@@ -1,4 +1,3 @@
-
 # cf-icons
 
 [![Dependency Status](https://gemnasium.com/cfpb/cf-icons.svg)](https://gemnasium.com/cfpb/cf-icons)
