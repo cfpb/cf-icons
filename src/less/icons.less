@@ -76,6 +76,20 @@
   font-style: normal;
 }
 
+// The class .cf-icon is used to support adding these rules via a mixin,
+// specifically when @cf-icon-prefix is changed to something other than
+// 'cf-icon', since string interpolation is incompatible with mixin calls.
+//
+// For example you can't do this:
+// .link-with-auto-icon {
+//   .@{cf-icon-prefix}();
+// }
+// 
+// But you can do this:
+// .link-with-auto-icon {
+//   .@cf-icon();
+// }
+.cf-icon,
 .@{cf-icon-prefix} {
   font-family: 'CFPB Minicons';
   display: inline-block;
