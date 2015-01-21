@@ -5,6 +5,7 @@ We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 ## 0.4.2 - 2015-01-19
 
 ### Added
+- Adds `.cf-icon` class that can be used as a mixin.
 - Screenshot
 
 ### Updated
