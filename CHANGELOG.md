@@ -1,6 +1,10 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 0.5.0 - 2015-03-23
+
+### Added
+- Adds icons for history, table of contents, closing quote, livestream, parents and servicemembers
 
 ## 0.4.2 - 2015-01-19
 
