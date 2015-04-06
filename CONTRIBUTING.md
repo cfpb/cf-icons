@@ -36,24 +36,29 @@ For Capital Framework-specific contributing guidelines please visit
 
 ### Uploading new fonts
 
-If you are contributing a new icon, please generate the associated webfonts
-with your new font file.
-
+If you are contributing a new icon,
+please generate the associated webfonts with your new font file.
 We use Font Squirrel to generate webfonts.
+Follow the instructions below to generate the webfonts in the cf-icons repo.
 
-1. Add your font source file (.ttf) to `src/font-source` folder
+1. From the cf-icons project directory,
+add your font source file (.ttf) to the `src/font-source` folder.
 
-2. Visit [FontSquirrel WebFont Generator](http://www.fontsquirrel.com/tools/webfont-generator) and upload your .ttf file and our `generator_config.txt` file located in the font-source folder.
+2. Visit [FontSquirrel WebFont Generator](http://www.fontsquirrel.com/tools/webfont-generator)
+and upload your .ttf file and our `generator_config.txt` file
+located in the `src/font-source` folder.
 
   ![](font-generating.png)
 
-3. Check the box that certifies that these fonts are legal for web embedding and download your new fonts.
+3. Check the box that certifies that these fonts are legal for web embedding
+and download your new fonts.
 
 4. Add your webfonts to `src/fonts` folder.
 
 5. Update `src/less/icons.less` with a description and css rule for each new icon.
 
-6. Run `grunt` and `grunt vendor` to copy the fonts to their appropriate folders. You should have new files in `src/fonts`, `docs/fonts` and `demo/fonts`.
+6. Run `grunt` and `grunt vendor` to copy the fonts to their appropriate folders.
+You should have new files in `src/fonts`, `docs/fonts` and `demo/fonts`.
 
 7. Take a screenshot of demo file and update `screenshot.png` to show off the newest icons.
 
