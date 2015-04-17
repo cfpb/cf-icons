@@ -1,3 +1,4 @@
+@import url(//fast.fonts.net/t/1.css?apiType=css&projectid=44e8c964-4684-44c6-a6e3-3f3da8787b50);
 /* ==========================================================================
    Capital Framework
    Icons
@@ -19,6 +20,11 @@
         - "@cf-icon-ie7-support: true;"
       notes:
         - "More on IE7 support can be found in the 'IE7 Support' section."
+    - name: Icon border color
+      codenotes:
+        - "@cf-border-color: #eee;"
+      notes:
+        - "Used in .cf-icon__border"
   tags:
     - cf-icons
 */
@@ -65,6 +71,184 @@
   font-weight: normal;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
+}
+/* topdoc
+  name: Icon character variables
+  family: cf-icons
+  patterns:
+    - name: Less variables for icons
+      codenotes:
+        - "@cf-icon-left:                       '\e000';"
+        - "@cf-icon-left-round:                 '\e001';"
+      notes:
+        - "These variables for fonts are used for adding icons in
+          Less files."
+        - "See the less file for the full list."
+  tags:
+    - cf-icons
+*/
+/* topdoc
+    name: Helper classes for icon sizes
+    family: cf-icons
+    patterns:
+        - name: Large icon size
+          markup: |
+            <span class="cf-icon cf-icon-money cf-icon__lg"></span>
+        - name: 2x icon size
+          markup: |
+            <span class="cf-icon cf-icon-money cf-icon__2x"></span>
+        - name: 3x icon size
+          markup: |
+            <span class="cf-icon cf-icon-money cf-icon__3x"></span>
+        - name: 4x icon size
+          markup: |
+            <span class="cf-icon cf-icon-money cf-icon__4x"></span>
+        - name: 5x icon size
+          markup: |
+            <span class="cf-icon cf-icon-money cf-icon__5x"></span>
+*/
+.cf-icon__lg {
+  font-size: 1.33333333em;
+  line-height: 0.75em;
+  vertical-align: -15%;
+}
+.cf-icon__2x {
+  font-size: 2em;
+}
+.cf-icon__3x {
+  font-size: 3em;
+}
+.cf-icon__4x {
+  font-size: 4em;
+}
+.cf-icon__5x {
+  font-size: 5em;
+}
+/* topdoc
+    name: Mixin classes
+    family: cf-icons
+    patterns:
+        - name: Icon rotation mixin
+          codenotes:
+            - ".@cf-icon__rotate-90  { .cf-icon__rotate(90deg, 1);  }"
+          notes:
+            - "First variable is @degrees."
+            - "Second variable is @rotation"
+        - name: Icon flip mixin
+          codenotes:
+            - ".@{cf-icon-prefix}__flip-horizontal { .cf-icon__flip(-1, 1, 0); }"
+            - ".@{cf-icon-prefix}__flip-vertical   { .cf-icon__flip(1, -1, 2); }"
+          notes:
+            - "First variable is for number of horizontal flips"
+            - "Second variable is for number of vertical flips"
+            - "Third variable is for rotation"
+*/
+/* topdoc
+    name: Helper classes for modified icons
+    family: cf-icons
+    patterns:
+        - name: Bordered icons
+          markup: |
+            <span class="cf-icon cf-icon-update cf-icon__border"></span>
+          notes:
+            - "Border color set by @cf-border-color"
+        - name: Rotated icons
+          markup: |
+            <span class="cf-icon cf-icon-update cf-icon__rotate-90"></span>
+            <span class="cf-icon cf-icon-update cf-icon__rotate-180"></span>
+            <span class="cf-icon cf-icon-update cf-icon__rotate-270"></span>
+        - name: Flipped icons
+          markup: |
+            <span class="cf-icon cf-icon-update cf-icon__flip-horizontal"></span>
+            <span class="cf-icon cf-icon-update cf-icon__flip-vertical"></span>
+*/
+.cf-icon__border {
+  padding: .2em .25em .15em;
+  border: solid 0.08em #eeeeee;
+  border-radius: .1em;
+}
+.cf-icon__rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.cf-icon__rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+.cf-icon__rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+.cf-icon__flip-horizontal {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
+  -webkit-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+.cf-icon__flip-vertical {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
+  -webkit-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+:root .cf-icon__rotate-90,
+:root .cf-icon__rotate-180,
+:root .cf-icon__rotate-270,
+:root .cf-icon__flip-horizontal,
+:root .cf-icon__flip-vertical {
+  -webkit-filter: none;
+  filter: none;
+}
+/* topdoc
+    name: Helper classes for animated icons
+    family: cf-icons
+    patterns:
+        - name: Spinning icons
+          markup: |
+            <span class="cf-icon cf-icon-update cf-icon__spin"></span>
+        - name: Pulsing icons
+          markup: |
+            <span class="cf-icon cf-icon-update cf-icon__pulse"></span>
+        - name: Flipped icons
+          markup: |
+            <span class="cf-icon cf-icon-phone cf-icon__flip-horizontal"></span>
+            <span class="cf-icon cf-icon-phone cf-icon__flip-vertical"></span>
+*/
+.cf-icon__spin {
+  -webkit-animation: cf-spin 2s infinite linear;
+  animation: cf-spin 2s infinite linear;
+}
+.cf-icon__pulse {
+  -webkit-animation: cf-spin 1s infinite steps(8);
+  animation: cf-spin 1s infinite steps(8);
+}
+@-webkit-keyframes cf-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+@keyframes cf-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    -ms-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
 }
 /* topdoc
     name: Navigation icons
@@ -558,6 +742,10 @@
         markup: |
           <span class="cf-icon cf-icon-upload"></span>
           <span class="cf-icon cf-icon-upload-round"></span>
+      - name: download
+        markup: |
+          <span class="cf-icon cf-icon-download"></span>
+          <span class="cf-icon cf-icon-download-round"></span>
       - name: copy
         markup: |
           <span class="cf-icon cf-icon-copy"></span>
@@ -1651,4 +1839,2283 @@
   name: EOF
   eof: true
 */
-/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9zcmMvdmVuZG9yL2NmLWNvbmNhdC9jZi5sZXNzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFtRUE7RUFDRSxhQUFhLGVBQWI7RUFDQSxTQUFTLHdCQUFUO0VBQ0EsU0FBUyxnQ0FBdUMsT0FBTywwQkFDakQsMEJBQWlDLE9BQU8sYUFDeEMseUJBQWdDLE9BQU8saUJBQ3ZDLHlCQUFnQyxPQUFPLE1BSDdDO0VBSUEsbUJBQUE7RUFDQSxrQkFBQTs7QUFnQkY7QUFDQSxDQUFDO0VBQ0MsYUFBYSxlQUFiO0VBQ0EscUJBQUE7RUFDQSxrQkFBQTtFQUNBLG1CQUFBO0VBQ0EsY0FBQTtFQUNBLG1DQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQTZDRSxDQURILE9BQWlCLEtBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQW5HZCw2RUFBQTs7QUF5R0EsQ0FESCxPQUFpQixXQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUF4R2QsNkVBQUE7O0FBOEdBLENBREgsT0FBaUIsTUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBN0dkLDZFQUFBOztBQW1IQSxDQURILE9BQWlCLFlBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQWxIZCw2RUFBQTs7QUF3SEEsQ0FESCxPQUFpQixHQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUF2SGQsNkVBQUE7O0FBNkhBLENBREgsT0FBaUIsU0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBNUhkLDZFQUFBOztBQWtJQSxDQURILE9BQWlCLEtBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtF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 */
+/* ==========================================================================
+   Capital Framework
+   Core Less file
+   ========================================================================== */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+}
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background-color: transparent;
+}
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+img {
+  border: 0;
+}
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+figure {
+  margin: 1em 40px;
+}
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+/**
+ * Contain overflow in all browsers.
+ */
+pre {
+  overflow: auto;
+}
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+button {
+  overflow: visible;
+}
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+button,
+select {
+  text-transform: none;
+}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+input {
+  line-height: normal;
+}
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -webkit-box-sizing: content-box;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+textarea {
+  overflow: auto;
+}
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+optgroup {
+  font-weight: bold;
+}
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+/*! normalize-legacy-addon | MIT License | https://github.com/cfpb/normalize-legacy-addon */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/*
+ * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+audio,
+canvas,
+video {
+  *display: inline;
+  *zoom: 1;
+}
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/* 
+ * Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+ * `em` units.
+*/
+html {
+  font-size: 100%;
+}
+/*
+ * Addresses `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+html,
+button,
+input,
+select,
+textarea {
+  font-family: sans-serif;
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/*
+ * Addresses font sizes and margins set differently in IE 6/7.
+ * Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+h1 {
+  margin: 0.67em 0;
+}
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0;
+}
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0;
+}
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0;
+}
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0;
+}
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0;
+}
+blockquote {
+  margin: 1em 40px;
+}
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+p,
+pre {
+  margin: 1em 0;
+}
+/*
+ * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  _font-family: 'courier new', monospace;
+}
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre;
+  word-wrap: break-word;
+}
+/*
+ * Addresses CSS quotes not supported in IE 6/7.
+ */
+q {
+  quotes: none;
+}
+/*
+ * Addresses `quotes` property not supported in Safari 4.
+ */
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/*
+ * Addresses margins set differently in IE 6/7.
+ */
+dl,
+menu,
+ol,
+ul {
+  margin: 1em 0;
+}
+dd {
+  margin: 0 0 0 40px;
+}
+/*
+ * Addresses paddings set differently in IE 6/7.
+ */
+menu,
+ol,
+ul {
+  padding: 0 0 0 40px;
+}
+/*
+ * Corrects list images handled incorrectly in IE 7.
+ */
+nav ul,
+nav ol {
+  list-style: none;
+  list-style-image: none;
+}
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/*
+ * Improves image quality when scaled in IE 7.
+ */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/*
+ * Corrects margin displayed oddly in IE 6/7.
+ */
+form {
+  margin: 0;
+}
+/*
+ * 1. Corrects color not being inherited in IE 6/7/8/9.
+ * 2. Corrects text not wrapping in Firefox 3.
+ * 3. Corrects alignment displayed oddly in IE 6/7.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */
+}
+/*
+ * Improves appearance and consistency in all browsers.
+ */
+button,
+input,
+select,
+textarea {
+  vertical-align: baseline;
+  *vertical-align: middle;
+}
+/*
+ * Removes inner spacing in IE 7 without affecting normal text inputs.
+ * Known issue: inner spacing remains in IE 6.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  *overflow: visible;
+}
+/*
+ * Removes excess padding in IE 7.
+ * Known issue: excess padding remains in IE 6.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  *height: 13px;
+  *width: 13px;
+}
+/* ==========================================================================
+   Capital Framework
+   Less variables
+   ========================================================================== */
+/* topdoc
+  name: Theme variables
+  family: cf-core
+  notes:
+    - "The following color and sizing variables are exposed, allowing you to
+       easily override them before compiling."
+  patterns:
+    - name: Sizing
+      codenotes:
+        - |
+          @base-font-size-px
+          @base-line-height-px
+          @base-line-height
+          @mobile-max
+          @tablet-min
+    - name: Colors
+      codenotes:
+        - |
+          @text
+          @link-text
+          @link-underline
+          @link-text-visited
+          @link-underline-visited
+          @link-text-hover
+          @link-underline-hover
+          @link-text-active
+          @link-underline-active
+          @thead-text
+          @thead-bg
+          @td-bg
+          @td-bg-alt
+          @input-bg
+          @input-border
+          @input-border-focus
+          @input-placeholder
+          @figure__bordered
+  tags:
+    - cf-core
+*/
+/* topdoc
+  name: EOF
+  eof: true
+*/
+/* ==========================================================================
+   Capital Framework
+   Media queries
+   ========================================================================== */
+/* topdoc
+  name: Media query mixins
+  family: cf-core
+  notes:
+    - "These mixins allow us to write consistent media queries using pixel
+      values, which are easier to remember. The mixins handle converting the
+      pixels into em's."
+  patterns:
+    - name: "min-width/max-width media queries"
+      codenotes:
+        - ".respond-to-min(@bp, @rules)"
+        - ".respond-to-max(@bp, @rules)"
+      notes:
+        - "@bp: the breakpoint size in pixels. It will get converted into em's."
+        - "@rules: a CSS or Less ruleset. Note that it can contain the full set
+          of Less features."
+    - name: "min-width/max-width media query usage"
+      codenotes:
+        - |
+            .respond-to-min(768px, {
+                .title {
+                    font-size: 2em;
+                }
+            });
+
+            Compiles to:
+
+            @media only all and (min-width: 48em) {
+                .title {
+                    font-size: 2em;
+                }
+            }
+    - name: "min-width/max-width media query range"
+      codenotes:
+        - ".respond-to-range(@bp1, @bp2, @rules)"
+      notes:
+        - "@bp1: the min-width breakpoint size in pixels.
+          It will get converted into em's."
+        - "@bp2: the max-width breakpoint size in pixels.
+          It will get converted into em's."
+        - "@rules: a CSS or Less ruleset. Note that it can contain the full set
+          of Less features."
+    - name: "min-width/max-width media query range usage"
+      codenotes:
+        - |
+            .respond-to-range(320px, 768px, {
+                .title {
+                    font-size: 2em;
+                }
+            });
+
+            Compiles to:
+
+            @media only all and (min-width: 20em) and (max-width: 48em) {
+                .title {
+                    font-size: 2em;
+                }
+            }
+  tags:
+    - cf-core
+*/
+/* topdoc
+  name: EOF
+  eof: true
+*/
+/* ==========================================================================
+   Capital Framework
+   Utilities
+   ========================================================================== */
+/* topdoc
+  name: JS-only
+  family: cf-core
+  patterns:
+    - name: Setup
+      codenotes:
+        - <html class="no-js">
+        - |
+            <script>
+                // Confirm availability of JS and remove no-js class from html
+                var docElement = document.documentElement;
+                docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2');
+            </script>
+      notes:
+        - "First add the .no-js class to the HTML element."
+        - "Then add the script to your HEAD which removes the .no-js class when
+           JS is available."
+    - name: Utility class
+      codenotes:
+        - .u-js-only;
+      notes:
+        - "Hide stuff when JavaScript isn't available. Depends on having a small
+           script in the HEAD of your HTML document that removes a .no-js class."
+  tags:
+    - cf-core
+*/
+.no-js .u-js-only {
+  display: none !important;
+}
+/* topdoc
+  name: Clearfix
+  family: cf-core
+  patterns:
+    - name: Utility class
+      markup: |
+        <div class="u-clearfix">
+            <div style="float:left; width:100%; height:60px; background:black;"></div>
+        </div>
+      codenotes:
+        - .u-clearfix;
+      notes:
+        - "Use this class to clear floats. For example, without .u-clearfix the
+           black box would spill into the markup section."
+        - "More information: http://css-tricks.com/snippets/css/clear-fix/"
+  tags:
+    - cf-core
+*/
+.u-clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.lt-ie8 .u-clearfix {
+  zoom: 1;
+}
+/* topdoc
+  name: Visually hidden
+  family: cf-core
+  patterns:
+    - name: Utility class
+      markup: |
+        <h1>
+            <a href="#">
+                <span class="cf-icon cf-icon-twitter-square"></span>
+                <span class="u-visually-hidden">Share on Twitter</span>
+            </a>
+        </h1>
+      codenotes:
+        - .u-visually-hidden;
+      notes:
+        - "Use this class to hide something from view while keeping it
+          accessible to screen readers."
+  tags:
+    - cf-core
+*/
+.u-visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  width: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+}
+/* topdoc
+  name: Inline block
+  family: cf-core
+  patterns:
+    - name: Utility class
+      codenotes:
+        - .u-inline-block;
+      notes:
+        - "Also adds a .lt-ie8 class to hack inline-block for IE 7 and below."
+  tags:
+    - cf-core
+*/
+.u-inline-block {
+  display: inline-block;
+}
+.lt-ie8 .u-inline-block {
+  display: inline;
+}
+/* topdoc
+  name: Floating right
+  family: cf-core
+  patterns:
+    - name: Utility class
+      codenotes:
+        - .u-right;
+      notes:
+        - "IE7 float: right drop bug fixes:"
+        - "1. If the float: right follows an element in the html structure that
+          should be to its left (and not above it), then that preceding
+          element(s) must be float: left.
+          http://stackoverflow.com/questions/10981767/clean-css-fix-of-ie7s-float-right-drop-bug#answer-11437688"
+        - "2. Simply change the markup order so that the element floating right
+          comes before the element to its left."
+  tags:
+    - cf-core
+*/
+.u-right {
+  float: right;
+}
+/* topdoc
+  name: Break word
+  family: cf-core
+  patterns:
+    - name: Utility class
+      markup: |
+        <div style="width: 100px;">
+            This link should break:
+            <br>
+            <a class="u-break-word" href="#">
+                something@something.com
+            </a>
+            <br>
+            <br>
+            This link should not:
+            <br>
+            <a href="#">
+                something@something.com
+            </a>
+        </div>
+      codenotes:
+        - .u-break-word
+      notes:
+        - "Use this on elements where you need the words to break when confined
+           to small containers."
+        - "This only works in IE8 when the element with the .u-break-word class
+           has layout. See <http://stackoverflow.com/questions/3997223/word-wrapbreak-word-not-working-in-ie8>
+           for more information."
+  tags:
+    - cf-core
+*/
+.u-break-word {
+  word-break: break-all;
+}
+/* topdoc
+  name: Align with button
+  family: cf-core
+  patterns:
+    - name: Utility class
+      codenotes:
+        - ".u-align-with-btn(@font-size: @base-font-size-px);"
+      notes:
+        - "Adds top padding (among other things) to help alignment with buttons."
+        - "If you pass no arguments then the padding will be calculated using
+          @base-font-size-px."
+        - "Pass one argument to use a custom font size to calculate the top
+          padding."
+  tags:
+    - cf-core
+*/
+/* topdoc
+  name: Flexible proportional containers
+  family: cf-core
+  notes:
+    - "Utilizes intrinsic ratios to create a flexible container that retains its
+      aspect ratio. When image tags scale they retain their aspect ratio, but if
+      you need a flexible video you will need to use this mixin."
+    - "You can read more about intrinsic rations here:
+      http://alistapart.com/article/creating-intrinsic-ratios-for-video"
+  patterns:
+    - name: Default example
+      markup: |
+        <div class="u-flexible-container">
+            <video
+              class="u-flexible-container_inner"
+              style="background:#75787B;"
+              controls>
+            </video>
+        </div>
+      notes:
+        - "Defaults to a 16:19 ratio."
+        - "Original mixin credit: https://gist.github.com/craigmdennis/6655047"
+        - "Note that inline style usage is being used for demo purposes only.
+          Please do not use inline styles."
+      codenotes:
+        - |
+          Structural sheat sheet:
+          -----------------------
+          .u-flexible-container
+            .u-flexible-container_inner
+    - name: Background image examples
+      markup: |
+        <div class="u-flexible-container"
+             style="
+               background-image:url(http://placekitten.com/700/394);
+               background-position: center center;
+             ">
+        </div>
+        <div class="u-flexible-container"
+             style="
+               background-image:url(http://placekitten.com/700/394);
+               background-position: center center;
+               background-size: cover;
+             ">
+        </div>
+      codenotes:
+        - |
+          Structural sheat sheet:
+          -----------------------
+          .u-flexible-container
+      notes:
+        - "If you're not using the video or object elements and all you need is
+          a proportionally cropped or scaling background image with a fluid
+          container then you can leave out u-flexible-container_inner."
+        - "Note that inline style usage is being used for demo purposes only.
+          Please do not use inline styles."
+    - name: 4-3 modifier
+      markup: |
+        <div class="u-flexible-container u-flexible-container__4-3">
+            <video
+              class="u-flexible-container_inner"
+              style="background:#75787B;"
+              controls>
+            </video>
+        </div>
+      codenotes:
+        - |
+          Structural sheat sheet:
+          -----------------------
+          .u-flexible-container.u-flexible-container__4-3
+            .u-flexible-container_inner
+      notes:
+        - "Create your own aspect ratios by using this modifier as an example."
+        - "Note that inline style usage is being used for demo purposes only.
+          Please do not use inline styles."
+  tags:
+    - cf-core
+*/
+.u-flexible-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+}
+.u-flexible-container_inner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.u-flexible-container__4-3 {
+  position: relative;
+  padding-bottom: 75%;
+  height: 0;
+}
+/* topdoc
+  name: Link mixins
+  family: cf-core
+  patterns:
+    - codenotes:
+        - .u-link__colors();
+      notes:
+        - "Pass this mixin no arguments to color your link states with the
+          following defaults: :link (default state) pacific, :hover pacific-50,
+          :focus: pacific, :visited teal, :active navy."
+    - codenotes:
+        - .u-link__colors(@c);
+      notes:
+        - "Pass this mixin one color to be used on all of the following
+          states of your link; :link (default state), :visited, :hover, :focus,
+          :active."
+    - codenotes:
+        - .u-link__colors(@c, @h);
+      notes:
+        - "Pass this mixin two colors to use the first color for the :link,
+          :visited, and :active states, and the second color for the :hover and
+          :focus states."
+    - codenotes:
+        - .u-link__colors(@c, @v, @h, @f, @a);
+      notes:
+        - "Pass this mixin five colors in 'love/hate' mnemonic order to color
+          :link, :visited, :hover, :focus, and :active states respectively."
+        - "Even though this mixin is basically the same as
+          .u-link__colors-base(@c, @v, @h, @f, @a); we encourage you to use
+          .u-link__colors(@c, @v, @h, @f, @a) to promote consistency."
+    - codenotes:
+        - .u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba);
+      notes:
+        - "Allows you to color text and the borders separately."
+        - "The first five colors in 'love/hate' mnemonic order will color text
+          for the :link, :visited, :hover, :focus, and :active states
+          respectively. The last five colors in 'love/hate' mnemonic order will
+          color the borders for the :link, :visited, :hover, :focus, and :active
+          states respectively."
+        - "Even though this mixin is basically the same as
+          .u-link__colors-base(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba); we
+          encourage you to use .u-link__colors(@c, @v, @h, @f, @a, @bc, @bv, @bh, @bf, @ba)
+          to promote consistency."
+    - codenotes:
+        - .u-link__colors-base(@c, @v, @h, @f, @a);
+      notes:
+        - "This is the base mixin that all .u-link__colors() mixins use. Please
+          refrain from using this mixin directly in order to promote a
+          consistent use of mixin names for coloring links throughout this
+          project. Remember that if you need to set colors for all states of a
+          link you should use .u-link__colors(@c, @v, @h, @f, @a)."
+    - codenotes:
+        - .u-link__border();
+      notes:
+        - "Forces the default bottom border on the :link and :hover states."
+    - codenotes:
+        - .u-link__no-border();
+      notes:
+        - "Turn off the default bottom border on the :link and :hover states."
+    - codenotes:
+        - .u-link__hover-border();
+      notes:
+        - "Turn off the default bottom border on the :link state and force a
+          bottom border on the :hover state."
+    - codenotes:
+        - .u-link-child__hover();
+      notes:
+        - "When a link has child elements you may want only certain children to
+          change color when the parent link is hovered.
+          Pass no arguments to this mixin to color the child element pacific
+          when the parent link is hovered."
+    - codenotes:
+        - .u-link-child__hover(@c);
+      notes:
+        - "Pass this mixin one color to color the child element when the parent
+          link is hovered."
+  tags:
+    - cf-core
+*/
+/* topdoc
+  name: Margin utilities
+  family: cf-core
+  patterns:
+    - name: Utility classes
+      codenotes:
+        - .u-m<p><#>;
+      notes:
+        - "Replace <p> with the first letter of the position ('t' for top or 'b'
+           for bottom) and <#> with the pixel value of the margin you want."
+        - "Available values: 0, 5, 10, 15, 20, 30, 45, 60."
+  tags:
+    - cf-core
+*/
+.u-mt0 {
+  margin-top: 0 !important;
+}
+.u-mb0 {
+  margin-bottom: 0 !important;
+}
+.u-mt5 {
+  margin-top: 5px !important;
+}
+.u-mb5 {
+  margin-bottom: 5px !important;
+}
+.u-mt10 {
+  margin-top: 10px !important;
+}
+.u-mb10 {
+  margin-bottom: 10px !important;
+}
+.u-mt15 {
+  margin-top: 15px !important;
+}
+.u-mb15 {
+  margin-bottom: 15px !important;
+}
+.u-mt20 {
+  margin-top: 20px !important;
+}
+.u-mb20 {
+  margin-bottom: 20px !important;
+}
+.u-mt30 {
+  margin-top: 30px !important;
+}
+.u-mb30 {
+  margin-bottom: 30px !important;
+}
+.u-mt45 {
+  margin-top: 45px !important;
+}
+.u-mb45 {
+  margin-bottom: 45px !important;
+}
+.u-mt60 {
+  margin-top: 60px !important;
+}
+.u-mb60 {
+  margin-bottom: 60px !important;
+}
+/* topdoc
+  name: Width utilities
+  family: cf-core
+  patterns:
+    - name: Percent-based
+      markup: |
+        <div class="u-w100pct" style="background: #f4edf3; margin-bottom: 1px;">
+            <code>.u-w100pct</code>
+        </div>
+        <div class="u-w90pct" style="background: #f4edf3; margin-bottom: 1px;">
+            <code>.u-w90pct</code>
+        </div>
+        <div class="u-w80pct" style="background: #f4edf3; margin-bottom: 1px;">
+            <code>.u-w80pct</code>
+        </div>
+        <div class="u-w70pct" style="background: #f4edf3; margin-bottom: 1px;">
+            <code>.u-w70pct</code>
+        </div>
+        <div class="u-w60pct" style="background: #f4edf3; margin-bottom: 1px;">
+            <code>.u-w60pct</code>
+        </div>
+        <div class="u-w50pct" style="background: #f4edf3; margin-bottom: 1px;">
+            <code>.u-w50pct</code>
+        </div>
+        <div class="u-w40pct" style="background: #f4edf3; margin-bottom: 1px;">
+            <code>.u-w40pct</code>
+        </div>
+        <div class="u-w30pct" style="background: #f4edf3; margin-bottom: 1px;">
+            <code>.u-w30pct</code>
+        </div>
+        <div class="u-w20pct" style="background: #f4edf3; margin-bottom: 1px;">
+            <code>.u-w20pct</code>
+        </div>
+        <div class="u-w10pct" style="background: #f4edf3; margin-bottom: 1px;">
+            <code>.u-w10pct</code>
+        </div>
+        <div class="u-w75pct" style="background: #f4edf3; margin-bottom: 1px;">
+            <code>.u-w75pct</code>
+        </div>
+        <div class="u-w25pct" style="background: #f4edf3; margin-bottom: 1px;">
+            <code>.u-w25pct</code>
+        </div>
+        <div class="u-w66pct" style="background: #f4edf3; margin-bottom: 1px;">
+            <code>.u-w66pct</code>
+        </div>
+        <div class="u-w33pct" style="background: #f4edf3; margin-bottom: 1px;">
+            <code>.u-w33pct</code>
+        </div>
+      notes:
+        - "Inline styles are for demonstration purposes only, please don't use
+           them."
+  tags:
+    - cf-core
+*/
+.u-w100pct {
+  width: 100%;
+}
+.u-w90pct {
+  width: 90%;
+}
+.u-w80pct {
+  width: 80%;
+}
+.u-w70pct {
+  width: 70%;
+}
+.u-w60pct {
+  width: 60%;
+}
+.u-w50pct {
+  width: 50%;
+}
+.u-w40pct {
+  width: 40%;
+}
+.u-w30pct {
+  width: 30%;
+}
+.u-w20pct {
+  width: 20%;
+}
+.u-w10pct {
+  width: 10%;
+}
+.u-w75pct {
+  width: 75%;
+}
+.u-w25pct {
+  width: 25%;
+}
+.u-w66pct {
+  width: 66.66666667%;
+}
+.u-w33pct {
+  width: 33.33333333%;
+}
+/* topdoc
+  name: Width-specific display
+  family: cf-core
+  patterns:
+    - name: Show on mobile
+      markup: |
+        <section>
+            <p>The the text in the box below is visible only at widths less than 600px</p>
+            <div style="border: 1px solid black; height: 22px; padding: 5px;">
+                <p class="u-show-on-mobile">Visible on mobile</p>
+            </div>
+        </section>
+      codenotes:
+        - ".u-show-on-mobile"
+        - "Uses 'display:block' to toggle display. Would need to be extended
+          for inline use cases."
+      notes:
+        - "Displays an element only at mobile widths."
+    - name: Hide on mobile
+      markup: |
+        <section>
+            <p>The text in the box below is hidden at widths less than 600px</p>
+            <div style="border: 1px solid black; height: 22px; padding: 5px;">
+                <p class="u-hide-on-mobile">Hidden on mobile</p>
+            </div>
+        </section>
+      codenotes:
+        - ".u-hide-on-mobile"
+      notes:
+        - "Hides an element at mobile widths"
+  tags:
+    - cf-core
+*/
+@media only all and (max-width: 37.4375em) {
+  .u-hide-on-mobile {
+    display: none;
+  }
+}
+.u-show-on-mobile {
+  display: none;
+}
+@media only all and (max-width: 37.4375em) {
+  .u-show-on-mobile {
+    display: block;
+  }
+}
+/* topdoc
+  name: Small text utility
+  family: cf-core
+  patterns:
+    - name: .u-small-text (utility class)
+      markup: |
+        Lorem ipsum<br>
+        <span class="u-small-text">dolor sit amet</span>
+      codenotes:
+        - ".u-small-text"
+      notes:
+        - "14px text."
+        - "The utility class should only be used when the default text size is
+           16px. For example you wouldn't want to use the class inside of an
+           `h1` because the `font-size` in the `h1` will make `.u-small-text`
+           bigger than it should be. See the docs for the `.u-small-text()`
+           mixin."
+    - name: .u-small-text() (Less mixin)
+      codenotes:
+        - ".u-small-text(@context)"
+        - |
+          // Mixin usage:
+          .example {
+            font-size: unit(20px / @base-font-size-px, em);
+            small {
+              .u-small-text(20px);
+            }
+          }
+          // Compiles to:
+          .example {
+            font-size: 1.25em;
+          }
+          .example small {
+            font-size: 0.7em;
+          }
+      notes:
+        - "This mixin enables you to easily create consistent small text by
+           passing the context `font-size`."
+  tags:
+    - cf-core
+*/
+.u-small-text {
+  font-size: 0.875em;
+}
+small {
+  font-size: 0.875em;
+}
+/* topdoc
+    name: EOF
+    eof: true
+*/
+/* ==========================================================================
+   Capital Framework
+   Base styles
+   ========================================================================== */
+/*
+ * Source: http://fast.fonts.net/cssapi/44e8c964-4684-44c6-a6e3-3f3da8787b50.css
+ * This file has been edited to use absolute URLS so we can concatenate it with
+ * all of our other styles.
+ */
+@font-face {
+  font-family: "AvenirNextLTW01-Regular";
+  src: url("//fast.fonts.net/dv2/2/e9167238-3b3f-4813-a04a-a384394eed42.eot?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("eot");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "AvenirNextLTW01-Regular";
+  src: url("//fast.fonts.net/dv2/2/e9167238-3b3f-4813-a04a-a384394eed42.eot?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50");
+  src: url("//fast.fonts.net/dv2/3/1e9892c0-6927-4412-9874-1b82801ba47a.woff?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("woff"), url("//fast.fonts.net/dv2/1/46cf1067-688d-4aab-b0f7-bd942af6efd8.ttf?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("truetype"), url("//fast.fonts.net/dv2/11/52a192b1-bea5-4b48-879f-107f009b666f.svg?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50#52a192b1-bea5-4b48-879f-107f009b666f") format("svg");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "AvenirNextLTW01-Italic";
+  src: url("//fast.fonts.net/dv2/2/d1fddef1-d940-4904-8f6c-17e809462301.eot?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("eot");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "AvenirNextLTW01-Italic";
+  src: url("//fast.fonts.net/dv2/2/d1fddef1-d940-4904-8f6c-17e809462301.eot?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50");
+  src: url("//fast.fonts.net/dv2/3/92b66dbd-4201-4ac2-a605-4d4ffc8705cc.woff?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("woff"), url("//fast.fonts.net/dv2/1/18839597-afa8-4f0b-9abb-4a30262d0da8.ttf?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("truetype"), url("//fast.fonts.net/dv2/11/1de7e6f4-9d4d-47e7-ab23-7d5cf10ab585.svg?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50#1de7e6f4-9d4d-47e7-ab23-7d5cf10ab585") format("svg");
+  font-style: italic;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "AvenirNextLTW01-Medium";
+  src: url("//fast.fonts.net/dv2/2/1a7c9181-cd24-4943-a9d9-d033189524e0.eot?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("eot");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "AvenirNextLTW01-Medium";
+  src: url("//fast.fonts.net/dv2/2/1a7c9181-cd24-4943-a9d9-d033189524e0.eot?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50");
+  src: url("//fast.fonts.net/dv2/3/f26faddb-86cc-4477-a253-1e1287684336.woff?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("woff"), url("//fast.fonts.net/dv2/1/63a74598-733c-4d0c-bd91-b01bffcd6e69.ttf?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("truetype"), url("//fast.fonts.net/dv2/11/a89d6ad1-a04f-4a8f-b140-e55478dbea80.svg?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50#a89d6ad1-a04f-4a8f-b140-e55478dbea80") format("svg");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "AvenirNextLTW01-Demi";
+  src: url("//fast.fonts.net/dv2/2/12d643f2-3899-49d5-a85b-ff430f5fad15.eot?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("eot");
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: "AvenirNextLTW01-Demi";
+  src: url("//fast.fonts.net/dv2/2/12d643f2-3899-49d5-a85b-ff430f5fad15.eot?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50");
+  src: url("//fast.fonts.net/dv2/3/91b50bbb-9aa1-4d54-9159-ec6f19d14a7c.woff?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("woff"), url("//fast.fonts.net/dv2/1/a0f4c2f9-8a42-4786-ad00-fce42b57b148.ttf?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50") format("truetype"), url("//fast.fonts.net/dv2/11/99affa9a-a5e9-4559-bd07-20cf0071852d.svg?d44f19a684109620e4841679af90e818b934c450213fb296d217dd76fbd8133e8104ffce1b8d7381e92baf075aac747ded01b441045f936c159eb0f46c11e1f99e958a3e0d6904164b21814766132f7cb38b46df85fb387875d6907338f619856e049c29c288424547a2ca329b1d0251faf8c505bae9c3ec3d5a1e4327f5fdf46ffb088d97582c65a45857e1e0662c2d545166a03c7b024ca17ac3839d703086c5f9fd694b6f5493360c3bcd9d5d427b599ea7651d27005ca2f4c1d0312515f51a323f79b7f5cf1afa2ab67a3ddbfee1&projectId=44e8c964-4684-44c6-a6e3-3f3da8787b50#99affa9a-a5e9-4559-bd07-20cf0071852d") format("svg");
+  font-style: normal;
+  font-weight: 700;
+}
+/* topdoc
+  name: Webfonts
+  family: cf-core
+  patterns:
+    - name: Licensed webfonts
+      notes:
+        - "Avenir Next is included via the licensed-fonts.css file.
+          This file contains absolute links to our paid font service.
+          Fonts included this way will only work on CFPB-registered domains."
+        - "Note that when using Avenir Regular we automatically fix faux italic
+          and bold issues by overriding i, em, b, and strong tags to use the
+          appropriate fonts."
+    - name: Webfont mixins
+      codenotes:
+        - ".webfont-regular()"
+        - ".webfont-italic()"
+        - ".webfont-medium()"
+        - ".webfont-demi()"
+      notes:
+        - "Use these mixins to easily add the Avenir Next font family to your
+          elements."
+        - "To avoid faux bold and italics in Avenir Next, you must use the font
+          family name for that particular style. So when defining an italic or
+          bold style in Avenir Next you need to use the Avenir Next Italic font
+          family. Use the mixins when setting bold or italic text as they also
+          set the appropriate font-weight and font-style."
+        - "These mixins also add the appropriate .lt-ie9 overrides.
+          .lt-ie9 overrides are necessary to override font-style and font-weight
+          each time the webfont is used. These overrides are built into the webfont
+          mixins so you get them automatically. Note that this requires you to
+          use conditional classes on the <html> element:
+          https://github.com/h5bp/html5-boilerplate/blob/v4.3.0/doc/html.md#conditional-html-classes."
+  tags:
+    - cf-core
+*/
+/* topdoc
+  name: Type hierarchy
+  family: cf-core
+  patterns:
+    - name: Default body type
+      markup: |
+        <p>Lorem ipsum dolor sit amet, <em>consectetur adipisicing elit</em>, sed do eiusmod <strong>tempor incididunt</strong> ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    - name: Heading level 1
+      markup: |
+        <h1>Example heading element</h1>
+        <p class="h1">A non-heading element</p>
+      notes:
+        - Responsive header. At mobile sizes, displays as h2.
+    - name: Heading level 2
+      markup: |
+        <h2>Example heading element</h2>
+        <p class="h2">A non-heading element</p>
+      notes:
+        - Responsive header. At mobile sizes, displays as h3.
+    - name: Heading level 3
+      markup: |
+        <h3>Example heading element</h3>
+        <p class="h3">A non-heading element</p>
+      notes:
+        - Responsive header. At mobile sizes, displays as h4.
+    - name: Heading level 4
+      markup: |
+        <h4>Example heading element</h4>
+        <p class="h4">A non-heading element</p>
+    - name: Heading level 5
+      markup: |
+        <h5>Example heading element</h5>
+        <p class="h5">A non-heading element</p>
+    - name: Heading level 6
+      markup: |
+        <h6>Example heading element</h6>
+        <p class="h6">A non-heading element</p>
+    - name: Super header
+      markup: |
+        <h1 class="superheader">Example super heading</h1>
+        <p class="superheader">Example super heading</p>
+  tags:
+    - cf-core
+*/
+body {
+  color: #5b3b57;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 100%;
+  line-height: 1.375;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
+  font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+h1 em,
+.h1 em,
+h2 em,
+.h2 em,
+h3 em,
+.h3 em,
+h1 i,
+.h1 i,
+h2 i,
+.h2 i,
+h3 i,
+.h3 i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 h1 em,
+.lt-ie9 .h1 em,
+.lt-ie9 h2 em,
+.lt-ie9 .h2 em,
+.lt-ie9 h3 em,
+.lt-ie9 .h3 em,
+.lt-ie9 h1 i,
+.lt-ie9 .h1 i,
+.lt-ie9 h2 i,
+.lt-ie9 .h2 i,
+.lt-ie9 h3 i,
+.lt-ie9 .h3 i {
+  font-style: normal !important;
+}
+h1 strong,
+.h1 strong,
+h2 strong,
+.h2 strong,
+h3 strong,
+.h3 strong,
+h1 b,
+.h1 b,
+h2 b,
+.h2 b,
+h3 b,
+.h3 b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 h1 strong,
+.lt-ie9 .h1 strong,
+.lt-ie9 h2 strong,
+.lt-ie9 .h2 strong,
+.lt-ie9 h3 strong,
+.lt-ie9 .h3 strong,
+.lt-ie9 h1 b,
+.lt-ie9 .h1 b,
+.lt-ie9 h2 b,
+.lt-ie9 .h2 b,
+.lt-ie9 h3 b,
+.lt-ie9 .h3 b {
+  font-weight: normal !important;
+}
+h1,
+.h1 {
+  margin-top: 0;
+  margin-bottom: 0.47058824em;
+  font-size: 2.125em;
+  line-height: 1.29411765;
+}
+@media only all and (max-width: 37.4375em) {
+  h1,
+  .h1 {
+    font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0.73076923em;
+    font-size: 1.625em;
+    line-height: 1.26923077;
+  }
+  h1 em,
+  .h1 em,
+  h1 i,
+  .h1 i {
+    font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+  }
+  .lt-ie9 h1 em,
+  .lt-ie9 .h1 em,
+  .lt-ie9 h1 i,
+  .lt-ie9 .h1 i {
+    font-style: normal !important;
+  }
+  h1 strong,
+  .h1 strong,
+  h1 b,
+  .h1 b {
+    font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+  }
+  .lt-ie9 h1 strong,
+  .lt-ie9 .h1 strong,
+  .lt-ie9 h1 b,
+  .lt-ie9 .h1 b {
+    font-weight: normal !important;
+  }
+}
+@media only all and (max-width: 37.4375em) and only all and (max-width: 37.4375em) {
+  h1,
+  .h1 {
+    font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0.95454545em;
+    font-size: 1.375em;
+    line-height: 1.27272727;
+  }
+  h1 em,
+  .h1 em,
+  h1 i,
+  .h1 i {
+    font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+  }
+  .lt-ie9 h1 em,
+  .lt-ie9 .h1 em,
+  .lt-ie9 h1 i,
+  .lt-ie9 .h1 i {
+    font-style: normal !important;
+  }
+  h1 strong,
+  .h1 strong,
+  h1 b,
+  .h1 b {
+    font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+  }
+  .lt-ie9 h1 strong,
+  .lt-ie9 .h1 strong,
+  .lt-ie9 h1 b,
+  .lt-ie9 .h1 b {
+    font-weight: normal !important;
+  }
+}
+@media only all and (max-width: 37.4375em) and only all and (max-width: 37.4375em) and only all and (max-width: 37.4375em) {
+  h1,
+  .h1 {
+    margin-top: 0;
+    margin-bottom: 1.16666667em;
+    font-size: 1.125em;
+    font-family: "AvenirNextLTW01-Medium", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.22222222;
+  }
+  .lt-ie9 h1,
+  .lt-ie9 .h1 {
+    font-weight: normal !important;
+  }
+}
+h2,
+.h2 {
+  margin-top: 0;
+  margin-bottom: 0.73076923em;
+  font-size: 1.625em;
+  line-height: 1.26923077;
+}
+@media only all and (max-width: 37.4375em) {
+  h2,
+  .h2 {
+    font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    margin-top: 0;
+    margin-bottom: 0.95454545em;
+    font-size: 1.375em;
+    line-height: 1.27272727;
+  }
+  h2 em,
+  .h2 em,
+  h2 i,
+  .h2 i {
+    font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+    font-style: italic;
+    font-weight: normal;
+  }
+  .lt-ie9 h2 em,
+  .lt-ie9 .h2 em,
+  .lt-ie9 h2 i,
+  .lt-ie9 .h2 i {
+    font-style: normal !important;
+  }
+  h2 strong,
+  .h2 strong,
+  h2 b,
+  .h2 b {
+    font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+  }
+  .lt-ie9 h2 strong,
+  .lt-ie9 .h2 strong,
+  .lt-ie9 h2 b,
+  .lt-ie9 .h2 b {
+    font-weight: normal !important;
+  }
+}
+@media only all and (max-width: 37.4375em) and only all and (max-width: 37.4375em) {
+  h2,
+  .h2 {
+    margin-top: 0;
+    margin-bottom: 1.16666667em;
+    font-size: 1.125em;
+    font-family: "AvenirNextLTW01-Medium", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.22222222;
+  }
+  .lt-ie9 h2,
+  .lt-ie9 .h2 {
+    font-weight: normal !important;
+  }
+}
+h3,
+.h3 {
+  margin-top: 0;
+  margin-bottom: 0.95454545em;
+  font-size: 1.375em;
+  line-height: 1.27272727;
+}
+@media only all and (max-width: 37.4375em) {
+  h3,
+  .h3 {
+    margin-top: 0;
+    margin-bottom: 1.16666667em;
+    font-size: 1.125em;
+    font-family: "AvenirNextLTW01-Medium", Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1.22222222;
+  }
+  .lt-ie9 h3,
+  .lt-ie9 .h3 {
+    font-weight: normal !important;
+  }
+}
+h4,
+.h4 {
+  margin-top: 0;
+  margin-bottom: 1.16666667em;
+  font-size: 1.125em;
+  font-family: "AvenirNextLTW01-Medium", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.22222222;
+}
+.lt-ie9 h4,
+.lt-ie9 .h4 {
+  font-weight: normal !important;
+}
+h5,
+h6,
+.h5,
+.h6 {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.lt-ie9 h5,
+.lt-ie9 h6,
+.lt-ie9 .h5,
+.lt-ie9 .h6 {
+  font-weight: normal !important;
+}
+h5,
+.h5 {
+  margin-top: 0;
+  margin-bottom: 0.35714286em;
+  font-size: 0.875em;
+  line-height: 1.57142857;
+}
+h6,
+.h6 {
+  margin-top: 0;
+  margin-bottom: 0.41666667em;
+  font-size: 0.75em;
+  line-height: 1.83333333;
+}
+.superheader {
+  margin-bottom: 0.1875em;
+  font-size: 3em;
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.25;
+}
+.lt-ie9 .superheader {
+  font-weight: normal !important;
+}
+/* topdoc
+  name: Margins
+  family: cf-core
+  patterns:
+    - name: Consistent vertical margins
+      notes:
+        - "Assumes that the font size of each of these items remains the default."
+      markup: |
+        <p>Paragraph margin example</p>
+        <p>Paragraph margin example</p>
+  tags:
+    - cf-core
+*/
+p,
+ul,
+ol,
+dl,
+table,
+figure {
+  margin-top: 0;
+  margin-bottom: 1.25em;
+}
+/* topdoc
+  name: Default link
+  notes:
+    - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+      be used in production."
+  family: cf-core
+  patterns:
+    - name: Default state
+      markup: |
+        <a href="#">Default link style</a>
+    - name: Visited state
+      markup: |
+        <a href="#" class="visited">Visited link style</a>
+    - name: Hovered state
+      markup: |
+        <a href="#" class="hover">Hovered link style</a>
+    - name: Focused state
+      markup: |
+        <a href="#" class="focus">Focused link style</a>
+    - name: Active state
+      markup: |
+        <a href="#" class="active">Active link style</a>
+  tags:
+    - cf-core
+*/
+a {
+  border-width: 0;
+  border-style: dotted;
+  border-color: #c7336e;
+  color: #c7336e;
+  text-decoration: none;
+}
+a:visited,
+a.visited {
+  border-color: #cf447c;
+  color: #cf447c;
+}
+a:hover,
+a.hover {
+  border-style: solid;
+  border-color: #9e2958;
+  color: #9e2958;
+}
+a:focus,
+a.focus {
+  border-style: solid;
+  outline: thin dotted;
+}
+a:active,
+a.active {
+  border-style: solid;
+  border-color: #8a234c;
+  color: #8a234c;
+}
+/* topdoc
+  name: Underlined links
+  family: cf-core
+  patterns:
+    - name: States
+      notes:
+        - "Note that the .visited, .hover, .focus, .active classes are for demonstration purposes only and should not 
+          be used in production."
+        - "The underline style properties are mostly set above in the a tag.
+          To enable the underline simply set a bottom-border-width as done here."
+      markup: |
+        <p>
+            <a href="#">Default</a>,
+            <a href="#" class="visited">Visited</a>,
+            <a href="#" class="hover">Hovered</a>,
+            <a href="#" class="focus">Focused</a>,
+            <a href="#" class="active">Active</a>
+        </p>
+    - name: Underline conditions
+      notes:
+        - "We're restricting link borders to links within p, li, and dd so that
+          we don't have to override them every time we want a plain link."
+      markup: |
+        <p>
+            <a href="#">A child of a paragraph</a>
+        </p>
+        <ul>
+            <li>
+                <a href="#">A child of a list item</a>
+            </li>
+        </ul>
+        <dl>
+            <dt>
+                Definition list term
+            </dt>
+            <dd>
+                <a href="#">A child of a definition list description</a>
+            </dd>
+        </dl>
+    - name: Exceptions for underlined links
+      notes:
+        - "Inline text links inside of a nav element are not underlined."
+      markup: |
+        <nav>
+            <p>
+                <a href="#">A child of a paragraph</a>
+            </p>
+            <ul>
+                <li>
+                    <a href="#">A child of a list item</a>
+                </li>
+            </ul>
+            <dl>
+                <dt>
+                    Definition list term
+                </dt>
+                <dd>
+                    <a href="#">A child of a definition list description</a>
+                </dd>
+            </dl>
+        </nav>
+  tags:
+    - cf-core
+*/
+p a,
+li a,
+dd a {
+  border-bottom-width: 1px;
+}
+nav a {
+  border-bottom-width: 0;
+}
+/* topdoc
+  name: Lists
+  family: cf-core
+  patterns:
+    - name: Unordered list
+      markup: |
+        <ul>
+            <li>List item</li>
+            <li>List item</li>
+            <li>List item</li>
+        </ul>
+  tags:
+    - cf-core
+*/
+ul {
+  list-style: square;
+}
+/* topdoc
+  name: Tables
+  family: cf-core
+  patterns:
+    - name: Standard table
+      markup: |
+        <table>
+            <thead>
+                <tr>
+                    <th>Column 1 header</th>
+                    <th>Column 2 header</th>
+                    <th>Column 3 header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Row 1 header</th>
+                    <td>Row 1, column 2</td>
+                    <td>Row 1, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 2 header</th>
+                    <td>Row 2, column 2</td>
+                    <td>Row 2, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 3 header</th>
+                    <td>Row 3, column 2</td>
+                    <td>Row 3, column 3</td>
+                </tr>
+            </tbody>
+        </table>
+    - name: Compact table
+      markup: |
+        <table class="compact-table">
+            <thead>
+                <tr>
+                    <th>Column 1 header</th>
+                    <th>Column 2 header</th>
+                    <th>Column 3 header</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Row 1 header</th>
+                    <td>Row 1, column 2</td>
+                    <td>Row 1, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 2 header</th>
+                    <td>Row 2, column 2</td>
+                    <td>Row 2, column 3</td>
+                </tr>
+                <tr>
+                    <th>Row 3 header</th>
+                    <td>Row 3, column 2</td>
+                    <td>Row 3, column 3</td>
+                </tr>
+            </tbody>
+        </table>
+      notes:
+        - Reduces cell padding to 10px.
+  tags:
+    - cf-core
+*/
+table {
+  font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+table em,
+table i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 table em,
+.lt-ie9 table i {
+  font-style: normal !important;
+}
+table strong,
+table b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 table strong,
+.lt-ie9 table b {
+  font-weight: normal !important;
+}
+th,
+td {
+  padding: 0.75em 0.9375em;
+  background: #eee4ed;
+}
+thead th,
+thead td {
+  color: #ffffff;
+  background: #5b3b57;
+}
+tbody > tr:nth-child(odd) > th,
+tbody > tr:nth-child(odd) > td {
+  background: #f4edf3;
+}
+.compact-table th,
+.compact-table td {
+  padding: 0.4375em 0.625em;
+}
+th {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  text-align: left;
+}
+.lt-ie9 th {
+  font-weight: normal !important;
+}
+/* topdoc
+  name: Block quote
+  family: cf-core
+  patterns:
+    - name: Default block quote
+      markup: |
+        <blockquote cite="link-to-source">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa
+            similique fugit hic eligendi praesentium officiis illum optio iusto
+            commodi eum tempore nisi ad in perferendis enim quo dolores.
+            Reprehenderit similique earum quibusdam possimus vitae esse
+            nesciunt mollitia sed beatae aliquid dolores iure a impedit quam
+            minus eum modi illum ducimus eligendi eveniet labore non sequi
+            voluptate et totam praesentium animi itaque asperiores dolorum
+            sunt laudantium repellat nam commodi. Perspiciatis natus aliquam
+            veniam officiis ducimus voluptatum ut necessitatibus non!
+        </blockquote>
+      notes:
+        - "Use a block quote to quote from an external work. See .pull-quote if
+          you need to highlight an excerpt from the current work."
+        - "It is best practice to document the URL of a quoted work using the
+          cite attribute."
+  tags:
+    - cf-core
+*/
+blockquote {
+  margin: 1.25em;
+}
+@media only all and (min-width: 37.5em) {
+  blockquote {
+    margin: 1.75em 2.5em;
+  }
+}
+/* topdoc
+    name: Form labels
+    family: cf-core
+    notes:
+      - "Visit https://github.com/cfpb/cf-forms for advanced form label patterns."
+    patterns:
+    - name: Default label
+      markup: |
+        <label>Form label</label>
+    - name: Label wrapping a radio or checkbox
+      markup: |
+        <label>
+            <input type="radio">
+            Radio label
+        </label>
+        <label>
+            <input type="checkbox">
+            Checkbox label
+        </label>
+    tags:
+    - cf-core
+*/
+label {
+  display: block;
+  margin-bottom: 0.3125em;
+  font-family: "AvenirNextLTW01-Regular", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+}
+label em,
+label i {
+  font-family: "AvenirNextLTW01-Italic", Arial, sans-serif;
+  font-style: italic;
+  font-weight: normal;
+}
+.lt-ie9 label em,
+.lt-ie9 label i {
+  font-style: normal !important;
+}
+label strong,
+label b {
+  font-family: "AvenirNextLTW01-Demi", Arial, sans-serif;
+  font-style: normal;
+  font-weight: bold;
+}
+.lt-ie9 label strong,
+.lt-ie9 label b {
+  font-weight: normal !important;
+}
+label input[type="radio"],
+label input[type="checkbox"] {
+  margin-right: 0.375em;
+}
+/* topdoc
+    name: Form elements
+    family: cf-core
+    notes:
+      - "The .focus class is only included for documentation demos and should
+         not be used in production."
+      - "Visit https://github.com/cfpb/cf-forms for advanced form field patterns."
+    patterns:
+    - name: type="text"
+      markup: |
+        <input type="text" value="Lorem ipsum">
+        <input class="focus" type="text" value="Lorem ipsum">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="text" value="">
+    - name: type="search"
+      markup: |
+        <input type="search" value="Lorem ipsum">
+        <input class="focus" type="search" value="Lorem ipsum">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="search" value="">
+    - name: type="email"
+      markup: |
+        <input type="email" value="Lorem ipsum">
+        <input class="focus" type="email" value="Lorem ipsum">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="email" value="">
+    - name: type="url"
+      markup: |
+        <input type="url" value="Lorem ipsum">
+        <input class="focus" type="url" value="Lorem ipsum">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="url" value="">
+    - name: type="tel"
+      markup: |
+        <input type="tel" value="Lorem ipsum">
+        <input class="focus" type="tel" value="Lorem ipsum">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="tel" value="">
+    - name: type="number"
+      markup: |
+        <input type="number" value="1000">
+        <input class="focus" type="number" value="1000">
+        <br><br>
+        <input placeholder="Lorem ipsum" type="number" value="">
+    - name: textarea
+      markup: |
+        <textarea>Lorem ipsum</textarea>
+        <textarea class="focus">Lorem ipsum</textarea>
+    - name: multi-select
+      markup: |
+        <select multiple>
+            <option value="option1">Lorem</option>
+            <option value="option2">Ipsum</option>
+            <option value="option3">Dolor</option>
+            <option value="option4">Sit</option>
+        </select>
+        <select class="focus" multiple>
+            <option value="option1">Lorem</option>
+            <option value="option2">Ipsum</option>
+            <option value="option3">Dolor</option>
+            <option value="option4">Sit</option>
+        </select>
+    tags:
+    - cf-core
+*/
+input[type="text"],
+input[type="search"],
+input[type="email"],
+input[type="url"],
+input[type="tel"],
+input[type="number"],
+textarea,
+select[multiple] {
+  display: inline-block;
+  margin: 0;
+  padding: 0.375em;
+  font-family: Arial, sans-serif;
+  font-size: 1em;
+  background: #ffffff;
+  border: 1px solid #5b3b57;
+  border-radius: 0;
+  vertical-align: top;
+  -webkit-appearance: none;
+  -webkit-user-modify: read-write-plaintext-only;
+}
+::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+input[type="text"]:focus,
+input[type="text"].focus,
+input[type="search"]:focus,
+input[type="search"].focus,
+input[type="email"]:focus,
+input[type="email"].focus,
+input[type="url"]:focus,
+input[type="url"].focus,
+input[type="tel"]:focus,
+input[type="tel"].focus,
+input[type="number"]:focus,
+input[type="number"].focus,
+textarea:focus,
+textarea.focus,
+select[multiple]:focus,
+select[multiple].focus {
+  border: 1px solid #c7336e;
+  outline: 1px solid #c7336e;
+  outline-offset: 0;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+::-webkit-input-placeholder {
+  color: grayscale(#c7336e);
+}
+::-moz-placeholder {
+  color: grayscale(#c7336e);
+}
+:-ms-input-placeholder {
+  color: grayscale(#c7336e);
+}
+/* topdoc
+  name: Images
+  family: cf-core
+  patterns:
+    - name: max-width
+      markup: |
+            <img src="http://placekitten.com/800/40" alt="">
+      notes:
+        - "Gives all images a default max-width of 100% of their container."
+  tags:
+    - cf-core
+*/
+img {
+  max-width: 100%;
+}
+/* topdoc
+  name: Figure
+  family: cf-core
+  patterns:
+    - name: figure
+      markup: |
+        <figure>
+            <img src="http://placekitten.com/340/320">
+        </figure>
+    - name: figure.figure__bordered
+      markup: |
+        <figure class="figure__bordered">
+            <img src="http://placekitten.com/340/320">
+        </figure>
+  tags:
+    - cf-core
+*/
+figure {
+  margin-left: 0;
+  margin-right: 0;
+}
+figure img {
+  vertical-align: middle;
+}
+.figure__bordered img {
+  border: 1px solid #5b3b57;
+}
+/* topdoc
+  name: EOF
+  eof: true
+*/
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi9zcmMvdmVuZG9yL2NmLWNvbmNhdC9jZi5sZXNzIiwiL3NyYy92ZW5kb3Ivbm9ybWFsaXplLWNzcy9ub3JtYWxpemUuY3NzIiwiL3NyYy92ZW5kb3Ivbm9ybWFsaXplLWxlZ2FjeS1hZGRvbi9ub3JtYWxpemUtbGVnYWN5LWFkZG9uLmNzcyIsIi9zcmMvdmVuZG9yL2NmLWNvcmUvY2YtdXRpbGl0aWVzLmxlc3MiLCIvc3JjL3ZlbmRvci9jZi1jb3JlL2NmLW1lZGlhLXF1ZXJpZXMubGVzcyIsIi9zcmMvdmVuZG9yL2NmLWNvcmUvbGljZW5zZWQtZm9udHMuY3NzIiwiL3NyYy92ZW5kb3IvY2YtY29yZS9jZi1iYXNlLmxlc3MiLCIvc3JjL3ZlbmRvci9jZi1jb3JlL2NmLXZhcnMubGVzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBd0VBO0VBQ0UsYUFBYSxlQUFiO0VBQ0EsU0FBUyx3QkFBVDtFQUNBLFNBQVMsZ0NBQXVDLE9BQU8sMEJBQ2pELDBCQUFpQyxPQUFPLGFBQ3hDLHlCQUFnQyxPQUFPLGlCQUN2Qyx5QkFBZ0MsT0FBTyxNQUg3QztFQUlBLG1CQUFBO0VBQ0Esa0JBQUE7O0FBZ0JGO0FBQ0EsQ0FBQztFQUNDLGFBQWEsZUFBYjtFQUNBLHFCQUFBO0VBQ0Esa0JBQUE7RUFDQSxtQkFBQTtFQUNBLGNBQUE7RUFDQSxtQ0FBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQWdRRixDQUFDLE9BQWlCO0VBQ2hCLHVCQUFBO0VBQ0EsbUJBQUE7RUFDQSxvQkFBQTs7QUFHRixDQUFDLE9BQWlCO0VBQU8sY0FBQTs7QUFDekIsQ0FBQyxPQUFpQjtFQUFPLGNBQUE7O0FBQ3pCLENBQUMsT0FBaUI7RUFBTyxjQUFBOztBQUN6QixDQUFDLE9BQWlCO0VBQU8sY0FBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQXlEekIsQ0FBQyxPQUFpQjtFQUNoQix5QkFBQTtFQUNBLDRCQUFBO0VBQ0EsbUJBQUE7O0FBR0YsQ0FBQyxPQUFpQjtFQXZDaEIsUUFBUSx3REFBUjtFQUNBLG1CQUFtQixhQUFuQjtFQUNJLGVBQWUsYUFBZjtFQUNJLFdBQVcsYUFBWDs7QUFxQ1YsQ0FBQyxPQUFpQjtFQXhDaEIsUUFBUSx3REFBUjtFQUNBLG1CQUFtQixjQUFuQjtFQUNJLGVBQWUsY0FBZjtFQUNJLFdBQVcsY0FBWDs7QUFzQ1YsQ0FBQyxPQUFpQjtFQXpDaEIsUUFBUSx3REFBUjtFQUNBLG1CQUFtQixjQUFuQjtFQUNJLGVBQWUsY0FBZjtFQUNJLFdBQVcsY0FBWDs7QUF3Q1YsQ0FBQyxPQUFpQjtFQXBDaEIsUUFBUSxrRUFBUjtFQUNBLG1CQUFtQixZQUFuQjtFQUNJLGVBQWUsWUFBZjtFQUNJLFdBQVcsWUFBWDs7QUFrQ1YsQ0FBQyxPQUFpQjtFQXJDaEIsUUFBUSxrRUFBUjtFQUNBLG1CQUFtQixZQUFuQjtFQUNJLGVBQWUsWUFBZjtFQUNJLFdBQVcsWUFBWDs7QUFvQ1YsS0FBTSxFQUFDLE9BQWlCO0FBQ3hCLEtBQU0sRUFBQyxPQUFpQjtBQUN4QixLQUFNLEVBQUMsT0FBaUI7QUFDeEIsS0FBTSxFQUFDLE9BQWlCO0FBQ3hCLEtBQU0sRUFBQyxPQUFpQjtFQUN0QixZQUFBOzs7Ozs7Ozs7Ozs7Ozs7OztBQW9CRixDQUFDLE9BQWlCO0VBQ2hCLDZDQUFBO0VBQ1EscUNBQUE7O0FBR1YsQ0FBQyxPQUFpQjtFQUNoQix1Q0FBdUMsUUFBdkM7RUFDUSwrQkFBK0IsUUFBL0I7O0FBR1Y7RUFDRTtJQUNFLG1CQUFtQixZQUFuQjtJQUNRLFdBQVcsWUFBWDs7RUFFVjtJQUNFLG1CQUFtQixjQUFuQjtJQUNRLFdBQVcsY0FBWDs7O0FBSVo7RUFDRTtJQUNFLG1CQUFtQixZQUFuQjtJQUNRLFdBQVcsWUFBWDs7RUFFVjtJQUNFLG1CQUFtQixjQUFuQjtJQUNRLFdBQVcsY0FBWDs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBOENSLENBREgsT0FBaUIsS0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBeGVkLDZFQUFBOztBQThlQSxDQURILE9BQWlCLFdBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTdlZCw2RUFBQTs7QUFtZkEsQ0FESCxPQUFpQixNQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFsZmQsNkVBQUE7O0FBd2ZBLENBREgsT0FBaUIsWUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBdmZkLDZFQUFBOztBQTZmQSxDQURILE9BQWlCLEdBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTVmZCw2RUFBQTs7QUFrZ0JBLENBREgsT0FBaUIsU0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBamdCZCw2RUFBQTs7QUF1Z0JBLENBREgsT0FBaUIsS0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBdGdCZCw2RUFBQTs7QUE0Z0JBLENBREgsT0FBaUIsV0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBM2dCZCw2RUFBQTs7QUFpaEJBLENBREgsT0FBaUIsV0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBaGhCZCw2RUFBQTs7QUFzaEJBLENBREgsT0FBaUIsaUJBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXJoQmQsNkVBQUE7O0FBMmhCQSxDQURILE9BQWlCLFlBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTFoQmQsNkVBQUE7O0FBZ2lCQSxDQURILE9BQWlCLGtCQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUEvaEJkLDZFQUFBOztBQXFpQkEsQ0FESCxPQUFpQixTQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFwaUJkLDZFQUFBOztBQTBpQkEsQ0FESCxPQUFpQixlQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUF6aUJkLDZFQUFBOztBQStpQkEsQ0FESCxPQUFpQixXQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUE5aUJkLDZFQUFBOztBQW9qQkEsQ0FESCxPQUFpQixpQkFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBbmpCZCw2RUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQThsQkEsQ0FESCxPQUFpQixTQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUE3bEJkLDZFQUFBOztBQW1tQkEsQ0FESCxPQUFpQixlQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFsbUJkLDZFQUFBOztBQXdtQkEsQ0FESCxPQUFpQixNQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUF2bUJkLDZFQUFBOztBQTZtQkEsQ0FESCxPQUFpQixZQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUE1bUJkLDZFQUFBOztBQWtuQkEsQ0FESCxPQUFpQixLQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFqbkJkLDZFQUFBOztBQXVuQkEsQ0FESCxPQUFpQixXQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUF0bkJkLDZFQUFBOztBQTRuQkEsQ0FESCxPQUFpQixPQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUEzbkJkLDZFQUFBOztBQWlvQkEsQ0FESCxPQUFpQixhQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFob0JkLDZFQUFBOztBQXNvQkEsQ0FESCxPQUFpQixLQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFyb0JkLDZFQUFBOztBQTJvQkEsQ0FESCxPQUFpQixXQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUExb0JkLDZFQUFBOztBQWdwQkEsQ0FESCxPQUFpQixNQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUEvb0JkLDZFQUFBOztBQXFwQkEsQ0FESCxPQUFpQixZQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFwcEJkLDZFQUFBOztBQTBwQkEsQ0FESCxPQUFpQixPQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUF6cEJkLDZFQUFBOztBQStwQkEsQ0FESCxPQUFpQixhQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUE5cEJkLDZFQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBeXNCQSxDQURILE9BQWlCLFFBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXhzQmQsNkVBQUE7O0FBOHNCQSxDQURILE9BQWlCLGVBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTdzQmQsNkVBQUE7O0FBbXRCQSxDQURILE9BQWlCLFNBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQWx0QmQsNkVBQUE7O0FBd3RCQSxDQURILE9BQWlCLGdCQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUF2dEJkLDZFQUFBOztBQTZ0QkEsQ0FESCxPQUFpQixTQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUE1dEJkLDZFQUFBOztBQWt1QkEsQ0FESCxPQUFpQixnQkFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBanVCZCw2RUFBQTs7QUF1dUJBLENBREgsT0FBaUIsT0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBdHVCZCw2RUFBQTs7QUE0dUJBLENBREgsT0FBaUIsY0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBM3VCZCw2RUFBQTs7QUFpdkJBLENBREgsT0FBaUIsUUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBaHZCZCw2RUFBQTs7QUFzdkJBLENBREgsT0FBaUIsZUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBcnZCZCw2RUFBQTs7QUEydkJBLENBREgsT0FBaUIsT0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBMXZCZCw2RUFBQTs7QUFnd0JBLENBREgsT0FBaUIsY0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBL3ZCZCw2RUFBQTs7QUFxd0JBLENBREgsT0FBaUIsYUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBcHdCZCw2RUFBQTs7QUEwd0JBLENBREgsT0FBaUIsb0JBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXp3QmQsNkVBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQWd6QkEsQ0FESCxPQUFpQixJQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUEveUJkLDZFQUFBOztBQXF6QkEsQ0FESCxPQUFpQixVQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFwekJkLDZFQUFBOztBQTB6QkEsQ0FESCxPQUFpQixNQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUF6ekJkLDZFQUFBOztBQSt6QkEsQ0FESCxPQUFpQixZQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUE5ekJkLDZFQUFBOztBQW8wQkEsQ0FESCxPQUFpQixLQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFuMEJkLDZFQUFBOztBQXkwQkEsQ0FESCxPQUFpQixXQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUF4MEJkLDZFQUFBOztBQTgwQkEsQ0FESCxPQUFpQixNQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUE3MEJkLDZFQUFBOztBQW0xQkEsQ0FESCxPQUFpQixZQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFsMUJkLDZFQUFBOztBQXcxQkEsQ0FESCxPQUFpQixXQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUF2MUJkLDZFQUFBOztBQTYxQkEsQ0FESCxPQUFpQixpQkFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBNTFCZCw2RUFBQTs7QUFrMkJBLENBREgsT0FBaUIsSUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBajJCZCw2RUFBQTs7QUF1MkJBLENBREgsT0FBaUIsVUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBdDJCZCw2RUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBcTZCQSxDQURILE9BQWlCLFNBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXA2QmQsNkVBQUE7O0FBMDZCQSxDQURILE9BQWlCLGVBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXo2QmQsNkVBQUE7O0FBKzZCQSxDQURILE9BQWlCLElBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTk2QmQsNkVBQUE7O0FBbzdCQSxDQURILE9BQWlCLFVBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQW43QmQsNkVBQUE7O0FBeTdCQSxDQURILE9BQWlCLE9BQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXg3QmQsNkVBQUE7O0FBODdCQSxDQURILE9BQWlCLGFBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTc3QmQsNkVBQUE7O0FBbThCQSxDQURILE9BQWlCLFNBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQWw4QmQsNkVBQUE7O0FBdzhCQSxDQURILE9BQWlCLGVBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXY4QmQsNkVBQUE7O0FBNjhCQSxDQURILE9BQWlCLEtBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTU4QmQsNkVBQUE7O0FBazlCQSxDQURILE9BQWlCLFdBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQWo5QmQsNkVBQUE7O0FBdTlCQSxDQURILE9BQWlCLEtBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXQ5QmQsNkVBQUE7O0FBNDlCQSxDQURILE9BQWlCLFdBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTM5QmQsNkVBQUE7O0FBaStCQSxDQURILE9BQWlCLE9BQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQWgrQmQsNkVBQUE7O0FBcytCQSxDQURILE9BQWlCLGFBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXIrQmQsNkVBQUE7O0FBMitCQSxDQURILE9BQWlCLE1BQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTErQmQsNkVBQUE7O0FBZy9CQSxDQURILE9BQWlCLFlBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQS8rQmQsNkVBQUE7O0FBcS9CQSxDQURILE9BQWlCLEtBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXAvQmQsNkVBQUE7O0FBMC9CQSxDQURILE9BQWlCLFdBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXovQmQsNkVBQUE7O0FBKy9CQSxDQURILE9BQWlCLFNBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTkvQmQsNkVBQUE7O0FBb2dDQSxDQURILE9BQWlCLGVBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQW5nQ2QsNkVBQUE7O0FBeWdDQSxDQURILE9BQWlCLFdBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXhnQ2QsNkVBQUE7O0FBOGdDQSxDQURILE9BQWlCLGlCQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUE3Z0NkLDZFQUFBOztBQW1oQ0EsQ0FESCxPQUFpQixJQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFsaENkLDZFQUFBOztBQXdoQ0EsQ0FESCxPQUFpQixVQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUF2aENkLDZFQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQXNuQ0EsQ0FESCxPQUFpQixhQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFybkNkLDZFQUFBOztBQTJuQ0EsQ0FESCxPQUFpQixtQkFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBMW5DZCw2RUFBQTs7QUFnb0NBLENBREgsT0FBaUIsWUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBL25DZCw2RUFBQTs7QUFxb0NBLENBREgsT0FBaUIsa0JBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXBvQ2QsNkVBQUE7O0FBMG9DQSxDQURILE9BQWlCLEtBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXpvQ2QsNkVBQUE7O0FBK29DQSxDQURILE9BQWlCLFdBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTlvQ2QsNkVBQUE7O0FBb3BDQSxDQURILE9BQWlCLGVBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQW5wQ2QsNkVBQUE7O0FBeXBDQSxDQURILE9BQWlCLHFCQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUF4cENkLDZFQUFBOztBQThwQ0EsQ0FESCxPQUFpQixTQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUE3cENkLDZFQUFBOztBQW1xQ0EsQ0FESCxPQUFpQixlQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFscUNkLDZFQUFBOztBQXdxQ0EsQ0FESCxPQUFpQixnQkFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBdnFDZCw2RUFBQTs7QUE2cUNBLENBREgsT0FBaUIsc0JBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTVxQ2QsNkVBQUE7O0FBa3JDQSxDQURILE9BQWlCLGNBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQWpyQ2QsNkVBQUE7O0FBdXJDQSxDQURILE9BQWlCLG9CQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUF0ckNkLDZFQUFBOztBQTRyQ0EsQ0FESCxPQUFpQixNQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUEzckNkLDZFQUFBOztBQWlzQ0EsQ0FESCxPQUFpQixZQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFoc0NkLDZFQUFBOztBQXNzQ0EsQ0FESCxPQUFpQixXQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFyc0NkLDZFQUFBOztBQTJzQ0EsQ0FESCxPQUFpQixpQkFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBMXNDZCw2RUFBQTs7QUFndENBLENBREgsT0FBaUIsU0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBL3NDZCw2RUFBQTs7QUFxdENBLENBREgsT0FBaUIsZUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBcHRDZCw2RUFBQTs7QUEwdENBLENBREgsT0FBaUIsVUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBenRDZCw2RUFBQTs7QUErdENBLENBREgsT0FBaUIsZ0JBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTl0Q2QsNkVBQUE7O0FBb3VDQSxDQURILE9BQWlCLG9CQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFudUNkLDZFQUFBOztBQXl1Q0EsQ0FESCxPQUFpQiwwQkFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBeHVDZCw2RUFBQTs7QUE4dUNBLENBREgsT0FBaUIsV0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBN3VDZCw2RUFBQTs7QUFtdkNBLENBREgsT0FBaUIsaUJBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQWx2Q2QsNkVBQUE7O0FBd3ZDQSxDQURILE9BQWlCLGVBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXZ2Q2QsNkVBQUE7O0FBNnZDQSxDQURILE9BQWlCLHFCQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUE1dkNkLDZFQUFBOztBQWt3Q0EsQ0FESCxPQUFpQixZQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFqd0NkLDZFQUFBOztBQXV3Q0EsQ0FESCxPQUFpQixrQkFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBdHdDZCw2RUFBQTs7QUE0d0NBLENBREgsT0FBaUIsS0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBM3dDZCw2RUFBQTs7QUFpeENBLENBREgsT0FBaUIsV0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBaHhDZCw2RUFBQTs7QUFzeENBLENBREgsT0FBaUIsZ0JBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXJ4Q2QsNkVBQUE7O0FBMnhDQSxDQURILE9BQWlCLHNCQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUExeENkLDZFQUFBOztBQWd5Q0EsQ0FESCxPQUFpQixjQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUEveENkLDZFQUFBOztBQXF5Q0EsQ0FESCxPQUFpQixvQkFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBcHlDZCw2RUFBQTs7QUEweUNBLENBREgsT0FBaUIsWUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBenlDZCw2RUFBQTs7QUEreUNBLENBREgsT0FBaUIsa0JBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTl5Q2QsNkVBQUE7O0FBb3pDQSxDQURILE9BQWlCLFdBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQW56Q2QsNkVBQUE7O0FBeXpDQSxDQURILE9BQWlCLGlCQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUF4ekNkLDZFQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUF1OUNBLENBREgsT0FBaUIsS0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBdDlDZCw2RUFBQTs7QUE0OUNBLENBREgsT0FBaUIsV0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBMzlDZCw2RUFBQTs7QUFpK0NBLENBREgsT0FBaUIsS0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBaCtDZCw2RUFBQTs7QUFzK0NBLENBREgsT0FBaUIsV0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBcitDZCw2RUFBQTs7QUEyK0NBLENBREgsT0FBaUIsT0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBMStDZCw2RUFBQTs7QUFnL0NBLENBREgsT0FBaUIsYUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBLytDZCw2RUFBQTs7QUFxL0NBLENBREgsT0FBaUIsTUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBcC9DZCw2RUFBQTs7QUEwL0NBLENBREgsT0FBaUIsWUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBei9DZCw2RUFBQTs7QUErL0NBLENBREgsT0FBaUIsS0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBOS9DZCw2RUFBQTs7QUFvZ0RBLENBREgsT0FBaUIsV0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBbmdEZCw2RUFBQTs7QUF5Z0RBLENBREgsT0FBaUIsY0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBeGdEZCw2RUFBQTs7QUE4Z0RBLENBREgsT0FBaUIsb0JBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTdnRGQsNkVBQUE7O0FBbWhEQSxDQURILE9BQWlCLFdBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQWxoRGQsNkVBQUE7O0FBd2hEQSxDQURILE9BQWlCLGlCQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUF2aERkLDZFQUFBOztBQTZoREEsQ0FESCxPQUFpQixVQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUE1aERkLDZFQUFBOztBQWtpREEsQ0FESCxPQUFpQixnQkFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBamlEZCw2RUFBQTs7QUF1aURBLENBREgsT0FBaUIsYUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBdGlEZCw2RUFBQTs7QUE0aURBLENBREgsT0FBaUIsbUJBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTNpRGQsNkVBQUE7O0FBaWpEQSxDQURILE9BQWlCLFVBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQWhqRGQsNkVBQUE7O0FBc2pEQSxDQURILE9BQWlCLGdCQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFyakRkLDZFQUFBOztBQTJqREEsQ0FESCxPQUFpQixTQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUExakRkLDZFQUFBOztBQWdrREEsQ0FESCxPQUFpQixlQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUEvakRkLDZFQUFBOztBQXFrREEsQ0FESCxPQUFpQixXQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFwa0RkLDZFQUFBOztBQTBrREEsQ0FESCxPQUFpQixpQkFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBemtEZCw2RUFBQTs7QUEra0RBLENBREgsT0FBaUIsU0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBOWtEZCw2RUFBQTs7QUFvbERBLENBREgsT0FBaUIsZUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBbmxEZCw2RUFBQTs7QUF5bERBLENBREgsT0FBaUIsV0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBeGxEZCw2RUFBQTs7QUE4bERBLENBREgsT0FBaUIsaUJBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTdsRGQsNkVBQUE7O0FBbW1EQSxDQURILE9BQWlCLFNBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQWxtRGQsNkVBQUE7O0FBd21EQSxDQURILE9BQWlCLGVBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXZtRGQsNkVBQUE7O0FBNm1EQSxDQURILE9BQWlCLEtBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTVtRGQsNkVBQUE7O0FBa25EQSxDQURILE9BQWlCLFdBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQWpuRGQsNkVBQUE7O0FBdW5EQSxDQURILE9BQWlCLEtBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXRuRGQsNkVBQUE7O0FBNG5EQSxDQURILE9BQWlCLFdBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTNuRGQsNkVBQUE7O0FBaW9EQSxDQURILE9BQWlCLE9BQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQWhvRGQsNkVBQUE7O0FBc29EQSxDQURILE9BQWlCLGFBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXJvRGQsNkVBQUE7O0FBMm9EQSxDQURILE9BQWlCLE1BQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTFvRGQsNkVBQUE7O0FBZ3BEQSxDQURILE9BQWlCLFlBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQS9vRGQsNkVBQUE7O0FBcXBEQSxDQURILE9BQWlCLE1BQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXBwRGQsNkVBQUE7O0FBMHBEQSxDQURILE9BQWlCLFlBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXpwRGQsNkVBQUE7O0FBK3BEQSxDQURILE9BQWlCLEtBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTlwRGQsNkVBQUE7O0FBb3FEQSxDQURILE9BQWlCLFdBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQW5xRGQsNkVBQUE7O0FBeXFEQSxDQURILE9BQWlCLFFBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXhxRGQsNkVBQUE7O0FBOHFEQSxDQURILE9BQWlCLGNBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTdxRGQsNkVBQUE7O0FBbXJEQSxDQURILE9BQWlCLGtCQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFsckRkLDZFQUFBOztBQXdyREEsQ0FESCxPQUFpQix3QkFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBdnJEZCw2RUFBQTs7QUE2ckRBLENBREgsT0FBaUIsVUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBNXJEZCw2RUFBQTs7QUFrc0RBLENBREgsT0FBaUIsZ0JBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQWpzRGQsNkVBQUE7O0FBdXNEQSxDQURILE9BQWlCLFdBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXRzRGQsNkVBQUE7O0FBNHNEQSxDQURILE9BQWlCLGlCQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUEzc0RkLDZFQUFBOztBQWl0REEsQ0FESCxPQUFpQixTQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFodERkLDZFQUFBOztBQXN0REEsQ0FESCxPQUFpQixlQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFydERkLDZFQUFBOztBQTJ0REEsQ0FESCxPQUFpQixhQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUExdERkLDZFQUFBOztBQWd1REEsQ0FESCxPQUFpQixtQkFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBL3REZCw2RUFBQTs7QUFxdURBLENBREgsT0FBaUIsY0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBcHVEZCw2RUFBQTs7QUEwdURBLENBREgsT0FBaUIsb0JBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQXp1RGQsNkVBQUE7O0FBK3VEQSxDQURILE9BQWlCLFlBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTl1RGQsNkVBQUE7O0FBb3ZEQSxDQURILE9BQWlCLGtCQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFudkRkLDZFQUFBOztBQXl2REEsQ0FESCxPQUFpQixVQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUF4dkRkLDZFQUFBOztBQTh2REEsQ0FESCxPQUFpQixnQkFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBN3ZEZCw2RUFBQTs7QUFtd0RBLENBREgsT0FBaUIsU0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBbHdEZCw2RUFBQTs7QUF3d0RBLENBREgsT0FBaUIsZUFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBdndEZCw2RUFBQTs7QUE2d0RBLENBREgsT0FBaUIsS0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBNXdEZCw2RUFBQTs7QUFreERBLENBREgsT0FBaUIsV0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBanhEZCw2RUFBQTs7QUF1eERBLENBREgsT0FBaUIsY0FDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBdHhEZCw2RUFBQTs7QUE0eERBLENBREgsT0FBaUIsb0JBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQTN4RGQsNkVBQUE7O0FBaXlEQSxDQURILE9BQWlCLFdBQ2I7RUFBZSxTQUFTLE9BQVQ7O0FBQ2hCLE9BQVEsRUFGWCxPQUFpQjtFQWh5RGQsNkVBQUE7O0FBc3lEQSxDQURILE9BQWlCLGlCQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFyeURkLDZFQUFBOztBQTJ5REEsQ0FESCxPQUFpQixRQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUExeURkLDZFQUFBOztBQWd6REEsQ0FESCxPQUFpQixjQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUEveURkLDZFQUFBOztBQXF6REEsQ0FESCxPQUFpQixlQUNiO0VBQWUsU0FBUyxPQUFUOztBQUNoQixPQUFRLEVBRlgsT0FBaUI7RUFwekRkLDZFQUFBOztBQTB6REEsQ0FESCxPQUFpQixxQkFDYjtFQUFlLFNBQVMsT0FBVDs7QUFDaEIsT0FBUSxFQUZYLE9BQWlCO0VBenpEZCw2RUFBQTs7Ozs7Ozs7Ozs7Ozs7OztBQ3hDSjtFQUNFLHVCQUFBOztFQUNBLDBCQUFBOztFQUNBLDhCQUFBOzs7Ozs7QUFPRjtFQUNFLFNBQUE7Ozs7Ozs7Ozs7QUFhRjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtFQUNFLGNBQUE7Ozs7OztBQVFGO0FBQ0E7QUFDQTtBQUNBO0VBQ0UscUJBQUE7O0VBQ0Esd0JBQUE7Ozs7Ozs7QUFRRixLQUFLLElBQUk7RUFDUCxhQUFBO0VBQ0EsU0FBQTs7Ozs7O0FBUUY7QUFDQTtFQUNFLGFBQUE7Ozs7Ozs7QUFVRjtFQUNFLDZCQUFBOzs7Ozs7QUFRRixDQUFDO0FBQ0QsQ0FBQztFQUNDLFVBQUE7Ozs7Ozs7QUFVRixJQUFJO0VBQ0YseUJBQUE7Ozs7O0FBT0Y7QUFDQTtFQUNFLGlCQUFBOzs7OztBQU9GO0VBQ0Usa0JBQUE7Ozs7OztBQVFGO0VBQ0UsY0FBQTtFQUNBLGdCQUFBOzs7OztBQU9GO0VBQ0UsZ0JBQUE7RUFDQSxXQUFBOzs7OztBQU9GO0VBQ0UsY0FBQTs7Ozs7QUFPRjtBQUNBO0VBQ0UsY0FBQTtFQUNBLGNBQUE7RUFDQSxrQkFBQTtFQUNBLHdCQUFBOztBQUdGO0VBQ0UsV0FBQTs7QUFHRjtFQUNFLGVBQUE7Ozs7Ozs7QUFVRjtFQUNFLFNBQUE7Ozs7O0FBT0YsR0FBRyxJQUFJO0VBQ0wsZ0JBQUE7Ozs7Ozs7QUFVRjtFQUNFLGdCQUFBOzs7OztBQU9GO0VBQ0UsdUJBQUE7RUFDQSxTQUFBOzs7OztBQU9GO0VBQ0UsY0FBQTs7Ozs7QUFPRjtBQUNBO0FBQ0E7QUFDQTtFQUNFLGlDQUFBO0VBQ0EsY0FBQTs7Ozs7Ozs7Ozs7Ozs7QUFrQkY7QUFDQTtBQUNBO0FBQ0E7QUFDQTtFQUNFLGNBQUE7O0VBQ0EsYUFBQTs7RUFDQSxTQUFBOzs7Ozs7QUFPRjtFQUNFLGlCQUFBOzs7Ozs7OztBQVVGO0FBQ0E7RUFDRSxvQkFBQTs7Ozs7Ozs7O0FBV0Y7QUFDQSxJQUFLLE1BQUs7QUFDVixLQUFLO0FBQ0wsS0FBSztFQUNILDBCQUFBOztFQUNBLGVBQUE7Ozs7OztBQU9GLE1BQU07QUFDTixJQUFLLE1BQUs7RUFDUixlQUFBOzs7OztBQU9GLE1BQU07QUFDTixLQUFLO0VBQ0gsU0FBQTtFQUNBLFVBQUE7Ozs7OztBQVFGO0VBQ0UsbUJBQUE7Ozs7Ozs7OztBQVdGLEtBQUs7QUFDTCxLQUFLO0VBQ0gsc0JBQUE7O0VBQ0EsVUFBQTs7Ozs7Ozs7QUFTRixLQUFLLGVBQWU7QUFDcEIsS0FBSyxlQUFlO0VBQ2xCLFlBQUE7Ozs7OztBQVFGLEtBQUs7RUFDSCw2QkFBQTs7RUFDQSx1QkFBQTs7Ozs7Ozs7QUFTRixLQUFLLGVBQWU7QUFDcEIsS0FBSyxlQUFlO0VBQ2xCLHdCQUFBOzs7OztBQU9GO0VBQ0UseUJBQUE7RUFDQSxhQUFBO0VBQ0EsOEJBQUE7Ozs7OztBQVFGO0VBQ0UsU0FBQTs7RUFDQSxVQUFBOzs7Ozs7QUFPRjtFQUNFLGNBQUE7Ozs7OztBQVFGO0VBQ0UsaUJBQUE7Ozs7Ozs7QUFVRjtFQUNFLHlCQUFBO0VBQ0EsaUJBQUE7O0FBR0Y7QUFDQTtFQUNFLFVBQUE7Ozs7Ozs7OztBQzVaRjtBQUNBO0FBQ0E7RUFDSSxnQkFBQTtFQUNBLFFBQUE7Ozs7Ozs7OztBQVlKO0VBQ0ksZUFBQTs7Ozs7O0FBUUo7QUFDQTtBQUNBO0FBQ0E7QUFDQTtFQUNJLHVCQUFBOzs7Ozs7Ozs7O0FBYUo7RUFDSSxnQkFBQTs7QUFHSjtFQUNJLGdCQUFBO0VBQ0EsZ0JBQUE7O0FBR0o7RUFDSSxpQkFBQTtFQUNBLGFBQUE7O0FBR0o7RUFDSSxjQUFBO0VBQ0EsZ0JBQUE7O0FBR0o7RUFDSSxpQkFBQTtFQUNBLGdCQUFBOztBQUdKO0VBQ0ksaUJBQUE7RUFDQSxnQkFBQTs7QUFHSjtFQUNJLGdCQUFBOzs7OztBQU9KO0FBQ0E7RUFDSSxhQUFBOzs7OztBQU9KO0FBQ0E7QUFDQTtBQUNBO0VBQ0ksY0FBYyx3QkFBZDs7Ozs7QUFPSjtFQUNJLGdCQUFBO0VBQ0EscUJBQUE7Ozs7O0FBT0o7RUFDSSxZQUFBOzs7OztBQU9KLENBQUM7QUFDRCxDQUFDO0VBQ0csU0FBUyxFQUFUO0VBQ0EsYUFBQTs7Ozs7Ozs7QUFXSjtBQUNBO0FBQ0E7QUFDQTtFQUNJLGFBQUE7O0FBR0o7RUFDSSxrQkFBQTs7Ozs7QUFPSjtBQUNBO0FBQ0E7RUFDSSxtQkFBQTs7Ozs7QUFPSixHQUFJO0FBQ0osR0FBSTtFQUNBLGdCQUFBO0VBQ0Esc0JBQUE7Ozs7Ozs7O0FBV0o7RUFDSSwrQkFBQTs7Ozs7Ozs7QUFXSjtFQUNJLFNBQUE7Ozs7Ozs7QUFTSjtFQUNJLFNBQUE7O0VBQ0EsbUJBQUE7O0VBQ0Esa0JBQUE7Ozs7OztBQU9KO0FBQ0E7QUFDQTtBQUNBO0VBQ0ksd0JBQUE7RUFDQSx1QkFBQTs7Ozs7O0FBUUo7QUFDQSxJQUFLLE1BQUs7QUFDVixLQUFLO0FBQ0wsS0FBSztFQUNELGtCQUFBOzs7Ozs7QUFRSixLQUFLO0FBQ0wsS0FBSztFQUNELGFBQUE7RUFDQSxZQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FDOU1BLE1BQU87RUFDSCx3QkFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUF5QkosV0FBQztFQUNHLFNBQVMsRUFBVDtFQUNBLGNBQUE7RUFDQSxXQUFBOztBQUVKLE9BQVE7RUFDSixPQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBMEJSO0VBQ0Usa0JBQUE7RUFDQSxnQkFBQTtFQUNBLE1BQU0sYUFBTjtFQUNBLFdBQUE7RUFBYSxVQUFBO0VBQ2IsWUFBQTtFQUFjLFVBQUE7RUFBWSxTQUFBOzs7Ozs7Ozs7Ozs7OztBQWlCNUI7RUFDSSxxQkFBQTs7QUFDQSxPQUFRO0VBRUosZUFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUF3QlI7RUFDSSxZQUFBOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFvQ0o7RUFDSSxxQkFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBbUhKO0VBTEksa0JBQUE7RUFDQSxzQkFBQTtFQUNBLFNBQUE7O0FBT0o7RUFDSSxrQkFBQTtFQUNBLE1BQUE7RUFDQSxPQUFBO0VBQ0EsV0FBQTtFQUNBLFlBQUE7O0FBR0o7RUFqQkksa0JBQUE7RUFDQSxtQkFBQTtFQUNBLFNBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBb05KO0VBQVUsd0JBQUE7O0FBQ1Y7RUFBVSwyQkFBQTs7QUFDVjtFQUFVLDBCQUFBOztBQUNWO0VBQVUsNkJBQUE7O0FBQ1Y7RUFBVSwyQkFBQTs7QUFDVjtFQUFVLDhCQUFBOztBQUNWO0VBQVUsMkJBQUE7O0FBQ1Y7RUFBVSw4QkFBQTs7QUFDVjtFQUFVLDJCQUFBOztBQUNWO0VBQVUsOEJBQUE7O0FBQ1Y7RUFBVSwyQkFBQTs7QUFDVjtFQUFVLDhCQUFBOztBQUNWO0VBQVUsMkJBQUE7O0FBQ1Y7RUFBVSw4QkFBQTs7QUFDVjtFQUFVLDJCQUFBOztBQUNWO0VBQVUsOEJBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBMERWO0VBQWEsV0FBQTs7QUFDYjtFQUFhLFVBQUE7O0FBQ2I7RUFBYSxVQUFBOztBQUNiO0VBQWEsVUFBQTs7QUFDYjtFQUFhLFVBQUE7O0FBQ2I7RUFBYSxVQUFBOztBQUNiO0VBQWEsVUFBQTs7QUFDYjtFQUFhLFVBQUE7O0FBQ2I7RUFBYSxVQUFBOztBQUNiO0VBQWEsVUFBQTs7QUFDYjtFQUFhLFVBQUE7O0FBQ2I7RUFBYSxVQUFBOztBQUNiO0VBQWEsbUJBQUE7O0FBQ2I7RUFBYSxtQkFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUM5ZmIscUJBSDBDO0VBRzFDO0lEcWlCUSxhQUFBOzs7QUFJUjtFQUNJLGFBQUE7O0FDMWlCSixxQkFIMEM7RUFHMUM7SUQ0aUJRLGNBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBbURSO0VBSEUsa0JBQUE7O0FBT0Y7RUFQRSxrQkFBQTs7Ozs7Ozs7Ozs7Ozs7O0FFdHFCRjtFQUNJLGFBQWEseUJBQWI7RUFDQSxTQUFTLG1oQkFBbWhCLE9BQU8sTUFBbmlCO0VBQ0Esa0JBQUE7RUFDQSxtQkFBQTs7QUFFSjtFQUNJLGFBQWEseUJBQWI7RUFDQSxTQUFTLGtoQkFBVDtFQUNBLFNBQVMsb2hCQUFvaEIsT0FBTyxhQUMzaEIsbWhCQUFtaEIsT0FBTyxpQkFDMWhCLHlqQkFBeWpCLE9BQU8sTUFGemtCO0VBR0Esa0JBQUE7RUFDQSxtQkFBQTs7QUFFSjtFQUNJLGFBQWEsd0JBQWI7RUFDQSxTQUFTLG1oQkFBbWhCLE9BQU8sTUFBbmlCO0VBQ0Esa0JBQUE7RUFDQSxtQkFBQTs7QUFFSjtFQUNJLGFBQWEsd0JBQWI7RUFDQSxTQUFTLGtoQkFBVDtFQUNBLFNBQVMsb2hCQUFvaEIsT0FBTyxhQUMzaEIsbWhCQUFtaEIsT0FBTyxpQkFDMWhCLHlqQkFBeWpCLE9BQU8sTUFGemtCO0VBR0Esa0JBQUE7RUFDQSxtQkFBQTs7QUFFSjtFQUNJLGFBQWEsd0JBQWI7RUFDQSxTQUFTLG1oQkFBbWhCLE9BQU8sTUFBbmlCO0VBQ0Esa0JBQUE7RUFDQSxnQkFBQTs7QUFFSjtFQUNJLGFBQWEsd0JBQWI7RUFDQSxTQUFTLGtoQkFBVDtFQUNBLFNBQVMsb2hCQUFvaEIsT0FBTyxhQUMzaEIsbWhCQUFtaEIsT0FBTyxpQkFDMWhCLHlqQkFBeWpCLE9BQU8sTUFGemtCO0VBR0Esa0JBQUE7RUFDQSxnQkFBQTs7QUFFSjtFQUNJLGFBQWEsc0JBQWI7RUFDQSxTQUFTLG1oQkFBbWhCLE9BQU8sTUFBbmlCO0VBQ0Esa0JBQUE7RUFDQSxnQkFBQTs7QUFFSjtFQUNJLGFBQWEsc0JBQWI7RUFDQSxTQUFTLGtoQkFBVDtFQUNBLFNBQVMsb2hCQUFvaEIsT0FBTyxhQUMzaEIsbWhCQUFtaEIsT0FBTyxpQkFDMWhCLHlqQkFBeWpCLE9BQU8sTUFGemtCO0VBR0Esa0JBQUE7RUFDQSxnQkFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FDc0VKO0VBQ0ksY0FBQTtFQUNBLHNCQUFzQix3QkFBdEI7RUFDQSxlQUFBO0VBQ0Esa0JBQUE7O0FBR0o7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0VBcEdJLGFBQWEsNENBQWI7RUFDQSxrQkFBQTtFQUNBLG1CQUFBOztBQUVBLEVBQUU7QUFBRixHQUFFO0FBQUYsRUFBRTtBQUFGLEdBQUU7QUFBRixFQUFFO0FBQUYsR0FBRTtBQUNGLEVBQUU7QUFBRixHQUFFO0FBQUYsRUFBRTtBQUFGLEdBQUU7QUFBRixFQUFFO0FBQUYsR0FBRTtFQVdGLGFBQWEsMkNBQWI7RUFDQSxrQkFBQTtFQUNBLG1CQUFBOztBQUNBLE9BQVEsR0FmTjtBQWVGLE9BQVEsSUFmTjtBQWVGLE9BQVEsR0FmTjtBQWVGLE9BQVEsSUFmTjtBQWVGLE9BQVEsR0FmTjtBQWVGLE9BQVEsSUFmTjtBQWVGLE9BQVEsR0FkTjtBQWNGLE9BQVEsSUFkTjtBQWNGLE9BQVEsR0FkTjtBQWNGLE9BQVEsSUFkTjtBQWNGLE9BQVEsR0FkTjtBQWNGLE9BQVEsSUFkTjtFQWVFLDZCQUFBOztBQVhKLEVBQUU7QUFBRixHQUFFO0FBQUYsRUFBRTtBQUFGLEdBQUU7QUFBRixFQUFFO0FBQUYsR0FBRTtBQUNGLEVBQUU7QUFBRixHQUFFO0FBQUYsRUFBRTtBQUFGLEdBQUU7QUFBRixFQUFFO0FBQUYsR0FBRTtFQXdCRixhQUFhLHlDQUFiO0VBQ0Esa0JBQUE7RUFDQSxpQkFBQTs7QUFDQSxPQUFRLEdBNUJOO0FBNEJGLE9BQVEsSUE1Qk47QUE0QkYsT0FBUSxHQTVCTjtBQTRCRixPQUFRLElBNUJOO0FBNEJGLE9BQVEsR0E1Qk47QUE0QkYsT0FBUSxJQTVCTjtBQTRCRixPQUFRLEdBM0JOO0FBMkJGLE9BQVEsSUEzQk47QUEyQkYsT0FBUSxHQTNCTjtBQTJCRixPQUFRLElBM0JOO0FBMkJGLE9BQVEsR0EzQk47QUEyQkYsT0FBUSxJQTNCTjtFQTRCRSw4QkFBQTs7QUFrRVI7QUFDQTtFQUlJLGFBQUE7RUFHQSwyQkFBQTtFQUNBLGtCQUFBO0VBQ0EsdUJBQUE7O0FGaEZKLHFCQUgwQztFQUcxQztFQUFBO0lFbENJLGFBQWEsNENBQWI7SUFDQSxrQkFBQTtJQUNBLG1CQUFBO0lBNEhBLGFBQUE7SUFHQSwyQkFBQTtJQUNBLGtCQUFBO0lBQ0EsdUJBQUE7O0VBL0hBLEVBQUU7RUFBRixHQUFFO0VBQ0YsRUFBRTtFQUFGLEdBQUU7SUFXRixhQUFhLDJDQUFiO0lBQ0Esa0JBQUE7SUFDQSxtQkFBQTs7RUFDQSxPQUFRLEdBZk47RUFlRixPQUFRLElBZk47RUFlRixPQUFRLEdBZE47RUFjRixPQUFRLElBZE47SUFlRSw2QkFBQTs7RUFYSixFQUFFO0VBQUYsR0FBRTtFQUNGLEVBQUU7RUFBRixHQUFFO0lBd0JGLGFBQWEseUNBQWI7SUFDQSxrQkFBQTtJQUNBLGlCQUFBOztFQUNBLE9BQVEsR0E1Qk47RUE0QkYsT0FBUSxJQTVCTjtFQTRCRixPQUFRLEdBM0JOO0VBMkJGLE9BQVEsSUEzQk47SUE0QkUsOEJBQUE7OztBRkpSLHFCQUgwQyx3Q0FBQTtFQUcxQztFQUFBO0lFbENJLGFBQWEsNENBQWI7SUFDQSxrQkFBQTtJQUNBLG1CQUFBO0lBNklBLGFBQUE7SUFHQSwyQkFBQTtJQUNBLGtCQUFBO0lBQ0EsdUJBQUE7O0VBaEpBLEVBQUU7RUFBRixHQUFFO0VBQ0YsRUFBRTtFQUFGLEdBQUU7SUFXRixhQUFhLDJDQUFiO0lBQ0Esa0JBQUE7SUFDQSxtQkFBQTs7RUFDQSxPQUFRLEdBZk47RUFlRixPQUFRLElBZk47RUFlRixPQUFRLEdBZE47RUFjRixPQUFRLElBZE47SUFlRSw2QkFBQTs7RUFYSixFQUFFO0VBQUYsR0FBRTtFQUNGLEVBQUU7RUFBRixHQUFFO0lBd0JGLGFBQWEseUNBQWI7SUFDQSxrQkFBQTtJQUNBLGlCQUFBOztFQUNBLE9BQVEsR0E1Qk47RUE0QkYsT0FBUSxJQTVCTjtFQTRCRixPQUFRLEdBM0JOO0VBMkJGLE9BQVEsSUEzQk47SUE0QkUsOEJBQUE7OztBRkpSLHFCQUgwQyx3Q0FBQSx3Q0FBQTtFQUcxQztFQUFBO0lFNkhJLGFBQUE7SUFHQSwyQkFBQTtJQUNBLGtCQUFBO0lBMUlBLGFBQWEsMkNBQWI7SUFDQSxrQkFBQTtJQUNBLGdCQUFBO0lBMElBLHVCQUFBOztFQXpJQSxPQUFRO0VBQVIsT0FBUTtJQUNKLDhCQUFBOzs7QUE0RlI7QUFDQTtFQUlJLGFBQUE7RUFHQSwyQkFBQTtFQUNBLGtCQUFBO0VBQ0EsdUJBQUE7O0FGakdKLHFCQUgwQztFQUcxQztFQUFBO0lFbENJLGFBQWEsNENBQWI7SUFDQSxrQkFBQTtJQUNBLG1CQUFBO0lBNklBLGFBQUE7SUFHQSwyQkFBQTtJQUNBLGtCQUFBO0lBQ0EsdUJBQUE7O0VBaEpBLEVBQUU7RUFBRixHQUFFO0VBQ0YsRUFBRTtFQUFGLEdBQUU7SUFXRixhQUFhLDJDQUFiO0lBQ0Esa0JBQUE7SUFDQSxtQkFBQTs7RUFDQSxPQUFRLEdBZk47RUFlRixPQUFRLElBZk47RUFlRixPQUFRLEdBZE47RUFjRixPQUFRLElBZE47SUFlRSw2QkFBQTs7RUFYSixFQUFFO0VBQUYsR0FBRTtFQUNGLEVBQUU7RUFBRixHQUFFO0lBd0JGLGFBQWEseUNBQWI7SUFDQSxrQkFBQTtJQUNBLGlCQUFBOztFQUNBLE9BQVEsR0E1Qk47RUE0QkYsT0FBUSxJQTVCTjtFQTRCRixPQUFRLEdBM0JOO0VBMkJGLE9BQVEsSUEzQk47SUE0QkUsOEJBQUE7OztBRkpSLHFCQUgwQyx3Q0FBQTtFQUcxQztFQUFBO0lFNkhJLGFBQUE7SUFHQSwyQkFBQTtJQUNBLGtCQUFBO0lBMUlBLGFBQWEsMkNBQWI7SUFDQSxrQkFBQTtJQUNBLGdCQUFBO0lBMElBLHVCQUFBOztFQXpJQSxPQUFRO0VBQVIsT0FBUTtJQUNKLDhCQUFBOzs7QUE2R1I7QUFDQTtFQUlJLGFBQUE7RUFHQSwyQkFBQTtFQUNBLGtCQUFBO0VBQ0EsdUJBQUE7O0FGbEhKLHFCQUgwQztFQUcxQztFQUFBO0lFNkhJLGFBQUE7SUFHQSwyQkFBQTtJQUNBLGtCQUFBO0lBMUlBLGFBQWEsMkNBQWI7SUFDQSxrQkFBQTtJQUNBLGdCQUFBO0lBMElBLHVCQUFBOztFQXpJQSxPQUFRO0VBQVIsT0FBUTtJQUNKLDhCQUFBOzs7QUE4SFI7QUFDQTtFQUdJLGFBQUE7RUFHQSwyQkFBQTtFQUNBLGtCQUFBO0VBMUlBLGFBQWEsMkNBQWI7RUFDQSxrQkFBQTtFQUNBLGdCQUFBO0VBMElBLHVCQUFBOztBQXpJQSxPQUFRO0FBQVIsT0FBUTtFQUNKLDhCQUFBOztBQTJJUjtBQUNBO0FBQ0E7QUFDQTtFQXpJSSxhQUFhLHlDQUFiO0VBQ0Esa0JBQUE7RUFDQSxpQkFBQTtFQTBJQSxtQkFBQTtFQUNBLHlCQUFBOztBQTFJQSxPQUFRO0FBQVIsT0FBUTtBQUFSLE9BQVE7QUFBUixPQUFRO0VBQ0osOEJBQUE7O0FBNElSO0FBQ0E7RUFHSSxhQUFBO0VBR0EsMkJBQUE7RUFDQSxrQkFBQTtFQUNBLHVCQUFBOztBQUdKO0FBQ0E7RUFHSSxhQUFBO0VBR0EsMkJBQUE7RUFDQSxpQkFBQTtFQUNBLHVCQUFBOztBQUlKO0VBUUksdUJBQUE7RUFDQSxjQUFBO0VBbExBLGFBQWEseUNBQWI7RUFDQSxrQkFBQTtFQUNBLGlCQUFBO0VBa0xBLGlCQUFBOztBQWpMQSxPQUFRO0VBQ0osOEJBQUE7Ozs7Ozs7Ozs7Ozs7OztBQWtNUjtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7RUFDSSxhQUFBO0VBRUEscUJBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQThCSjtFQUNJLGVBQUE7RUFDQSxvQkFBQTtFQUNBLHFCQUFBO0VBQ0EsY0FBQTtFQUNBLHFCQUFBOztBQUVBLENBQUM7QUFDRCxDQUFDO0VBQ0cscUJBQUE7RUFDQSxjQUFBOztBQUdKLENBQUM7QUFDRCxDQUFDO0VBQ0csbUJBQUE7RUFDQSxxQkFBQTtFQUNBLGNBQUE7O0FBR0osQ0FBQztBQUNELENBQUM7RUFDRyxtQkFBQTtFQUNBLG9CQUFBOztBQUdKLENBQUM7QUFDRCxDQUFDO0VBQ0csbUJBQUE7RUFDQSxxQkFBQTtFQUNBLGNBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQXNFUixDQUtJO0FBSkosRUFJSTtBQUhKLEVBR0k7RUFDSSx3QkFBQTs7QUFJUixHQUFJO0VBRUEsc0JBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7QUFtQko7RUFDSSxrQkFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQXNFSjtFQXhkSSxhQUFhLDRDQUFiO0VBQ0Esa0JBQUE7RUFDQSxtQkFBQTs7QUFFQSxLQUFFO0FBQ0YsS0FBRTtFQVdGLGFBQWEsMkNBQWI7RUFDQSxrQkFBQTtFQUNBLG1CQUFBOztBQUNBLE9BQVEsTUFmTjtBQWVGLE9BQVEsTUFkTjtFQWVFLDZCQUFBOztBQVhKLEtBQUU7QUFDRixLQUFFO0VBd0JGLGFBQWEseUNBQWI7RUFDQSxrQkFBQTtFQUNBLGlCQUFBOztBQUNBLE9BQVEsTUE1Qk47QUE0QkYsT0FBUSxNQTNCTjtFQTRCRSw4QkFBQTs7QUFzYlI7QUFDQTtFQUNJLHdCQUFBO0VBQ0EsbUJBQUE7O0FBRUEsS0FBTTtBQUFOLEtBQU07RUFDRixjQUFBO0VBQ0EsbUJBQUE7O0FBR0osS0FBTSxLQUFJLFVBQVUsS0FBTTtBQUExQixLQUFNLEtBQUksVUFBVSxLQUFNO0VBQ3RCLG1CQUFBOztBQUdKLGNBQWU7QUFBZixjQUFlO0VBQ1gseUJBQUE7O0FBSVI7RUE3Y0ksYUFBYSx5Q0FBYjtFQUNBLGtCQUFBO0VBQ0EsaUJBQUE7RUE2Y0EsZ0JBQUE7O0FBNWNBLE9BQVE7RUFDSiw4QkFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7O0FBeWVSO0VBRUksY0FBQTs7QUFNSixxQkFKNEU7RUFJNUU7SUFIUSxvQkFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQTZCUjtFQUNJLGNBQUE7RUFFQSx1QkFBQTtFQXBqQkEsYUFBYSw0Q0FBYjtFQUNBLGtCQUFBO0VBQ0EsbUJBQUE7O0FBRUEsS0FBRTtBQUNGLEtBQUU7RUFXRixhQUFhLDJDQUFiO0VBQ0Esa0JBQUE7RUFDQSxtQkFBQTs7QUFDQSxPQUFRLE1BZk47QUFlRixPQUFRLE1BZE47RUFlRSw2QkFBQTs7QUFYSixLQUFFO0FBQ0YsS0FBRTtFQXdCRixhQUFhLHlDQUFiO0VBQ0Esa0JBQUE7RUFDQSxpQkFBQTs7QUFDQSxPQUFRLE1BNUJOO0FBNEJGLE9BQVEsTUEzQk47RUE0QkUsOEJBQUE7O0FBMmdCUixLQU1JLE1BQUs7QUFOVCxLQU9JLE1BQUs7RUFDRCxxQkFBQTs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztBQXVFUixLQUFLO0FBQ0wsS0FBSztBQUNMLEtBQUs7QUFDTCxLQUFLO0FBQ0wsS0FBSztBQUNMLEtBQUs7QUFDTDtBQUNBLE1BQU07RUFHRixxQkFBQTtFQUNBLFNBQUE7RUFDQSxnQkFBQTtFQUNBLDhCQUFBO0VBQ0EsY0FBQTtFQUNBLG1CQUFBO0VBQ0EseUJBQUE7RUFDQSxnQkFBQTtFQUNBLG1CQUFBO0VBQ0Esd0JBQUE7RUFDQSw4Q0FBQTs7QUFLSjtFQUNJLHdCQUFBOztBQUtKLEtBQUssYUFBYTtBQUNsQixLQUFLLGFBQWE7QUFDbEIsS0FBSyxlQUFlO0FBQ3BCLEtBQUssZUFBZTtBQUNwQixLQUFLLGNBQWM7QUFDbkIsS0FBSyxjQUFjO0FBQ25CLEtBQUssWUFBWTtBQUNqQixLQUFLLFlBQVk7QUFDakIsS0FBSyxZQUFZO0FBQ2pCLEtBQUssWUFBWTtBQUNqQixLQUFLLGVBQWU7QUFDcEIsS0FBSyxlQUFlO0FBQ3BCLFFBQVE7QUFDUixRQUFRO0FBQ1IsTUFBTSxVQUFVO0FBQ2hCLE1BQU0sVUFBVTtFQUNaLHlCQUFBO0VBQ0EsMEJBQUE7RUFDQSxpQkFBQTtFQUNBLGdCQUFBOztBQUdKO0VBQ0csT0NycEI2QixrQkRxcEI3Qjs7QUFFSDtFQUNHLE9DeHBCNkIsa0JEd3BCN0I7O0FBRUg7RUFDRyxPQzNwQjZCLGtCRDJwQjdCOzs7Ozs7Ozs7Ozs7OztBQWlCSDtFQUNJLGVBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7QUFzQko7RUFDSSxjQUFBO0VBQ0EsZUFBQTs7QUFGSixNQUlJO0VBRUksc0JBQUE7O0FBSVIsaUJBQWtCO0VBQ2QseUJBQUEifQ== */
