@@ -21,6 +21,11 @@
         - "@cf-icon-ie7-support: true;"
       notes:
         - "More on IE7 support can be found in the 'IE7 Support' section."
+    - name: Icon border color
+      codenotes:
+        - "@cf-border-color: #eee;"
+      notes:
+        - "Used in .cf-icon__border"
   tags:
     - cf-icons
 */
@@ -28,7 +33,7 @@
 @cf-icon-prefix:                cf-icon;
 @cf-icon-path:                  '../fonts';
 @cf-icon-ie7-support:           true;
-
+@cf-border-color:               #eee;
 
 /* topdoc
   name: IE7 Support
@@ -97,6 +102,165 @@
   font-weight: normal;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
+}
+
+
+/* topdoc
+    name: Helper classes for icon sizes
+    family: cf-icons
+    patterns:
+        - name: Large icon size
+          markup: |
+            <span class="cf-icon cf-icon-money cf-icon__lg"></span>
+        - name: 2x icon size
+          markup: |
+            <span class="cf-icon cf-icon-money cf-icon__2x"></span>
+        - name: 3x icon size
+          markup: |
+            <span class="cf-icon cf-icon-money cf-icon__3x"></span>
+        - name: 4x icon size
+          markup: |
+            <span class="cf-icon cf-icon-money cf-icon__4x"></span>
+        - name: 5x icon size
+          markup: |
+            <span class="cf-icon cf-icon-money cf-icon__5x"></span>
+*/
+
+// makes the font 33% larger relative to the icon container
+.@{cf-icon-prefix}__lg {
+  font-size: (4em / 3);
+  line-height: (3em / 4);
+  vertical-align: -15%;
+}
+
+.@{cf-icon-prefix}__2x { font-size: 2em; }
+.@{cf-icon-prefix}__3x { font-size: 3em; }
+.@{cf-icon-prefix}__4x { font-size: 4em; }
+.@{cf-icon-prefix}__5x { font-size: 5em; }
+
+
+/* topdoc
+    name: Mixin classes
+    family: cf-icons
+    patterns:
+        - name: Icon rotation mixin
+          codenotes:
+            - ".@cf-icon__rotate-90  { .cf-icon__rotate(90deg, 1);  }"
+          notes:
+            - "First variable is @degrees."
+            - "Second variable is @rotation"
+        - name: Icon flip mixin
+          codenotes:
+            - ".@{cf-icon-prefix}__flip-horizontal { .cf-icon__flip(-1, 1, 0); }"
+            - ".@{cf-icon-prefix}__flip-vertical   { .cf-icon__flip(1, -1, 2); }"
+          notes:
+            - "First variable is for number of horizontal flips"
+            - "Second variable is for number of vertical flips"
+            - "Third variable is for rotation"
+*/
+
+.cf-icon__rotate(@degrees, @rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=@rotation);
+  -webkit-transform: rotate(@degrees);
+      -ms-transform: rotate(@degrees);
+          transform: rotate(@degrees);
+}
+
+.cf-icon__flip(@horiz, @vert, @rotation) {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=@rotation, mirror=1);
+  -webkit-transform: scale(@horiz, @vert);
+      -ms-transform: scale(@horiz, @vert);
+          transform: scale(@horiz, @vert);
+}
+
+/* topdoc
+    name: Helper classes for modified icons
+    family: cf-icons
+    patterns:
+        - name: Bordered icons
+          markup: |
+            <span class="cf-icon cf-icon-update cf-icon__border"></span>
+          notes:
+            - "Border color set by @cf-border-color"
+        - name: Rotated icons
+          markup: |
+            <span class="cf-icon cf-icon-update cf-icon__rotate-90"></span>
+            <span class="cf-icon cf-icon-update cf-icon__rotate-180"></span>
+            <span class="cf-icon cf-icon-update cf-icon__rotate-270"></span>
+        - name: Flipped icons
+          markup: |
+            <span class="cf-icon cf-icon-update cf-icon__flip-horizontal"></span>
+            <span class="cf-icon cf-icon-update cf-icon__flip-vertical"></span>
+*/
+
+.@{cf-icon-prefix}__border {
+  padding: .2em .25em .15em;
+  border: solid .08em @cf-border-color;
+  border-radius: .1em;
+}
+
+.@{cf-icon-prefix}__rotate-90  { .cf-icon__rotate(90deg, 1);  }
+.@{cf-icon-prefix}__rotate-180 { .cf-icon__rotate(180deg, 2); }
+.@{cf-icon-prefix}__rotate-270 { .cf-icon__rotate(270deg, 3); }
+
+.@{cf-icon-prefix}__flip-horizontal { .cf-icon__flip(-1, 1, 0); }
+.@{cf-icon-prefix}__flip-vertical   { .cf-icon__flip(1, -1, 2); }
+
+:root .@{cf-icon-prefix}__rotate-90,
+:root .@{cf-icon-prefix}__rotate-180,
+:root .@{cf-icon-prefix}__rotate-270,
+:root .@{cf-icon-prefix}__flip-horizontal,
+:root .@{cf-icon-prefix}__flip-vertical {
+  filter: none;
+}
+
+
+/* topdoc
+    name: Helper classes for animated icons
+    family: cf-icons
+    patterns:
+        - name: Spinning icons
+          markup: |
+            <span class="cf-icon cf-icon-update cf-icon__spin"></span>
+        - name: Pulsing icons
+          markup: |
+            <span class="cf-icon cf-icon-update cf-icon__pulse"></span>
+        - name: Flipped icons
+          markup: |
+            <span class="cf-icon cf-icon-phone cf-icon__flip-horizontal"></span>
+            <span class="cf-icon cf-icon-phone cf-icon__flip-vertical"></span>
+*/
+
+.@{cf-icon-prefix}__spin {
+  -webkit-animation: cf-spin 2s infinite linear;
+          animation: cf-spin 2s infinite linear;
+}
+
+.@{cf-icon-prefix}__pulse {
+  -webkit-animation: cf-spin 1s infinite steps(8);
+          animation: cf-spin 1s infinite steps(8);
+}
+
+@-webkit-keyframes cf-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes cf-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
 }
 
 
@@ -544,6 +708,10 @@
         markup: |
           <span class="cf-icon cf-icon-upload"></span>
           <span class="cf-icon cf-icon-upload-round"></span>
+      - name: download
+        markup: |
+          <span class="cf-icon cf-icon-download"></span>
+          <span class="cf-icon cf-icon-download-round"></span>
       - name: copy
         markup: |
           <span class="cf-icon cf-icon-copy"></span>
