@@ -134,18 +134,18 @@
     patterns:
         - name: Icon rotation mixin
           codenotes:
-            - ".@cf-icon__rotate-90  { .cf-icon__rotate(90deg, 1);  }"
+            - ".@{cf-icon-prefix}__rotate-90  { .cf-icon__rotate(90deg, 1);  }"
           notes:
-            - "First variable is @degrees."
-            - "Second variable is @rotation"
+            - "First parameter is @degrees."
+            - "Second parameter is @rotation"
         - name: Icon flip mixin
           codenotes:
             - ".@{cf-icon-prefix}__flip-horizontal { .cf-icon__flip(-1, 1, 0); }"
             - ".@{cf-icon-prefix}__flip-vertical   { .cf-icon__flip(1, -1, 2); }"
           notes:
-            - "First variable is for number of horizontal flips"
-            - "Second variable is for number of vertical flips"
-            - "Third variable is for rotation"
+            - "First parameter is for number of horizontal flips"
+            - "Second parameter is for number of vertical flips"
+            - "Third parameter is for rotation"
     notes:
        - "MIT Licensed by Font Awesome"
 */
@@ -157,7 +157,7 @@
           markup: |
             <span class="cf-icon cf-icon-update cf-icon__border"></span>
           notes:
-            - "Border color set by @cf-border-color"
+            - "Border color set by @cf-icon-border-color"
         - name: Rotated icons
           markup: |
             <span class="cf-icon cf-icon-update cf-icon__rotate-90"></span>
