@@ -17,7 +17,7 @@
   "license": "https://github.com/cfpb/cf-icons/blob/gh-pages/TERMS.md",
   "main": "src/less/cf-icons.less",
   "dependencies": {
-    "cf-core": "cfpb/cf-core#1.0"
+    "cf-core": "cfpb/cf-core#dev"
   },
   "exportsOverride": {
     "cf-*": {
