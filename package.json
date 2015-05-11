@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "pa11y localhost:8080/demo -r ci -s WCAG2AA"
+  },
   "devDependencies": {
     "cf-component-demo": "git://github.com/cfpb/cf-component-demo.git#0.9.1",
     "cf-grunt-config": "~0.3.1",
