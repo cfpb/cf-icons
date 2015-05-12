@@ -1,5 +1,6 @@
 # cf-icons
 
+[![Build Status](https://img.shields.io/travis/cfpb/cf-icons.svg)](https://travis-ci.org/cfpb/cf-icons) 
 [![Dependency Status](https://gemnasium.com/cfpb/cf-icons.svg)](https://gemnasium.com/cfpb/cf-icons)
 
 Custom icon font for Capital Framework.
