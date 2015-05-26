@@ -1,5 +1,6 @@
 # cf-icons
 
+[![Build Status](https://img.shields.io/travis/cfpb/cf-icons.svg)](https://travis-ci.org/cfpb/cf-icons) 
 [![Dependency Status](https://gemnasium.com/cfpb/cf-icons.svg)](https://gemnasium.com/cfpb/cf-icons)
 
 Custom icon font for Capital Framework.
@@ -26,6 +27,14 @@ We welcome your feedback and contributions.
 - [Find out about contributing](CONTRIBUTING.md)
 - File a bug using this [handy template](https://github.com/cfpb/cf-icons/issues/new?body=%23%23%20URL%0D%0D%0D%23%23%20Actual%20Behavior%0D%0D%0D%23%23%20Expected%20Behavior%0D%0D%0D%23%23%20Steps%20to%20Reproduce%0D%0D%0D%23%23%20Screenshot&labels=bug)
 
+## Running tests
+
+Before contributing to our codebase, please ensure all tests pass. After cloning this repository to your machine, run:
+
+```sh
+$ npm install
+$ npm test
+```
 
 ---
 
