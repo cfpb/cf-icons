@@ -1,9 +1,20 @@
 {
+  "name": "cf-icons",
+  "version": "1.0.2",
+  "description": "Custom icon font for Capital Framework.",
   "scripts": {
     "pretest": "forever stopall -s && forever start -s ./node_modules/.bin/http-server",
     "test": "pa11y localhost:8080/demo -r ci -s WCAG2AA",
     "posttest": "forever stopall -s"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cfpb/cf-icons"
+  },
+  "bugs": {
+    "url": "https://github.com/cfpb/cf-icons/issues"
+  },
+  "license" : "SEE LICENSE IN TERMS.md",
   "devDependencies": {
     "cf-component-demo": "^1.0.0",
     "cf-grunt-config": "^1.0.0",
