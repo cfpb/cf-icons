@@ -2,6 +2,15 @@
   "name": "cf-icons",
   "version": "1.0.2",
   "description": "Custom icon font for Capital Framework.",
+  "keywords": ["capital-framework", "capital", "icons", "less"],
+  "contributors": [
+    {
+      "name": "Consumer Financial Protection Bureau",
+      "url": "https://cfpb.github.io/"
+    }
+  ],
+  "homepage": "https://github.com/cfpb/cf-icons",
+  "main": "src/less/cf-icons.less",
   "scripts": {
     "pretest": "forever stopall -s && forever start -s ./node_modules/.bin/http-server",
     "test": "pa11y localhost:8080/demo -r ci -s WCAG2AA",
