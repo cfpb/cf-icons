@@ -1,6 +1,11 @@
 All notable changes to this project will be documented in this file.
 We follow the [Semantic Versioning 2.0.0](http://semver.org/) format.
 
+## 1.0.2 - 2015-08-03
+
+### Added
+- Adds missing fields to `package.json`
+
 ## 0.6.0 - 2015-04-22
 - Adds mixins for each character code in cf-icon
 - Helper classes for animations, rotating and flipping icons and bordered icons
